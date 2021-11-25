@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1 class="title"></h1>
+    <p class="content"></p>
+    <img src="" alt="" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+
+      const url = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/2";
+
+      async function start() {
+        const resspons = await fetch(url);
+        const json = await resspons.json();
+        vis(json);
+      }
+
+      function vis(page) {
+        console.log(page);
+        document.querySelector(".title").innerHTML = page.title.rendered;
+        document.querySelector(".content").innerHTML = page.content.rendered;
+      }
+    </script>
+  </body>
+</html>
