@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/dqc7cia.css" />
+  </head>
+  <body>
+    <div class="nav_container">
+      <nav class="navbar">
+        <img id="navbar_logo" src="logo.JPG" alt="logo" />
+        <div class="menu_toggle" id="mobile_menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="nav_menu">
+          <div class="dropdown">
+            <li>
+              <a href="portofolio.html" class="nav_links" id="dropbtn"
+                >OM DYRENE</a
+              >
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Landbrugsdyr</a>
+              <a href="#">Pelsdyr</a>
+              <a href="#">Forsøgsdyr</a>
+              <a href="#">Underholdningsdyr</a>
+              <a href="#">Vilde dyr</a>
+              <a href="#">Truede dyr</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="portofolio.html" class="nav_links" id="dropbtn"
+                >GØR EN FORSKEL</a
+              >
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Bliv medlem</a>
+              <a href="#">Lev dyrevenligt</a>
+              <a href="#">Underskriv</a>
+              <a href="#">Testamentér</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="portofolio.html" class="nav_links" id="dropbtn">BLOG</a>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Kategori 1</a>
+              <a href="#">Kategori 1</a>
+              <a href="#">Kategori 1</a>
+              <a href="#">Kategori 1</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="portofolio.html" class="nav_links" id="dropbtn">OM OS</a>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Vores arbejde</a>
+              <a href="#">Vores historie</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="portofolio.html" class="nav_links" id="dropbtn"
+                >KONTAKT</a
+              >
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Ledige stillinger</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+    <div classs="splash_wrapper">
+      <div class="splash_picture">
+        <img
+          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </div>
+      <div class="splash_text">
+        <h1>Anima</h1>
+        <h2>Din stemme til dyrene</h2>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      window.addEventListener("DOMContentLoaded", initPage);
+      function initPage() {
+        const menu = document.querySelector("#mobile_menu");
+        const menuLinks = document.querySelector(".nav_menu");
+        menu.addEventListener("click", function () {
+          menu.classList.toggle("is-active");
+          menuLinks.classList.toggle("active");
+        });
+        clearText();
+      }
+    </script>
+  </body>
+</html>
