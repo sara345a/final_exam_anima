@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="blog_style.css">
+    <title>BLOG | Anima</title>
+</head>
+
+<body>
+    <main id="container">
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
+        <header>
+
+        </header>
+
+        <div id="splash">
+            <h1 id="title">
+            </h1>
+
+            <p id="blog_splashtext"><p></p>
+        </div>
+
+            <div id="blogcontent"></div>
+
+
+            <!--template til hvert post-->
+            <template>
+                <article class="post_article">
+                    <div class="post_element">
+                        <img class="post_image"></img>
+                        <h2 class="post_h2"></h2>
+                        <div class="post_excerpt"></div>
+                        <div class="button_box">
+                            <button class="post_button">LÆS HER</button>
+                        </div>
+    
+                    </div>
+                    <!-- <div class="mere lukket" style="display: none;">
+                    </div> -->
+                </article>
+            </template>
+
+    
+
+
+        <!--footer, der er delt op i tre kolloner-->
+        <footer>
+            
+        </footer>
+    </main>
+
+    <!--script til at indsætte indhold om blog og alle blogpostene-->
+    <script src="blog.js"></script>
+
+    </script>
+</body>
+
+</html>
