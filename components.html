@@ -11,109 +11,274 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dqc7cia.css" />
+    <script
+      src="https://kit.fontawesome.com/5ad841142e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="nav_container">
-      <nav class="navbar">
-        <img id="navbar_logo" src="logo.JPG" alt="logo" />
-        <div class="menu_toggle" id="mobile_menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="top_top">
+    <div class="top_component">
+    <nav id="navbar">
+      <div class="wrapper">
+      <div class="logo_container">
+        <div class="menu_toggle" id="burger_menu">
+          <span class="burger-stripe"></span>
+          <span class="burger-stripe"></span>
+          <span class="burger-stripe"></span>
         </div>
 
-        <ul class="nav_menu">
-          <div class="dropdown">
-            <li>
-              <a href="portofolio.html" class="nav_links" id="dropbtn"
-                >OM DYRENE</a
-              >
-            </li>
-            <div class="dropdown-content">
-              <a href="#">Landbrugsdyr</a>
-              <a href="#">Pelsdyr</a>
-              <a href="#">Forsøgsdyr</a>
-              <a href="#">Underholdningsdyr</a>
-              <a href="#">Vilde dyr</a>
-              <a href="#">Truede dyr</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <li>
-              <a href="portofolio.html" class="nav_links" id="dropbtn"
-                >GØR EN FORSKEL</a
-              >
-            </li>
-            <div class="dropdown-content">
-              <a href="#">Bliv medlem</a>
-              <a href="#">Lev dyrevenligt</a>
-              <a href="#">Underskriv</a>
-              <a href="#">Testamentér</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <li>
-              <a href="portofolio.html" class="nav_links" id="dropbtn">BLOG</a>
-            </li>
-            <div class="dropdown-content">
-              <a href="#">Kategori 1</a>
-              <a href="#">Kategori 1</a>
-              <a href="#">Kategori 1</a>
-              <a href="#">Kategori 1</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <li>
-              <a href="portofolio.html" class="nav_links" id="dropbtn">OM OS</a>
-            </li>
-            <div class="dropdown-content">
-              <a href="#">Vores arbejde</a>
-              <a href="#">Vores historie</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <li>
-              <a href="portofolio.html" class="nav_links" id="dropbtn"
-                >KONTAKT</a
-              >
-            </li>
-            <div class="dropdown-content">
-              <a href="#">Ledige stillinger</a>
-            </div>
-          </div>
-        </ul>
-      </nav>
-    </div>
-
-    <div classs="splash_wrapper">
-      <div class="splash_picture">
         <img
-          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-          alt=""
+          id="navbar_logo"
+          src="https://anima.dk/sites/default/files/anima-logo_0.svg"
+          alt="logo"
         />
       </div>
-      <div class="splash_text">
-        <h1>Anima</h1>
-        <h2>Din stemme til dyrene</h2>
-      </div>
-    </div>
 
-    <script>
-      "use strict";
-      window.addEventListener("DOMContentLoaded", initPage);
-      function initPage() {
-        const menu = document.querySelector("#mobile_menu");
-        const menuLinks = document.querySelector(".nav_menu");
-        menu.addEventListener("click", function () {
-          menu.classList.toggle("is-active");
-          menuLinks.classList.toggle("active");
-        });
-        clearText();
-      }
-    </script>
-  </body>
+      <ul class="nav_container">
+        <div class="dropdown">
+          <li>
+            <a href="portofolio.html" class="nav_links" id="dropbtn"
+              >OM DYRENE</a
+            >
+          </li>
+          <div class="dropdown-content">
+            <a href="#">Landbrugsdyr</a>
+            <a href="#">Pelsdyr</a>
+            <a href="#">Forsøgsdyr</a>
+            <a href="#">Underholdningsdyr</a>
+            <a href="#">Vilde dyr</a>
+            <a href="#">Truede dyr</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <li>
+            <a href="portofolio.html" class="nav_links" id="dropbtn"
+              >GØR EN FORSKEL</a
+            >
+          </li>
+          <div class="dropdown-content">
+            <a href="#">Bliv medlem</a>
+            <a href="#">Lev dyrevenligt</a>
+            <a href="#">Underskriv</a>
+            <a href="#">Testamentér</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <li>
+            <a href="portofolio.html" class="nav_links" id="dropbtn">BLOG</a>
+          </li>
+          <div class="dropdown-content">
+            <a href="#">Kategori 1</a>
+            <a href="#">Kategori 1</a>
+            <a href="#">Kategori 1</a>
+            <a href="#">Kategori 1</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <li>
+            <a href="portofolio.html" class="nav_links" id="dropbtn">OM OS</a>
+          </li>
+          <div class="dropdown-content">
+            <a href="#">Vores arbejde</a>
+            <a href="#">Vores historie</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <li>
+            <a href="portofolio.html" class="nav_links" id="dropbtn">KONTAKT</a>
+          </li>
+          <div class="dropdown-content">
+            <a href="#">Ledige stillinger</a>
+          </div>
+        </div>
+
+        <div class="search">
+          <input  class="search-txt" type="text" name="" placeholder="Type to search">
+         
+         </div>
+    
+        <div class="support-button_container">
+          <button type="button">STØT</button>
+        </div>
+      </ul>
+    </nav>
+  </div>
+
+
+      <!-- Slideshow container -->
+<div class="ss-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="picture_one"></div>
+    <div class="text">Caption One</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="picture_two"></div>
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="picture_three"></div>
+
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+</div>
+
+
+
+
+      
+  <script>
+    "use strict";
+///////////////////////////BRUGER MENU///////////////////////////////////////////
+    window.addEventListener("DOMContentLoaded", initPage);
+    function initPage() {
+      const menu = document.querySelector("#burger_menu");
+      const menuLinks = document.querySelector(".nav_container");
+
+      menu.addEventListener("click", function () {
+      menu.classList.toggle("is-active");
+      menuLinks.classList.toggle("active");
+      }); 
+    }
+///////////////////////////SLIDESHOW///////////////////////////////////////////
+var slideIndex = 0;
+showSlides();
+var slides,dots;
+var i;
+function showSlides() {
+    
+    slides = document.querySelectorAll(".mySlides");
+    dots = document.querySelectorAll(".dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5500); 
+}
+
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+
+
+///////////////////////////STICKY NAVBAR WHEN SCROLL///////////////////////////////////////////
+window.onscroll = function() {makeNavbarSticky()};
+    // Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function makeNavbarSticky() {
+  if (window.scrollY > 50) {
+    navbar.classList.add("sticky")
+    navbar.classList.add("background_color")
+
+  } else {
+    navbar.classList.remove("sticky");
+    navbar.classList.remove("background_color");
+
+
+  }
+}
+
+
+///////////////////////////HENT DATAL///////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", hentData);
+
+
+
+//Henter json data og starter forsiden (async for at få loadet json før man går videre)
+
+async function hentData() {
+    console.log("hentData");
+   
+    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/2/"
+  
+
+    const respons = await fetch(link);
+    
+
+    const json = await respons.json();
+    
+
+
+    //vis forsiden
+    vis(json);
+
+}
+
+async function vis(data) {
+
+console.log("vis");
+/* document.querySelector("#splash").style.backgroundImage = "url(" + data.splashbillede.guid + ")"; */
+// document.querySelector(".p").textContent = data.content.rendered;
+// document.querySelector("#blogindhold").innerHTML = data.content.rendered;
+
+/* document.querySelector(".picture_one").src = data.kampagne_splash1.guid;
+document.querySelector(".picture_two").src = data.kampagne_splash2.guid;
+document.querySelector(".picture_three").src = data.kampagne_splash3.guid; */
+
+ document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")"; 
+ document.querySelector(".picture_two").style.backgroundImage = "url(" + data.splash2.guid + ")"; 
+ document.querySelector(".picture_three").style.backgroundImage = "url(" + data.splash3.guid + ")"; 
+
+
+
+}
+  </script>
+</body>
 </html>
