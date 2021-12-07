@@ -1,0 +1,142 @@
+/*****************************GENERELT********************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-grey: #f6f6f6;
+  --color-black: #000000;
+  --color-red: #df544b;
+  --color-icyblue: #e9eff4;
+  --color-darkblue: #30415d;
+  --color-darkerblue: #021424;
+}
+
+h1,
+h2,
+h3 {
+  font-family: montserrat, sans-serif;
+}
+
+p {
+  font-family: work-sans, sans-serif;
+}
+
+button {
+  all: unset;
+  font-family: montserrat, sans-serif;
+  cursor: pointer;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 2% 7% 2% 7%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*************************************************************/
+
+#content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#content #form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10%;
+  margin: 10% 10% 5% 10%;
+}
+
+#content #form input,
+#content #form textarea {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 30px;
+}
+
+#content #form .message {
+  height: 100px;
+}
+
+#thank_you_message {
+  text-align: center;
+}
+
+#content #info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-darkblue);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10%;
+  margin: 10%;
+  color: var(--color-white);
+}
+
+#content #info #info_content {
+  margin-top: 10%;
+}
+
+#content #info .adress,
+#content #info .phone,
+#content #info .mail {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+#content #info .icon {
+  height: 30px;
+  align-self: center;
+  margin-right: 10%;
+}
+
+#content #info p {
+  align-self: center;
+}
+
+#content #info .some {
+  margin-top: 20%;
+}
+
+#content #info .some_icon {
+  height: 30px;
+  margin-right: 5%;
+}
+
+/************************TOGGLE CLASS'****************/
+
+.hide {
+  display: none !important;
+}
+
+/************************MEDIA QUERY****************/
+
+/*-------tablet--------*/
+@media screen and (min-width: 768px) {
+}
+
+/*---------laptop---------*/
+@media screen and (min-width: 1024px) {
+  #content {
+    flex-direction: row;
+  }
+
+  #content #form {
+    margin: 10% 0 10% 10%;
+  }
+
+  #content #info {
+    margin: 10% 10% 10% 0;
+  }
+}
+
+/*----laptop large------*/
+@media screen and (min-width: 1440px) {
+}

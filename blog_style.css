@@ -3,8 +3,31 @@
   padding: 0;
 }
 
+:root {
+  --color-white: #ffffff;
+  --color-grey: #f6f6f6;
+  --color-black: #000000;
+  --color-red: #df544b;
+  --color-icyblue: #e9eff4;
+  --color-darkblue: #30415d;
+  --color-darkerblue: #021424;
+}
+
+h1,
+h2,
+h3 {
+  font-family: montserrat, sans-serif;
+}
+
+p {
+  font-family: work-sans, sans-serif;
+}
+
 button {
+  all: unset;
+  font-family: montserrat, sans-serif;
   cursor: pointer;
+  color: var(--color-red);
 }
 
 #blogcontent {
@@ -24,22 +47,50 @@ button {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-radius: 3%;
+  border-radius: 2%;
   width: 80%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  cursor: pointer;
 }
 
 .post_image {
   width: 100%;
-  border-radius: 3% 3% 0% 0%;
+  border-radius: 2% 2% 0% 0%;
 }
 
 .post_h2,
 .post_excerpt,
 .button_box {
-  width: 95%;
+  width: 90%;
   place-self: center;
   margin: 5%;
+}
+
+.post_element:hover {
+  background-color: var(--color-icyblue);
+}
+
+/************************MEDIA QUERY****************/
+
+/*-------tablet--------*/
+@media screen and (min-width: 768px) {
+  #blogcontent {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  }
+}
+
+/*---------laptop---------*/
+@media screen and (min-width: 1024px) {
+  #blogcontent {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
+  }
+}
+
+/*----laptop large------*/
+@media screen and (min-width: 1440px) {
+  #blogcontent {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
+  }
 }
