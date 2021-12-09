@@ -23,14 +23,18 @@ p {
   font-family: work-sans, sans-serif;
 }
 
-button {
+/*------------------------------------------------------------------------------------*/
+/*                                     MAIN INDHOLD                                   */
+/*------------------------------------------------------------------------------------*/
+
+main button {
   all: unset;
   font-family: montserrat, sans-serif;
   cursor: pointer;
   color: var(--color-red);
 }
 
-#blogcontent {
+main #blogcontent {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -38,12 +42,12 @@ button {
   align-items: center;
 }
 
-.post_article {
+main .post_article {
   display: flex;
   justify-content: center;
 }
 
-.post_element {
+main .post_element {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -55,42 +59,44 @@ button {
   cursor: pointer;
 }
 
-.post_image {
+main .post_image {
   width: 100%;
   border-radius: 2% 2% 0% 0%;
 }
 
-.post_h2,
-.post_excerpt,
-.button_box {
+main .post_h2,
+main .post_excerpt,
+main .button_box {
   width: 90%;
   place-self: center;
   margin: 5%;
 }
 
-.post_element:hover {
+main .post_element:hover {
   background-color: var(--color-icyblue);
 }
 
-/************************MEDIA QUERY****************/
+/*------------------------------------------------------------------------------------*/
+/*                                     MEDIA QUERY                                    */
+/*------------------------------------------------------------------------------------*/
 
 /*-------tablet--------*/
 @media screen and (min-width: 768px) {
-  #blogcontent {
+  main #blogcontent {
     grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   }
 }
 
 /*---------laptop---------*/
 @media screen and (min-width: 1024px) {
-  #blogcontent {
+  main #blogcontent {
     grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
   }
 }
 
 /*----laptop large------*/
 @media screen and (min-width: 1440px) {
-  #blogcontent {
+  main #blogcontent {
     grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
   }
 }
