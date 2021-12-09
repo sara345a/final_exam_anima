@@ -6,7 +6,7 @@ let template = document.querySelector("template");
 async function hentData() {
     console.log("hentData");
 
-    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/26/"
+    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/145/"
     const respons = await fetch(link);
     const json = await respons.json();
 
@@ -22,13 +22,14 @@ async function vis(data) {
     document.querySelector("#title").textContent = data.title.rendered;
     document.querySelector("#blog_splashtext").innerHTML = data.content.rendered;
 
-
-
+    document.querySelector(".textbox h3").textContent = data.overskrift1;
+    document.querySelector(".textbox p").textContent = data.tekstfelt1;
+    document.querySelector("#img_box img").src = data.indholdsbillede1.guid;
 
     const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/blog_posts"
     const responspost = await fetch(postlink);
     const jsonpost = await responspost.json();
-    let filtrerede;
+    /* let filtrerede; */
     console.log("Det virker!!!");
 
     console.log(jsonpost);

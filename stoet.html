@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="stoet_style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
+
+    <title>STØT | Anima</title>
+</head>
+
+<body>
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
+        <header>
+
+        </header>
+
+        <div id="splash">
+            <h1 id="title">
+            </h1>
+
+            <p id="blog_splashtext"><p></p>
+
+            <div id="form">
+                <div id="form_content" class="">
+                    <div id="flow_steps">
+                        <h4 id="step1_path" class="this_flow">1. BELØB</h4>
+                        <h4 id="step2_path">2. INFORMATION</h4>
+                        <h4 id="step3_path">3. BETAL</h4>
+                    </div>
+                    <div id="step1">
+                        <h3>VÆLG BELØB</h3>
+                        <div id="amounts">
+                            <button id="dkk50" class="" onclick="chosenAmountOneFunction()">50 DKK</button>
+                            <button id="dkk100" class="" onclick="chosenAmountTwoFunction()">100 DKK</button>
+                            <button id="dkk150" class="" onclick="chosenAmountThreeFunction()">150 DKK</button>
+                            <button id="dkk200" class="" onclick="chosenAmountFourFunction()">200 DKK</button>
+                            <button id="dkk250" class="" onclick="chosenAmountFiveFunction()">250 DKK</button>
+                            <button id="dkk500" class="" onclick="chosenAmountSixFunction()">500 DKK</button>
+                            <input type="text" placeholder="ANDET"></input>
+                        </div>
+                        <h3>VÆLG BETALINGSFORM</h3>
+                        <div class="payments">
+                            <button id="card" class="" onclick="chosenCardFunction()">BETALINGSKORT</button>
+                            <button id="mobilepay" class="" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
+                            <button id="pay_service" class="" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
+                        </div>
+                        <div class="next_button">
+                            <button onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
+                        </div>
+                    </div>
+                    <div id="step2" class="hide">
+                        <h3>INDTAST DINE OPLYSNINGER</h3>
+                        <div class="inputs">
+                            <input type="text" placeholder="Navn" class="name"></input>
+                            <input type="email" placeholder="E-mail" class="mail"></input>
+                            <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
+                            <div class="checkbox"><input type="checkbox"></input><p>Ja tak, jeg vil gerne modtage nyhedsbrev fra Anima</p></div>
+                            <div class="checkbox"><input type="checkbox"></input><p>Jeg godkender handelsbetingelserne*</p></div>
+                            <div class="next_button">
+                                <button onclick="flowFuntionStepTwo()">GÅ TIL BETALING</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="step3" class="hide">
+                        <h3>BETALING</h3>
+                        <P>Du vil nu blive dirigeret videre til betalingsudbyderen</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <main>
+        <section id="content">
+        
+            <div id="icons_box">
+                <div id="icon_1">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div id="icon_2">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div id="icon_3">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+            <div id="bottom_column">
+                <div class="textbox">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <img>
+            </div>
+
+        </section>
+    </main>
+
+    
+
+
+        <!--footer, der er delt op i tre kolloner-->
+        <footer>
+            
+        </footer>
+
+    <script>
+
+        
+        function chosenAmountOneFunction() {
+            var amount50 = document.getElementById("dkk50");
+           var amount100 = document.getElementById("dkk100");
+           var amount150 = document.getElementById("dkk150");
+           var amount200 = document.getElementById("dkk200");
+           var amount250 = document.getElementById("dkk250");
+           var amount500 = document.getElementById("dkk500");
+
+                amount100.classList.remove("chosen_amount");
+                amount150.classList.remove("chosen_amount");
+                amount200.classList.remove("chosen_amount");
+                amount250.classList.remove("chosen_amount");
+                amount500.classList.remove("chosen_amount");
+
+                amount50.classList.toggle("chosen_amount");
+        }
+           
+        function chosenAmountTwoFunction() {
+            var amount50 = document.getElementById("dkk50");
+           var amount100 = document.getElementById("dkk100");
+           var amount150 = document.getElementById("dkk150");
+           var amount200 = document.getElementById("dkk200");
+           var amount250 = document.getElementById("dkk250");
+           var amount500 = document.getElementById("dkk500");
+
+                amount50.classList.remove("chosen_amount");
+                amount150.classList.remove("chosen_amount");
+                amount200.classList.remove("chosen_amount");
+                amount250.classList.remove("chosen_amount");
+                amount500.classList.remove("chosen_amount");
+
+                amount100.classList.toggle("chosen_amount");
+        } 
+
+        function chosenAmountThreeFunction() {
+            var amount50 = document.getElementById("dkk50");
+           var amount100 = document.getElementById("dkk100");
+           var amount150 = document.getElementById("dkk150");
+           var amount200 = document.getElementById("dkk200");
+           var amount250 = document.getElementById("dkk250");
+           var amount500 = document.getElementById("dkk500");
+
+                amount50.classList.remove("chosen_amount");
+                amount100.classList.remove("chosen_amount");
+                amount200.classList.remove("chosen_amount");
+                amount250.classList.remove("chosen_amount");
+                amount500.classList.remove("chosen_amount");
+
+                amount150.classList.toggle("chosen_amount");
+        } 
+
+        function chosenAmountFourFunction() {
+            var amount50 = document.getElementById("dkk50");
+           var amount100 = document.getElementById("dkk100");
+           var amount150 = document.getElementById("dkk150");
+           var amount200 = document.getElementById("dkk200");
+           var amount250 = document.getElementById("dkk250");
+           var amount500 = document.getElementById("dkk500");
+
+                amount50.classList.remove("chosen_amount");
+                amount100.classList.remove("chosen_amount");
+                amount150.classList.remove("chosen_amount");
+                amount250.classList.remove("chosen_amount");
+                amount500.classList.remove("chosen_amount");
+
+                amount200.classList.toggle("chosen_amount");
+        } 
+
+        function chosenAmountFiveFunction() {
+            var amount50 = document.getElementById("dkk50");
+           var amount100 = document.getElementById("dkk100");
+           var amount150 = document.getElementById("dkk150");
+           var amount200 = document.getElementById("dkk200");
+           var amount250 = document.getElementById("dkk250");
+           var amount500 = document.getElementById("dkk500");
+
+                amount50.classList.remove("chosen_amount");
+                amount100.classList.remove("chosen_amount");
+                amount150.classList.remove("chosen_amount");
+                amount200.classList.remove("chosen_amount");
+                amount500.classList.remove("chosen_amount");
+
+                amount250.classList.toggle("chosen_amount");
+        }
+
+        function chosenAmountSixFunction() {
+            var amount50 = document.getElementById("dkk50");
+           var amount100 = document.getElementById("dkk100");
+           var amount150 = document.getElementById("dkk150");
+           var amount200 = document.getElementById("dkk200");
+           var amount250 = document.getElementById("dkk250");
+           var amount500 = document.getElementById("dkk500");
+
+                amount50.classList.remove("chosen_amount");
+                amount100.classList.remove("chosen_amount");
+                amount150.classList.remove("chosen_amount");
+                amount200.classList.remove("chosen_amount");
+                amount250.classList.remove("chosen_amount");
+
+                amount500.classList.toggle("chosen_amount");
+        }
+
+        function chosenCardFunction() {
+            var card = document.getElementById("card");
+           var mobilePay = document.getElementById("mobilepay");
+           var payService = document.getElementById("pay_service");
+
+                mobilePay.classList.remove("chosen_amount");
+                payService.classList.remove("chosen_amount");
+
+                card.classList.toggle("chosen_amount");
+        }
+
+        function chosenMobilepayFunction() {
+            var card = document.getElementById("card");
+           var mobilePay = document.getElementById("mobilepay");
+           var payService = document.getElementById("pay_service");
+
+                card.classList.remove("chosen_amount");
+                payService.classList.remove("chosen_amount");
+
+                mobilePay.classList.toggle("chosen_amount");
+        }
+
+        function chosenPayServiceFunction() {
+            var card = document.getElementById("card");
+           var mobilePay = document.getElementById("mobilepay");
+           var payService = document.getElementById("pay_service");
+
+                card.classList.remove("chosen_amount");
+                mobilePay.classList.remove("chosen_amount");
+
+                payService.classList.toggle("chosen_amount");
+        }
+        
+
+        function flowFuntionStepOne() {
+           var stepOne = document.getElementById("step1");
+           var stepTwo = document.getElementById("step2");
+           var stepOnePath = document.getElementById("step1_path");
+           var stepTwoPath = document.getElementById("step2_path");
+           stepOne.classList.toggle("hide");
+           stepTwo.classList.toggle("hide");
+           stepOnePath.classList.toggle("this_flow");
+           stepTwoPath.classList.toggle("this_flow");
+        }
+
+        function flowFuntionStepTwo() {
+           var stepThree = document.getElementById("step3");
+           var stepTwo = document.getElementById("step2");
+           var stepThreePath = document.getElementById("step3_path");
+           var stepTwoPath = document.getElementById("step2_path");
+           stepThree.classList.toggle("hide");
+           stepTwo.classList.toggle("hide");
+           stepThreePath.classList.toggle("this_flow");
+           stepTwoPath.classList.toggle("this_flow");
+        }
+
+        
+           
+    </script>
+
+    <!--script til at indsætte indhold om blog og alle blogpostene-->
+    <script src="stoet.js"></script>
+
+    
+</body>
+
+</html>

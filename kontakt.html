@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="kontakt_style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
+
+    <title>KONTAKT | Anima</title>
+</head>
+
+<body>
+    <main id="container">
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
+        <header>
+
+        </header>
+
+        <div id="splash">
+            <h1 id="title">
+            </h1>
+
+            <p id="blog_splashtext"><p></p>
+        </div>
+
+        <section id="content">
+            <div id="form">
+                <div id="form_content" class="">
+                <h3>SEND OS EN BESKED</h3>
+                <input type="text" placeholder="Navn" class="name"></input>
+                <input type="email" placeholder="E-mail" class="mail"></input>
+                <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
+                <textarea type="text" rows="20" placeholder="Din besked" class="message"></textarea>
+                <button onclick="flowFunction()">SEND</button>
+            </div>
+                <div id="thank_you_message" class="hide">
+                    <p>TAK FOR DIN BESKED!<br><br>Vi gør vores bedste for at besvare den så hurtigt som muligt.</p>
+                </div>
+            </div>
+
+            <div id="info" >
+                <h3>KONTAKT OS</h3>
+            <div id="info_content">
+                <div class="adress">
+                    <img class="icon" src="icons/fb_w.png">
+                    <p>Tornebuskegade 7, 1.<br>1131 København K</p>
+                </div>
+                <div class="phone">
+                    <img class="icon" src="icons/fb_w.png">
+                    <p>+45 35 10 70 70</p>
+                </div>
+                <div class="mail">
+                    <img class="icon" src="icons/fb_w.png">
+                    <p>info@anima.dk</p>
+                </div>
+                <div class="some">
+                    <img  class="some_icon" src="icons/fb_w.png">
+                    <img class="some_icon" src="icons/fb_w.png">
+                    <img class="some_icon" src="icons/fb_w.png">
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+
+    
+
+
+        <!--footer, der er delt op i tre kolloner-->
+        <footer>
+            
+        </footer>
+    </main>
+
+    <script>
+        function flowFunction() {
+           var thankYouMessage = document.getElementById("thank_you_message");
+           var formContent = document.getElementById("form_content");
+           thankYouMessage.classList.toggle("hide");
+           formContent.classList.toggle("hide");
+        }
+    </script>
+
+    <!--script til at indsætte indhold om blog og alle blogpostene-->
+    <script src="kontakt.js"></script>
+
+    
+</body>
+
+</html>
