@@ -285,9 +285,9 @@ img {
   color: var(--color-black);
 }
 /* a:link, a:visited,  a:hover, a:active {
-  color: #000000;
-  text-decoration: none;
-} */
+    color: #000000;
+    text-decoration: none;
+  } */
 
 /*----two third------*/
 .two-third_wrapper {
@@ -370,7 +370,7 @@ img {
   border-radius: 10px;
 }
 
-/*----footer------*/
+/*----newsletter------*/
 .footer_wrapper {
   display: flex;
   background-color: var(--color-darkerblue);
@@ -589,6 +589,7 @@ img {
     padding: 80px;
   }
 }
+
 /*----laptop large------*/
 @media screen and (min-width: 1440px) {
   .splash_text {
