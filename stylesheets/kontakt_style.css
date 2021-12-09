@@ -25,7 +25,11 @@ p {
   font-family: work-sans, sans-serif;
 }
 
-button {
+/*------------------------------------------------------------------------------------*/
+/*                                     MAIN INDHOLD                                   */
+/*------------------------------------------------------------------------------------*/
+
+main button {
   all: unset;
   font-family: montserrat, sans-serif;
   cursor: pointer;
@@ -35,15 +39,13 @@ button {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-/*************************************************************/
-
-#content {
+main #content {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-#content #form {
+main #content #form {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -52,23 +54,23 @@ button {
   margin: 10% 10% 5% 10%;
 }
 
-#content #form input,
-#content #form textarea {
+main #content #form input,
+main #content #form textarea {
   width: 100%;
   margin-top: 5%;
   margin-bottom: 5%;
   height: 30px;
 }
 
-#content #form .message {
+main #content #form .message {
   height: 100px;
 }
 
-#thank_you_message {
+main #thank_you_message {
   text-align: center;
 }
 
-#content #info {
+main #content #info {
   display: flex;
   flex-direction: column;
   background-color: var(--color-darkblue);
@@ -79,44 +81,48 @@ button {
   color: var(--color-white);
 }
 
-#content #info #info_content {
+main #content #info #info_content {
   margin-top: 10%;
 }
 
-#content #info .adress,
-#content #info .phone,
-#content #info .mail {
+main #content #info .adress,
+main #content #info .phone,
+main #content #info .mail {
   display: flex;
   flex-direction: row;
   margin-top: 10%;
 }
 
-#content #info .icon {
+main #content #info .icon {
   height: 30px;
   align-self: center;
   margin-right: 10%;
 }
 
-#content #info p {
+main #content #info p {
   align-self: center;
 }
 
-#content #info .some {
+main #content #info .some {
   margin-top: 20%;
 }
 
-#content #info .some_icon {
+main #content #info .some_icon {
   height: 30px;
   margin-right: 5%;
 }
 
-/************************TOGGLE CLASS'****************/
+/*------------------------------------------------------------------------------------*/
+/*                                    TOGGLE CLASSES                                  */
+/*------------------------------------------------------------------------------------*/
 
 .hide {
   display: none !important;
 }
 
-/************************MEDIA QUERY****************/
+/*------------------------------------------------------------------------------------*/
+/*                                     MEDIA QUERY                                    */
+/*------------------------------------------------------------------------------------*/
 
 /*-------tablet--------*/
 @media screen and (min-width: 768px) {
@@ -124,15 +130,15 @@ button {
 
 /*---------laptop---------*/
 @media screen and (min-width: 1024px) {
-  #content {
+  main #content {
     flex-direction: row;
   }
 
-  #content #form {
+  main #content #form {
     margin: 10% 0 10% 10%;
   }
 
-  #content #info {
+  main #content #info {
     margin: 10% 10% 10% 0;
   }
 }
