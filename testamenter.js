@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", hentData);
 
-let template = document.querySelector("template");
 
 //Henter json data og starter forsiden (async for at få loadet json før man går videre)
 async function hentData() {
@@ -20,8 +19,12 @@ async function vis(data) {
 
     document.querySelector("#splash").style.backgroundImage = "url(" + data.splash1.guid + ")";
     document.querySelector("#title").textContent = data.title.rendered;
-    document.querySelector("#content").innerHTML = data.content.rendered;
-
+    document.querySelector("#top_column .textbox h3").textContent = data.overskrift1;
+    document.querySelector("#top_column .textbox p").textContent = data.tekstfelt1;
+    document.querySelector("#top_column img").src = data.indholdsbillede1.guid;
+    document.querySelector("#bottom_column .textbox h3").textContent = data.overskrift2;
+    document.querySelector("#bottom_column .textbox p").textContent = data.tekstfelt2;
+    document.querySelector("#bottom_column img").src = data.indholdsbillede2.guid;
 }
 
 

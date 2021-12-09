@@ -33,7 +33,7 @@
                 <input type="email" placeholder="E-mail" class="mail"></input>
                 <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
                 <textarea type="text" rows="20" placeholder="Din besked" class="message"></textarea>
-                <button onclick="myFunction()">SEND</button>
+                <button onclick="flowFunction()">SEND</button>
             </div>
                 <div id="thank_you_message" class="hide">
                     <p>TAK FOR DIN BESKED!<br><br>Vi gør vores bedste for at besvare den så hurtigt som muligt.</p>
@@ -76,7 +76,7 @@
     </main>
 
     <script>
-        function myFunction() {
+        function flowFunction() {
            var thankYouMessage = document.getElementById("thank_you_message");
            var formContent = document.getElementById("form_content");
            thankYouMessage.classList.toggle("hide");
