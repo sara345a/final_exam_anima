@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex">
     <link rel="stylesheet" href="stylesheets/stoet_style.css">
     <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
 
     <title>STØT | Anima</title>
 </head>
@@ -14,63 +15,162 @@
 <body>
        <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
         <header>
-
-        </header>
-
-        <div id="splash">
-            <h1 id="title">
-            </h1>
-
-            <p id="blog_splashtext"><p></p>
-
-            <div id="form">
-                <div id="form_content" class="">
-                    <div id="flow_steps">
-                        <h4 id="step1_path" class="this_flow">1. BELØB</h4>
-                        <h4 id="step2_path">2. INFORMATION</h4>
-                        <h4 id="step3_path">3. BETAL</h4>
+            <div class="top_top">
+                <div class="top_component">
+                <nav id="navbar">
+                  <div class="wrapper">
+                  <div class="logo_container">
+                    <div class="menu_toggle" id="burger_menu">
+                      <span class="burger-stripe"></span>
+                      <span class="burger-stripe"></span>
+                      <span class="burger-stripe"></span>
                     </div>
-                    <div id="step1">
-                        <h3>VÆLG BELØB</h3>
-                        <div id="amounts">
-                            <button id="dkk50" class="" onclick="chosenAmountOneFunction()">50 DKK</button>
-                            <button id="dkk100" class="" onclick="chosenAmountTwoFunction()">100 DKK</button>
-                            <button id="dkk150" class="" onclick="chosenAmountThreeFunction()">150 DKK</button>
-                            <button id="dkk200" class="" onclick="chosenAmountFourFunction()">200 DKK</button>
-                            <button id="dkk250" class="" onclick="chosenAmountFiveFunction()">250 DKK</button>
-                            <button id="dkk500" class="" onclick="chosenAmountSixFunction()">500 DKK</button>
-                            <input type="text" placeholder="ANDET"></input>
-                        </div>
-                        <h3>VÆLG BETALINGSFORM</h3>
-                        <div class="payments">
-                            <button id="card" class="" onclick="chosenCardFunction()">BETALINGSKORT</button>
-                            <button id="mobilepay" class="" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
-                            <button id="pay_service" class="" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
-                        </div>
-                        <div class="next_button">
-                            <button onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
-                        </div>
+            
+                    <img
+                      id="navbar_logo"
+                      src="https://anima.dk/sites/default/files/anima-logo_0.svg"
+                      alt="logo"
+                    />
+                  </div>
+            
+                  <div class="nav_container">
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn"
+                          >OM DYRENE</a
+                        >
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Landbrugsdyr</a>
+                        <a href="#">Pelsdyr</a>
+                        <a href="#">Forsøgsdyr</a>
+                        <a href="#">Underholdningsdyr</a>
+                        <a href="#">Vilde dyr</a>
+                        <a href="#">Truede dyr</a>
+                      </div>
                     </div>
-                    <div id="step2" class="hide">
-                        <h3>INDTAST DINE OPLYSNINGER</h3>
-                        <div class="inputs">
-                            <input type="text" placeholder="Navn" class="name"></input>
-                            <input type="email" placeholder="E-mail" class="mail"></input>
-                            <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
-                            <div class="checkbox"><input type="checkbox"></input><p>Ja tak, jeg vil gerne modtage nyhedsbrev fra Anima</p></div>
-                            <div class="checkbox"><input type="checkbox"></input><p>Jeg godkender handelsbetingelserne*</p></div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn"
+                          >GØR EN FORSKEL</a
+                        >
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Bliv medlem</a>
+                        <a href="#">Lev dyrevenligt</a>
+                        <a href="#">Underskriv</a>
+                        <a href="#">Testamentér</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn">BLOG</a>
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Kategori 1</a>
+                        <a href="#">Kategori 1</a>
+                        <a href="#">Kategori 1</a>
+                        <a href="#">Kategori 1</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn">OM OS</a>
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Vores arbejde</a>
+                        <a href="#">Vores historie</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn">KONTAKT</a>
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Ledige stillinger</a>
+                      </div>
+                    </div>
+            
+                    <div class="search_container">
+                      <input  class="search" type="text" name="" placeholder="Søg...">
+                     </div>
+                
+                    <div class="support-button_container">
+                      <button type="button">STØT</button>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            
+            
+                  <!-- Slideshow container -->
+            <div class="ss-container">
+            
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides">
+                <div class="picture_one"><div class="text">
+                  <h1>Caption One</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vitae accusamus consequatur aut magni. Et similique corrupti deleniti vero nemo?</p>
+                </div>
+                <div id="form">
+                    <div id="form_content" class="">
+                        <div id="flow_steps">
+                            <h4 id="step1_path" class="this_flow">1. BELØB</h4>
+                            <h4 id="step2_path">2. INFORMATION</h4>
+                            <h4 id="step3_path">3. BETAL</h4>
+                        </div>
+                        <div id="step1">
+                            <h3>VÆLG BELØB</h3>
+                            <div id="amounts">
+                                <button id="dkk50" class="" onclick="chosenAmountOneFunction()">50 DKK</button>
+                                <button id="dkk100" class="" onclick="chosenAmountTwoFunction()">100 DKK</button>
+                                <button id="dkk150" class="" onclick="chosenAmountThreeFunction()">150 DKK</button>
+                                <button id="dkk200" class="" onclick="chosenAmountFourFunction()">200 DKK</button>
+                                <button id="dkk250" class="" onclick="chosenAmountFiveFunction()">250 DKK</button>
+                                <button id="dkk500" class="" onclick="chosenAmountSixFunction()">500 DKK</button>
+                                <input type="text" placeholder="ANDET"></input>
+                            </div>
+                            <h3>VÆLG BETALINGSFORM</h3>
+                            <div class="payments">
+                                <button id="card" class="" onclick="chosenCardFunction()">BETALINGSKORT</button>
+                                <button id="mobilepay" class="" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
+                                <button id="pay_service" class="" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
+                            </div>
                             <div class="next_button">
-                                <button onclick="flowFuntionStepTwo()">GÅ TIL BETALING</button>
+                                <button onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
                             </div>
                         </div>
+                        <div id="step2" class="hide">
+                            <h3>INDTAST DINE OPLYSNINGER</h3>
+                            <div class="inputs">
+                                <input type="text" placeholder="Navn" class="name"></input>
+                                <input type="email" placeholder="E-mail" class="mail"></input>
+                                <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
+                                <div class="checkbox"><input type="checkbox"></input><p>Ja tak, jeg vil gerne modtage nyhedsbrev fra Anima</p></div>
+                                <div class="checkbox"><input type="checkbox"></input><p>Jeg godkender handelsbetingelserne*</p></div>
+                                <div class="next_button">
+                                    <button onclick="flowFuntionStepTwo()">GÅ TIL BETALING</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step3" class="hide">
+                            <h3>BETALING</h3>
+                            <P>Du vil nu blive dirigeret videre til betalingsudbyderen</P>
+                        </div>
                     </div>
-                    <div id="step3" class="hide">
-                        <h3>BETALING</h3>
-                        <P>Du vil nu blive dirigeret videre til betalingsudbyderen</P>
-                    </div>
-                </div>
+                </div></div> 
             </div>
-        </div>
+              </div>
+            </div>
+        </header>
+
+        
+
+            
 
     <main>
         <section id="content">
