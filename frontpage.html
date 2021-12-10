@@ -216,40 +216,56 @@
 </section>
 
 <!-- COMPONENT FIVE -->
-<section class="footer_wrapper">
-  <div class=footer-top_container>
-    <div class="footer_column one">
-      <img src="" alt="">
-      <p>Logo</p>
-      <img src="" alt="">
+
+<footer>
+  <div class="footer-content-wrapper">
+    <div class="column one">
+      <h3>Column 1</h3>
+      <img src="" alt="" />
+      <a href="#"
+        >Husk at du kan få fradrag for donationer til Anima på op til 17.000
+        kr.</a
+      >
+      <a href="#">CVR</a>
+      <img src="" alt="" />
     </div>
-    <div class="footer_column two">
-      <h4>Links</h4>
-      <p>Lorem.</p>
-      <p>Lorem.</p>
-      <p>Lorem.</p>
-      <p>Lorem.</p>
+
+    <div class="column two">
+      <h3>Column 2</h3>
+      <a href="#">Om dyrene</a>
+      <a href="#">Gør en forskel</a>
+      <a href="#">Blog</a>
+      <a href="#">Om os</a>
+      <a href="#">Kontakt</a>
+    </div>
+
+    <div class="column three">
+      <h3>Column 3</h3>
+      <a href="#"
+        >Mail: <br />
+        info@anima.dk</a
+      >
+      <a href="#"
+        >Telefon: <br />
+        35 10 70 70</a
+      >
+      <a href="#"
+        >Adresse: <br />
+        Tornebuskegade 7, 1.<br />
+        1131 København K
+      </a>
+    </div>
+
+    <div class="column four">
+      <h3>Column 4</h3>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Vimeo</a>
+      <a href="#">Youtube</a>
     </div>
   </div>
-
-  <div class=footer-bottom_container>
-    <div class="footer_column three">
-      <h4>Kontakt</h4>
-      <p>Lorem.</p>
-      <p>Lorem.</p>
-      <p>Lorem.</p>
-    </div>
-    <div class="footer_column four">
-      <h4>Følg os</h4>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter-square"></i>
-      <i class="fab fa-vimeo"></i>
-      <i class="fab fa-youtube"></i>
-
-    </div>
-  </div>
-</section>
+</footer>
 
 
 
@@ -369,13 +385,7 @@ async function hentData() {
 async function vis(data) {
 
 console.log("vis");
-/* document.querySelector("#splash").style.backgroundImage = "url(" + data.splashbillede.guid + ")"; */
-// document.querySelector(".p").textContent = data.content.rendered;
-// document.querySelector("#blogindhold").innerHTML = data.content.rendered;
 
-/* document.querySelector(".picture_one").src = data.kampagne_splash1.guid;
-document.querySelector(".picture_two").src = data.kampagne_splash2.guid;
-document.querySelector(".picture_three").src = data.kampagne_splash3.guid; */
 
  document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")"; 
  document.querySelector(".picture_two").style.backgroundImage = "url(" + data.splash2.guid + ")"; 

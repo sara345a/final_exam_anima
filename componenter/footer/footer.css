@@ -20,6 +20,7 @@
   background-color: var(--color-darkerblue);
   color: var(--color-white);
   padding: 20px;
+  font-family: var(--paragraph);
 }
 
 .column {

@@ -19,6 +19,19 @@ html {
   overflow-y: scroll;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: var(--paragraph);
+}
+
 .picture_one,
 .picture_two,
 .picture_three {
@@ -213,6 +226,10 @@ img {
   display: none;
 }
 
+.picture_three {
+  background-position: top right;
+}
+
 /* Next & previous buttons */
 .prev,
 .next {
@@ -300,11 +317,16 @@ img {
   cursor: pointer;
   text-decoration: none;
   color: var(--color-black);
+  font-family: var(--paragraph);
 }
-/* a:link, a:visited,  a:hover, a:active {
-  color: #000000;
+.call-to-action_option:hover {
+  background-color: var(--color-grey);
+}
+
+.call-to-action_box a {
   text-decoration: none;
-} */
+  color: var(--color-black);
+}
 
 /*----two third------*/
 .two-third_wrapper {
@@ -421,6 +443,29 @@ img {
   gap: 13px;
   font-size: 30px;
 }
+
+.footer-content-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  text-align: start;
+  background-color: var(--color-darkerblue);
+  color: var(--color-white);
+  padding: 20px;
+  font-family: var(--paragraph);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.column a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
 /*------------------------------------------------------------------------------------*/
 /*                                   MEDIAQUERIES                                     */
 /*------------------------------------------------------------------------------------*/
@@ -505,6 +550,14 @@ img {
 
   #burger_menu.is-active .burger-stripe:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .footer-content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
