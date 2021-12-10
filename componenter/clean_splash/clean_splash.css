@@ -20,9 +20,7 @@ html {
   overflow-y: scroll;
 }
 
-.picture_one,
-.picture_two,
-.picture_three {
+.picture_one {
   width: 100%;
   height: 500px;
   background-position: center;
