@@ -1,4 +1,4 @@
-(function () {
+function () {
   "use strict";
 
   // define variables
@@ -29,4 +29,4 @@
   window.addEventListener("load", callbackFunc);
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
-})();
+}();
