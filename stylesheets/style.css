@@ -384,7 +384,7 @@ img {
   padding: 40px 0px;
 }
 
-.input_fields {
+#input_fields {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -392,7 +392,16 @@ img {
   justify-content: center;
 }
 
-.input_content {
+#input_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  color: var(--color-white);
+}
+
+#thank_you_message {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -464,6 +473,14 @@ img {
 .column a {
   text-decoration: none;
   color: var(--color-white);
+}
+
+/*------------------------------------------------------------------------------------*/
+/*                                   TOGGLE CLASSES                                   */
+/*------------------------------------------------------------------------------------*/
+
+.hide {
+  display: none !important;
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -608,7 +625,7 @@ img {
     min-height: 150px;
   }
 
-  .input_fields {
+  #input_fields {
     flex-direction: row;
   }
 
