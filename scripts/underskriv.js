@@ -45,11 +45,11 @@ let json;
 async function hentData() {
     console.log("hentData");
 
-    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/26/"
+    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/185/"
     const respons = await fetch(link);
     json = await respons.json();
 
-    const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/blog_posts"
+    const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/underskriv_posts"
     const responspost = await fetch(postlink);
     jsonpost = await responspost.json();
 
@@ -58,18 +58,16 @@ async function hentData() {
     categoryJson = await categoryRespons.json();
 
     //vis forsiden
-    vis(json);
+    vis();
     addButtons();
 
 }
 
 //Indsætter data fra wordpress på rette pladser på forsiden
-async function vis(data) {
+async function vis() {
     console.log("vis");
 
     document.querySelector(".picture_one").style.backgroundImage = "url(" + json.splash1.guid + ")";
-    document.querySelector(".text h1").textContent = data.splash_overskrift1;
-    document.querySelector(".text p").textContent = data.splash_tekst1;
    
 
     let filtrerede;

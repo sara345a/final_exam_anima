@@ -204,15 +204,20 @@
 
 <!-- COMPONENT FOUR -->
 <section class="newsletter_wrapper">
-  <div class="input_content">
-    <h2 class="subheader">Lorem, ipsum dolor.</h2>
-    <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, provident?</p>
+  <div id="input_content">
+    <h2 class="subheader">TILMELD NYHEDSBREV</h2>
+    <p class="paragraph">Få spændende nyheder og følg med i vores arbejde for dyrene - Tilmeld dig nyhedsbrevet gratis her. </p>
   </div>
 
-  <div class="input_fields">
+  <div id="input_fields">
     <input class="newsletter_input" type="text" name="" placeholder="NAVN">
     <input class="newsletter_input" type="text" name="" placeholder="E-MAIL">
-    <button type="button">JA TAK - TILMELD</button>
+    <button type="button" onclick="flowFunction()">JA TAK - TILMELD</button>
+  </div>
+
+  <div id="thank_you_message" class="hide">
+    <h2 class="subheader">Tak for din tilmelding</h2>
+    <p class="paragraph">Nu kan du glæde dig til spændende nyheder fra Anima.</p>
   </div>
 </section>
 
@@ -392,9 +397,16 @@ console.log("vis");
  document.querySelector(".picture_two").style.backgroundImage = "url(" + data.splash2.guid + ")"; 
  document.querySelector(".picture_three").style.backgroundImage = "url(" + data.splash3.guid + ")"; 
 
-
-
 }
+
+function flowFunction() {
+           var thankYouMessage = document.getElementById("thank_you_message");
+           var formContent = document.getElementById("input_content");
+           var formInputs = document.getElementById("input_fields");
+           thankYouMessage.classList.toggle("hide");
+           formContent.classList.toggle("hide");
+           formInputs.classList.toggle("hide");
+        }
   </script>
 </body>
 </html>

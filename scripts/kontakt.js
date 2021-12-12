@@ -1,3 +1,37 @@
+/* */ //////////////////////////BRUGER MENU/////////////////////////////////////////// */
+window.addEventListener("DOMContentLoaded", initPage);
+function initPage() {
+  const menu = document.querySelector("#burger_menu");
+  const menuLinks = document.querySelector(".nav_container");
+
+  menu.addEventListener("click", function () {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.toggle("active");
+  });
+}
+///////////////////////////STICKY NAVBAR WHEN SCROLL///////////////////////////////////////////
+window.onscroll = function () {
+  makeNavbarSticky();
+};
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function makeNavbarSticky() {
+  if (window.scrollY > 50) {
+    navbar.classList.add("sticky");
+    navbar.classList.add("background_color");
+  } else {
+    navbar.classList.remove("sticky");
+    navbar.classList.remove("background_color");
+  }
+}
+
+///////////////////////////HENT DATAL///////////////////////////////////////////
+
 document.addEventListener("DOMContentLoaded", hentData);
 
 let template = document.querySelector("template");
@@ -18,9 +52,9 @@ async function hentData() {
 async function vis(data) {
     console.log("vis");
 
-    document.querySelector("#splash").style.backgroundImage = "url(" + data.splash1.guid + ")";
-    document.querySelector("#title").textContent = data.title.rendered;
-    /* document.querySelector("#blog_splashtext").innerHTML = data.content.rendered; */
+    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")";
+    document.querySelector(".text h1").textContent = data.splash_overskrift1;
+    document.querySelector(".text p").textContent = data.splash_tekst1;
 
 }
 

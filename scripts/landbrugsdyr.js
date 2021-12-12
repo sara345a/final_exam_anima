@@ -8,35 +8,6 @@ function initPage() {
     menu.classList.toggle("is-active");
     menuLinks.classList.toggle("active");
   });
-
-  // define variables
-  var items = document.querySelectorAll(".timeline li");
-
-  // check if an element is in viewport
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
-      }
-    }
-  }
-
-  // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
-  window.addEventListener("scroll", callbackFunc);
 }
 ///////////////////////////STICKY NAVBAR WHEN SCROLL///////////////////////////////////////////
 window.onscroll = function () {
@@ -68,7 +39,7 @@ document.addEventListener("DOMContentLoaded", hentData);
 async function hentData() {
   console.log("hentData");
 
-  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/187/";
+  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/100/";
 
   const respons = await fetch(link);
 
@@ -83,9 +54,4 @@ async function vis(data) {
 
   document.querySelector(".picture_one").style.backgroundImage =
     "url(" + data.splash1.guid + ")";
-  document.querySelector(".text h1").textContent = data.splash_overskrift1;
-  document.querySelector(".text p").textContent = data.splash_tekst1;
-  document.querySelector(".subheader").textContent = data.overskrift1;
-  document.querySelector(".paragraph").textContent = data.tekstfelt1;
-
 }

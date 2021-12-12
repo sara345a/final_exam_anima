@@ -18,7 +18,7 @@ async function hentData() {
 async function vis(data) {
     console.log("vis");
 
-    document.querySelector("#splash").style.backgroundImage = "url(" + data.splash1.guid + ")";
+    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")";
     document.querySelector("#title").textContent = data.title.rendered;
     document.querySelector("#blog_splashtext").innerHTML = data.content.rendered;
 
@@ -26,7 +26,7 @@ async function vis(data) {
     document.querySelector(".textbox p").textContent = data.tekstfelt1;
     document.querySelector("#img_box img").src = data.indholdsbillede1.guid;
 
-    const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/blog_posts"
+    const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/lev_dyrevenligt_post"
     const responspost = await fetch(postlink);
     const jsonpost = await responspost.json();
     /* let filtrerede; */
