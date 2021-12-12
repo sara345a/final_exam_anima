@@ -118,12 +118,9 @@ console.log("vis");
  document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")"; 
  document.querySelector(".picture_two").style.backgroundImage = "url(" + data.splash2.guid + ")"; 
  document.querySelector(".picture_three").style.backgroundImage = "url(" + data.splash3.guid + ")"; 
- document.querySelector(".text h1").textContent = data.splash_overskrift1;
-    document.querySelector(".text p").textContent = data.splash_tekst1;
-    document.querySelector(".text h1").textContent = data.splash_overskrift2;
-    document.querySelector(".text p").textContent = data.splash_tekst2;
-    document.querySelector(".text h1").textContent = data.splash_overskrift3;
-    document.querySelector(".text p").textContent = data.splash_tekst3;
+ document.querySelector(".first h1").textContent = data.splash_overskrift1;
+    document.querySelector(".second h1").textContent = data.splash_overskrift2;
+    document.querySelector(".third h1").textContent = data.splash_overskrift3;
 
 }
 
