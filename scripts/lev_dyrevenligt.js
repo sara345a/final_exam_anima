@@ -19,8 +19,8 @@ async function vis(data) {
     console.log("vis");
 
     document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")";
-    document.querySelector("#title").textContent = data.title.rendered;
-    document.querySelector("#blog_splashtext").innerHTML = data.content.rendered;
+    document.querySelector(".text h1").textContent = data.splash_overskrift1;
+    document.querySelector(".text p").textContent = data.splash_tekst1;
 
     document.querySelector(".textbox h3").textContent = data.overskrift1;
     document.querySelector(".textbox p").textContent = data.tekstfelt1;

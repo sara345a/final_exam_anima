@@ -54,6 +54,8 @@ async function vis(data) {
 
   document.querySelector(".picture_one").style.backgroundImage =
     "url(" + data.splash1.guid + ")";
+    document.querySelector(".text h1").textContent = data.splash_overskrift1;
+    document.querySelector(".text p").textContent = data.splash_tekst1;
 
     document.querySelector("#icon_1 img").src = data.ikon1.guid;
     document.querySelector("#icon_1 h4").textContent = data.ikon_overskrift1;

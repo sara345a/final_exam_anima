@@ -58,16 +58,18 @@ async function hentData() {
     categoryJson = await categoryRespons.json();
 
     //vis forsiden
-    vis();
+    vis(json);
     addButtons();
 
 }
 
 //Indsætter data fra wordpress på rette pladser på forsiden
-async function vis() {
+async function vis(data) {
     console.log("vis");
 
     document.querySelector(".picture_one").style.backgroundImage = "url(" + json.splash1.guid + ")";
+    document.querySelector(".text h1").textContent = data.splash_overskrift1;
+    document.querySelector(".text p").textContent = data.splash_tekst1;
    
 
     let filtrerede;
