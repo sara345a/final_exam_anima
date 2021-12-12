@@ -26,7 +26,7 @@ async function vis(data) {
     document.querySelector(".textbox p").textContent = data.tekstfelt1;
     document.querySelector("#img_box img").src = data.indholdsbillede1.guid;
 
-    const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/blog_posts"
+    const postlink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/lev_dyrevenligt_post"
     const responspost = await fetch(postlink);
     const jsonpost = await responspost.json();
     /* let filtrerede; */

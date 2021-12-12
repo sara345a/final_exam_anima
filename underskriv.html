@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="stylesheets/underskriv_style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+
+    <title>UNDERSKRIV | Anima</title>
+</head>
+
+<body>
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
+        <header>
+            <div class="top_top">
+                <div class="top_component">
+                <nav id="navbar">
+                  <div class="wrapper">
+                  <div class="logo_container">
+                    <div class="menu_toggle" id="burger_menu">
+                      <span class="burger-stripe"></span>
+                      <span class="burger-stripe"></span>
+                      <span class="burger-stripe"></span>
+                    </div>
+            
+                    <img
+                      id="navbar_logo"
+                      src="https://anima.dk/sites/default/files/anima-logo_0.svg"
+                      alt="logo"
+                    />
+                  </div>
+            
+                  <div class="nav_container">
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn"
+                          >OM DYRENE</a
+                        >
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Landbrugsdyr</a>
+                        <a href="#">Pelsdyr</a>
+                        <a href="#">Forsøgsdyr</a>
+                        <a href="#">Underholdningsdyr</a>
+                        <a href="#">Vilde dyr</a>
+                        <a href="#">Truede dyr</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn"
+                          >GØR EN FORSKEL</a
+                        >
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Bliv medlem</a>
+                        <a href="#">Lev dyrevenligt</a>
+                        <a href="#">Underskriv</a>
+                        <a href="#">Testamentér</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn">BLOG</a>
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Kategori 1</a>
+                        <a href="#">Kategori 1</a>
+                        <a href="#">Kategori 1</a>
+                        <a href="#">Kategori 1</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn">OM OS</a>
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Vores arbejde</a>
+                        <a href="#">Vores historie</a>
+                      </div>
+                    </div>
+            
+                    <div class="dropdown">
+                      <li>
+                        <a href="portofolio.html" class="nav_links" id="dropbtn">KONTAKT</a>
+                      </li>
+                      <div class="dropdown-content">
+                        <a href="#">Ledige stillinger</a>
+                      </div>
+                    </div>
+            
+                    <div class="search_container">
+                      <input  class="search" type="text" name="" placeholder="Søg...">
+                     </div>
+                
+                    <div class="support-button_container">
+                      <button type="button">STØT</button>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            
+            
+                  <!-- Slideshow container -->
+            <div class="ss-container">
+            
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides">
+                <div class="picture_one"></div>
+                <div class="text">
+                  <h1>Caption One</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vitae accusamus consequatur aut magni. Et similique corrupti deleniti vero nemo?</p>
+                </div>
+              </div>
+            </div>
+        </header>
+
+        
+
+        <main>
+          <div id="button_box">
+            <!-- <button class="filter_btn" value="landbrugsdyr" id="landbrugsdyr_button">Landbrugsdyr</button>
+            <button class="filter_btn" id="pelsdyr_button">Pelsdyr</button>
+            <button class="filter_btn" id="forsoegsdyr_button">Forsøgsdyr</button>
+            <button class="filter_btn" id="underholdningsdyr_button">Underholdningsdyr</button>
+            <button class="filter_btn" id="vilde_dyr_button">Vilde dyr</button>
+            <button class="filter_btn" id="truede_dyr_button">Truede dyr</button>
+            <button class="filter_btn" id="andet_button">andet</button> -->
+        </div>
+            
+
+            <div id="blogcontent"></div>
+
+
+            <template id="category_template">
+                <button class="filter_btn"></button>
+            </template>
+            <!--template til hvert post-->
+            <template id="post_template">
+                <article class="post_article">
+                    <div class="post_element">
+                        <img class="post_image"></img>
+                        <h2 class="post_h2"></h2>
+                        <div class="post_excerpt"></div>
+                        <div class="button_box">
+                            <button class="post_button">LÆS HER</button>
+                        </div>
+    
+                    </div>
+                    <!-- <div class="mere lukket" style="display: none;">
+                    </div> -->
+                </article>
+            </template>
+
+        </main>
+
+
+        <!--footer, der er delt op i tre kolloner-->
+        <footer>
+            
+        </footer>
+    </main>
+
+    <!--script til at indsætte indhold om blog og alle blogpostene-->
+    <script src="scripts/underskriv.js"></script>
+
+    </script>
+</body>
+
+</html>
