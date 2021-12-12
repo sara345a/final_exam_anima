@@ -54,6 +54,8 @@ async function vis(data) {
 
   document.querySelector(".picture_one").style.backgroundImage =
     "url(" + data.splash1.guid + ")";
+    document.querySelector(".text h1").textContent = data.splash_overskrift1;
+    document.querySelector(".text p").textContent = data.splash_tekst1;
     document.querySelector("#top_column .textbox h3").textContent = data.overskrift1;
     document.querySelector("#top_column .textbox p").textContent = data.tekstfelt1;
     document.querySelector("#top_column img").src = data.indholdsbillede1.guid;
