@@ -85,7 +85,19 @@ async function vis(data) {
     "url(" + data.splash1.guid + ")";
   document.querySelector(".text h1").textContent = data.splash_overskrift1;
   document.querySelector(".text p").textContent = data.splash_tekst1;
-  document.querySelector(".subheader").textContent = data.overskrift1;
-  document.querySelector(".paragraph").textContent = data.tekstfelt1;
+  document.querySelector(".two-third_left .subheader").textContent = data.overskrift1;
+  document.querySelector(".two-third_left .paragraph").textContent = data.tekstfelt1;
+  
+  document.querySelector(".two-third_right .subheader").textContent = data.overskrift2;
+  document.querySelector(".two-third_right .h4_1").textContent = data.ikon_overskrift1;
+  document.querySelector(".two-third_right .icon_1").src = data.ikon1.guid;
+  
+  document.querySelector(".two-third_right .h4_2").textContent = data.ikon_overskrift2;
+  document.querySelector(".two-third_right .icon_2").src = data.ikon2.guid;
+  
+  document.querySelector(".two-third_right .h4_3").textContent = data.ikon_overskrift3;
+  document.querySelector(".two-third_right .icon_3").src = data.ikon3.guid;
+  
+
 
 }
