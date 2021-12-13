@@ -21,6 +21,19 @@ html {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: var(--paragraph);
+}
+
 .picture_one {
   width: 100%;
   height: 500px;
@@ -31,7 +44,7 @@ html {
 /*------------------------------------------------------------------------------------*/
 /*                                     NAV BAR START                                  */
 /*------------------------------------------------------------------------------------*/
-.top_top {
+header .top_top {
   position: relative;
 }
 .wrapper {
@@ -40,34 +53,30 @@ html {
   position: sticky;
 }
 
-.nav_container {
+header .nav_container {
   width: 100%;
   display: flex;
   flex-direction: row;
   padding: 5px;
 }
 
-#navbar {
-  z-index: 5;
+header .logo_image {
+  max-width: 150px;
+  margin-top: 5px;
 }
 
-#navbar_logo {
-  width: 50%;
-  object-fit: scale-down;
-}
-
-img#navbar_logo:hover {
+header img#navbar_logo:hover {
   opacity: 70%;
   transition: all 0.2s ease-out;
 }
 
-.logo_container {
+header .logo_container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.nav_container {
+header .nav_container {
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -75,7 +84,7 @@ img#navbar_logo:hover {
   align-items: center;
 }
 
-.menu_toggle .burger-stripe {
+header .menu_toggle .burger-stripe {
   width: 25px;
   height: 3px;
   margin: 5px auto;
@@ -83,39 +92,38 @@ img#navbar_logo:hover {
   background: var(--color-grey);
 }
 
-.dropdown {
+header .dropdown {
   position: relative;
   display: inline-block;
   padding: 8px;
 }
 
-.dropdown-content {
+header .dropdown-content {
   display: none;
   position: absolute;
   background: var(--color-grey);
   color: var(--color-white);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
   margin-left: -20px;
 }
 
-.dropdown-content a {
+header .dropdown-content a {
   color: var(--color-black);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
+header .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+header .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.nav_links {
+header .nav_links {
   color: var(--color-white);
   text-decoration: none;
   /* position: relative; */
@@ -126,7 +134,7 @@ img#navbar_logo:hover {
   white-space: nowrap;
 }
 
-.nav_links:hover {
+header .nav_links:hover {
   color: rgb(199, 199, 199);
   transition: all 0.1s ease-out;
 }
@@ -136,7 +144,7 @@ button {
   background-color: var(--color-red);
   border: none;
   border-radius: 10px;
-  box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 40%);
+  box-shadow: var(--box-shadow);
   width: 90px;
   padding: 10px;
   cursor: pointer;
@@ -155,26 +163,26 @@ button:active {
 }
 
 /*STICKY NAVBAR CLASS-*/
-.sticky {
+header .sticky {
   position: fixed;
   top: 0;
   padding-bottom: 7px;
 }
 
-.background_color {
+header .background_color {
   background-color: var(--color-darkerblue);
   transition-timing-function: ease-in-out;
   transition: 0.4s;
   width: 100%;
 }
 
-.search_container {
+header .search_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.search {
+header .search {
   background: var(--color-white);
   border-color: var(--color-grey);
   border-radius: 10px;
@@ -193,7 +201,7 @@ img {
   overflow: hidden;
 }
 
-.top_component {
+header .top_component {
   margin: auto;
   position: absolute;
   top: 0px;
@@ -202,31 +210,25 @@ img {
 }
 
 /* Slideshow container */
-.slideshow-container {
+header .slideshow-container {
   position: relative;
   margin: auto;
-  z-index: -1;
 }
 
-.text {
+/* Caption text */
+header .text {
   color: #f2f2f2;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
   padding: 8px 12px;
   position: absolute;
   bottom: 90px;
   text-align: center;
   left: 20px;
-  font-family: var(--paragraph);
 }
 
-.text button {
+header .text button {
   width: 240px;
-}
-
-.text p {
-  max-width: 600px;
-  font-weight: 400;
 }
 
 /*----two third------*/
@@ -320,28 +322,20 @@ footer .column a:hover {
 /*------------------------------------------------------------------------------------*/
 
 @media screen and (min-width: 374px) {
-  .splash_text {
+  header .splash_text {
     bottom: 63%;
-  }
-
-  .text {
-    left: 50px;
   }
 }
 
 @media screen and (min-width: 425px) {
-  .splash_text {
+  header .splash_text {
     bottom: 58%;
-  }
-
-  .text {
-    left: 70px;
   }
 }
 
 /*---------mobile---------*/
 @media screen and (max-width: 768px) {
-  .nav_container {
+  header .nav_container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -355,49 +349,48 @@ footer .column a:hover {
     grid-gap: 0;
   }
 
-  #nav_logo {
+  header #nav_logo {
     margin-left: 20px;
   }
 
-  .nav_container.active {
+  header .nav_container.active {
     background: var(--color-darkblue);
     left: -10px;
     opacity: 1;
     transition: all 0.5s ease;
     padding: 2vh;
-    z-index: 30;
   }
 
-  .nav_links {
+  header .nav_links {
     font-size: 16px;
   }
 
-  .nav_links:hover {
+  header .nav_links:hover {
     transition: all 0.4s ease-out;
   }
 
-  #burger_menu {
+  header #burger_menu {
     transform: translate(5%, 20%);
   }
 
-  .menu_toggle .burger-stripe {
+  header .menu_toggle .burger-stripe {
     display: block;
     cursor: pointer;
   }
 
-  .menu_toggle:hover {
+  header .menu_toggle:hover {
     cursor: pointer;
   }
 
-  #burger_menu.is-active .burger-stripe:nth-child(2) {
+  header #burger_menu.is-active .burger-stripe:nth-child(2) {
     opacity: 0;
   }
 
-  #burger_menu.is-active .burger-stripe:nth-child(1) {
+  header #burger_menu.is-active .burger-stripe:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
 
-  #burger_menu.is-active .burger-stripe:nth-child(3) {
+  header #burger_menu.is-active .burger-stripe:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
@@ -412,32 +405,41 @@ footer .column a:hover {
 
 /*-------tablet--------*/
 @media screen and (min-width: 768px) {
-  #navbar_logo {
-    width: 25%;
-  }
-
-  .splash_text {
+  header .splash_text {
     bottom: 26%;
     font-size: 1.7em;
   }
 
-  .text {
-    font-size: 72px;
-    bottom: 40px;
-    text-align: unset;
-    left: 20px;
-  }
-
-  .nav_container.active {
-    width: 30%;
-    max-height: 10px;
-  }
-
-  .text {
+  header .text {
     font-size: 22px;
     bottom: 100px;
     text-align: unset;
     left: 50px;
+  }
+
+  header .nav_container.active {
+    width: 30%;
+    max-height: 10px;
+  }
+
+  header .nav_links {
+    font-size: 13px;
+  }
+
+  header .search {
+    max-width: 50px;
+    margin-bottom: unset;
+  }
+
+  header .nav_container button {
+    width: 70px;
+    height: 29px;
+    text-align: center;
+    line-height: 10px;
+  }
+
+  header .logo_container {
+    justify-content: unset;
   }
 
   .two-third {
@@ -462,78 +464,87 @@ footer .column a:hover {
 
 /*---------laptop---------*/
 @media screen and (min-width: 1024px) {
-  .logo_container {
+  header .logo_container {
     justify-content: flex-start;
   }
 
-  #navbar_logo {
-    width: 70%;
-  }
-
-  .logo_container {
+  header .logo_container {
     width: unset;
   }
 
-  .splash_text {
+  header .splash_text {
     bottom: 0%;
     font-size: 2.5em;
   }
 
-  .dropdown {
+  header .dropdown {
     padding-right: 17px;
   }
 
-  .wrapper {
+  header .wrapper {
     margin: 0px 20px;
   }
 
-  .sticky {
+  header .sticky {
     padding-bottom: 0px;
   }
 
-  .button {
-    width: 70px;
-  }
-
-  .search {
+  header .search {
     width: 80px;
     margin-bottom: unset;
   }
 
-  .nav_links {
+  header .nav_links {
     font-size: 19px;
+  }
+  header .call-to-action_option {
+    max-width: 250px;
+  }
+
+  header .two-third_right {
+    padding: 80px;
+  }
+
+  header .logo_image {
+    max-width: 160px;
+    margin-top: 12px;
+  }
+
+  header .text h1,
+  header .text p {
+    max-width: 600px;
   }
 }
 
 /*----laptop large------*/
 @media screen and (min-width: 1440px) {
-  .splash_text {
+  header .splash_text {
     bottom: 20%;
     font-size: 2.5em;
   }
-  .dropdown {
+  header .dropdown {
     padding-right: 30px;
   }
 
-  img {
+  header img {
     max-height: 600px;
   }
 
-  .button {
-    width: 80px;
-  }
-
-  .search {
+  header .search {
     width: 90px;
     margin-right: 10px;
   }
 
-  .nav_links {
+  header .nav_links {
     font-size: 22px;
   }
 
-  .dropdown {
+  header .dropdown {
     padding-right: 30px;
+  }
+
+  header .nav_container button {
+    height: 34px;
   }
 
   .two-third_left {

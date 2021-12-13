@@ -20,13 +20,33 @@ html {
   overflow-y: scroll;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: var(--paragraph);
+}
+
+.picture_one {
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
 /*------------------------------------------------------------------------------------*/
 /*                                     NAV BAR START                                  */
 /*------------------------------------------------------------------------------------*/
 header .top_top {
   position: relative;
 }
-header .wrapper {
+.wrapper {
   display: flex;
   margin: 0px 10px;
   position: sticky;
@@ -39,13 +59,9 @@ header .nav_container {
   padding: 5px;
 }
 
-header #navbar {
-  z-index: 5;
-}
-
-header #navbar_logo {
-  width: 50%;
-  object-fit: scale-down;
+header .logo_image {
+  max-width: 150px;
+  margin-top: 5px;
 }
 
 header img#navbar_logo:hover {
@@ -88,7 +104,6 @@ header .dropdown-content {
   color: var(--color-white);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
   margin-left: -20px;
 }
 
@@ -123,15 +138,27 @@ header .nav_links:hover {
   transition: all 0.1s ease-out;
 }
 
-header button {
+button {
   color: white;
   background-color: var(--color-red);
   border: none;
   border-radius: 10px;
-  /* box-shadow: 5px 10px; */
-  box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 40%);
+  box-shadow: var(--box-shadow);
   width: 90px;
   padding: 10px;
+  cursor: pointer;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-property: color, background-color;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: #ac3c36;
+  color: white;
 }
 
 /*STICKY NAVBAR CLASS-*/
@@ -165,18 +192,8 @@ header .search {
   margin-bottom: 10px;
 }
 
-/*------------------------------------------------------------------------------------*/
-/*                                     SPLASH SEKTION                                 */
-/*------------------------------------------------------------------------------------*/
-
-header .picture_one {
-  width: 100%;
-  height: 500px;
-  background-position: center;
-  background-size: cover;
-}
-
-header img {
+/*----------------------------------nav bar END---------------------------------------*/
+img {
   object-fit: cover;
   width: 100%;
   max-height: 500px;
@@ -195,12 +212,12 @@ header .top_component {
 header .slideshow-container {
   position: relative;
   margin: auto;
-  z-index: -1;
 }
 
+/* Caption text */
 header .text {
   color: #f2f2f2;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
   padding: 8px 12px;
   position: absolute;
@@ -213,11 +230,6 @@ header .text button {
   width: 240px;
 }
 
-header .text p {
-  max-width: 600px;
-  font-weight: 400;
-}
-
 /*------------------------------------------------------------------------------------*/
 /*                                   MEDIAQUERIES                                     */
 /*------------------------------------------------------------------------------------*/
@@ -226,19 +238,11 @@ header .text p {
   header .splash_text {
     bottom: 63%;
   }
-
-  header .text {
-    left: 50px;
-  }
 }
 
 @media screen and (min-width: 425px) {
   header .splash_text {
     bottom: 58%;
-  }
-
-  header .text {
-    left: 70px;
   }
 }
 
@@ -268,7 +272,6 @@ header .text p {
     opacity: 1;
     transition: all 0.5s ease;
     padding: 2vh;
-    z-index: 30;
   }
 
   header .nav_links {
@@ -306,26 +309,10 @@ header .text p {
 }
 
 /*-------tablet--------*/
-@media screen and (min-width: 768px) {
-  header #navbar_logo {
-    width: 25%;
-  }
-
+@media screen and (min-width: 769px) {
   header .splash_text {
     bottom: 26%;
     font-size: 1.7em;
-  }
-
-  header .text {
-    font-size: 72px;
-    bottom: 40px;
-    text-align: unset;
-    left: 20px;
-  }
-
-  header .nav_container.active {
-    width: 30%;
-    max-height: 10px;
   }
 
   header .text {
@@ -334,16 +321,36 @@ header .text p {
     text-align: unset;
     left: 50px;
   }
-}
 
+  header .nav_container.active {
+    width: 30%;
+    max-height: 10px;
+  }
+
+  header .nav_links {
+    font-size: 13px;
+  }
+
+  header .search {
+    max-width: 50px;
+    margin-bottom: unset;
+  }
+
+  header .nav_container button {
+    width: 70px;
+    height: 29px;
+    text-align: center;
+    line-height: 10px;
+  }
+
+  header .logo_container {
+    justify-content: unset;
+  }
+}
 /*---------laptop---------*/
 @media screen and (min-width: 1024px) {
   header .logo_container {
     justify-content: flex-start;
-  }
-
-  header #navbar_logo {
-    width: 70%;
   }
 
   header .logo_container {
@@ -367,10 +374,6 @@ header .text p {
     padding-bottom: 0px;
   }
 
-  header .button {
-    width: 70px;
-  }
-
   header .search {
     width: 80px;
     margin-bottom: unset;
@@ -379,8 +382,24 @@ header .text p {
   header .nav_links {
     font-size: 19px;
   }
-}
+  header .call-to-action_option {
+    max-width: 250px;
+  }
 
+  header .two-third_right {
+    padding: 80px;
+  }
+
+  header .logo_image {
+    max-width: 160px;
+    margin-top: 12px;
+  }
+
+  header .text h1,
+  header .text p {
+    max-width: 600px;
+  }
+}
 /*----laptop large------*/
 @media screen and (min-width: 1440px) {
   header .splash_text {
@@ -395,10 +414,6 @@ header .text p {
     max-height: 600px;
   }
 
-  header .button {
-    width: 80px;
-  }
-
   header .search {
     width: 90px;
     margin-right: 10px;
@@ -410,5 +425,9 @@ header .text p {
 
   header .dropdown {
     padding-right: 30px;
+  }
+
+  header .nav_container button {
+    height: 34px;
   }
 }
