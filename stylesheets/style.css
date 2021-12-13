@@ -446,6 +446,72 @@ footer .column a:hover {
 }
 
 /*------------------------------------------------------------------------------------*/
+/*                                PRIVATLIVSPOLITIK                                   */
+/*------------------------------------------------------------------------------------*/
+
+#fixed_box {
+  position: fixed;
+  width: 100vw;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+#privatlivspolitik {
+  background-color: var(--color-darkerblue);
+  border: solid 3px var(--color-darkblue);
+  color: var(--color-white);
+  padding: 3%;
+  max-width: 50%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+#privatlivspolitik_text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  justify-content: center;
+}
+
+#privatlivspolitik p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+#privatlivspolitik p:first-of-type {
+  margin-bottom: 5%;
+}
+
+#buttons_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#buttons_box button {
+  margin: 5%;
+  margin-top: 10%;
+}
+
+.fade_in {
+  animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+/*------------------------------------------------------------------------------------*/
 /*                                   TOGGLE CLASSES                                   */
 /*------------------------------------------------------------------------------------*/
 
@@ -461,17 +527,11 @@ footer .column a:hover {
   .splash_text {
     bottom: 63%;
   }
-
-  .text {
-  }
 }
 
 @media screen and (min-width: 425px) {
   .splash_text {
     bottom: 58%;
-  }
-
-  .text {
   }
 }
 

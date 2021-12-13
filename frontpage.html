@@ -18,6 +18,7 @@
     ></script>
   </head>
   <body>
+  <header>
     <div class="top_top">
     <div class="top_component">
       <nav id="navbar">
@@ -159,30 +160,32 @@
   </div>
 </div>
 </div>
+</header>
 
+<main>
 <!-- COMPONENT TWO -->
 <div class="call-to-action_box">
   <a href="#">
     <div class="call-to-action_option">
-      <img src="" alt="">
-      <h2 class="subheader">doner</h2>
-      <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias corrupti aliquam illum iste corporis. Esse temporibus aut ad cupiditate pariatur?</p>
+      <img src="" alt="" class="icon_1">
+      <h2 class="subheader h2_1"></h2>
+      <p class="paragraph para_1"></p>
     </div>
   </a>
 
   <a href="#">
     <div class="call-to-action_option">
-      <img src="" alt="">
-      <h2 class="subheader">testamenter</h2>
-      <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quos minus ullam, consequatur soluta beatae consequuntur inventore sunt facilis perspiciatis.</p>
+      <img src="" alt="" class="icon_2">
+      <h2 class="subheader h2_2"></h2>
+      <p class="paragraph para_2"></p>
     </div>
   </a>
 
   <a href="#">
     <div class="call-to-action_option">
-      <img src="" alt="">
-      <h2 class="subheader">underskriv</h2>
-      <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut optio pariatur, mollitia a error libero reprehenderit quae sed! Eveniet, ducimus!</p>
+      <img src="" alt="" class="icon_3">
+      <h2 class="subheader h2_3"></h2>
+      <p class="paragraph para_3"></p>
     </div>
   </a>
 </div>
@@ -224,7 +227,20 @@
   </div>
 </section>
 
-<!-- COMPONENT FIVE -->
+<div id="fixed_box">
+<div id="privatlivspolitik" class="">
+  <div id="privatlivspolitik_text">
+    <p><strong>Denne hjemmeside bruger cookies</strong></p>
+    <p>Vi bruger cookies til at tilpasse vores, vise dig funktioner fra sociale medier og til at analysere vores trafik</p>
+  </div>
+  <div id="buttons_box">
+    <button class="ok" onclick="privatpolitikFlowFunction()">OK</button>
+    <button class="read_more" onclick="window.location.href=('http:')">LÆS MERE</button>
+  </div>
+</div>
+</div>
+
+</main>
 
 <footer>
   <div class="footer-content-wrapper">
@@ -330,6 +346,13 @@
 
 
 <script src="scripts/script.js"></script>
+<script>
+
+  function privatpolitikFlowFunction() {
+     var privatpolitkBox = document.getElementById("fixed_box");
+     privatpolitkBox.classList.toggle("hide");
+  }
+</script>
 
 </body>
 </html>
