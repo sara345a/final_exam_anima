@@ -34,26 +34,79 @@ function makeNavbarSticky() {
 
 document.addEventListener("DOMContentLoaded", hentData);
 
-//Henter json data og starter forsiden (async for at få loadet json før man går videre)
 
+let animalData;
+
+
+//Henter json data og starter højskole-siden (async for at få loadet json før man går videre)
 async function hentData() {
-  console.log("hentData");
+    console.log("hentData");
 
-  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/100/";
 
-  const respons = await fetch(link);
+    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/100/"
+    const respons = await fetch(link);
+    const json = await respons.json();
 
-  const json = await respons.json();
+    //vis splash
+    vis(json);
 
-  //vis forsiden
-  vis(json);
+    //filtrer fagene
+    filterContent();
 }
 
-async function vis(data) {
-  console.log("vis");
+//Indsætter data fra wordpress på rette pladser på forsiden
+function vis(data) {
+    console.log("vis");
 
-  document.querySelector(".picture_one").style.backgroundImage =
-    "url(" + data.splash1.guid + ")";
+    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")";
     document.querySelector(".text h1").textContent = data.splash_overskrift1;
     document.querySelector(".text p").textContent = data.splash_tekst1;
+
 }
+
+//filtrer fagene efter faggruppe og viser dem
+async function filterContent() {
+
+  
+    const animalLink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/dyr_posts/"
+    const responsAnimal = await fetch(animalLink);
+    const jsonAnimal = await responsAnimal.json();
+    /* let filtrerede; */
+    console.log("Det virker!!!");
+
+    console.log(jsonAnimal);
+
+    //filtrer efter kategori og vis
+    jsonAnimal.forEach((animalData) => {
+        if (animalData.kategori == "landbrugsdyr_omdyr") {
+            const klon = document.querySelector("#animal_template").cloneNode(true).content;
+            klon.querySelector(".animal_article h2").textContent = animalData.title.rendered;
+            klon.querySelector(".animal_article p").textContent = animalData.beskrivende_tekst;
+            klon.querySelector(".animal_article .top-banner").style.backgroundImage = "url(" + animalData.baggrundsbillede.guid + ")";
+
+            /* klon.querySelector("button").id = animalData.slug;
+            klon.querySelector("button").addEventListener("click", visMere);
+
+
+            klon.querySelector(".mere").id = animalData.slug + "mere";
+            klon.querySelector(".mere").innerHTML = animalData.content.rendered; */
+
+            document.querySelector("#animal_content").appendChild(klon);
+            console.log("appendChild");
+        }
+    })
+}
+
+/* function visMere() {
+    console.log("viser mere info");
+
+    if (this.classList.contains("lukket")) {
+        this.classList = "open"
+        document.querySelector("#" + this.id + "mere").style.display = "block";
+    } else {
+        this.classList = "lukket"
+        document.querySelector("#" + this.id + "mere").style.display = "none";
+    }
+
+
+} */
