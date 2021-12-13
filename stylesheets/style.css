@@ -461,17 +461,11 @@ footer .column a:hover {
   .splash_text {
     bottom: 63%;
   }
-
-  .text {
-  }
 }
 
 @media screen and (min-width: 425px) {
   .splash_text {
     bottom: 58%;
-  }
-
-  .text {
   }
 }
 

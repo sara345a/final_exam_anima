@@ -132,7 +132,7 @@ button {
   background-color: var(--color-red);
   border: none;
   border-radius: 10px;
-  box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 40%);
+  box-shadow: var(--box-shadow);
   width: 90px;
   padding: 10px;
   cursor: pointer;
@@ -201,12 +201,15 @@ img {
 .slideshow-container {
   position: relative;
   margin: auto;
-  z-index: -1;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+.picture_three {
+  background-position: top right;
 }
 
 /* Next & previous buttons */
@@ -259,7 +262,7 @@ img {
   text-align: center;
   position: absolute;
   bottom: 11%;
-  left: 50%;
+  left: 40%;
 }
 
 .dot {
@@ -320,7 +323,6 @@ img {
     opacity: 1;
     transition: all 0.5s ease;
     padding: 2vh;
-    z-index: 30;
   }
 
   .nav_links {
@@ -358,37 +360,60 @@ img {
 }
 
 /*-------tablet--------*/
-@media screen and (min-width: 768px) {
-  #navbar_logo {
-    width: 25%;
-  }
-
+@media screen and (min-width: 769px) {
   .splash_text {
     bottom: 26%;
     font-size: 1.7em;
   }
 
   .text {
-    font-size: 72px;
-    bottom: 40px;
+    font-size: 22px;
+    bottom: 100px;
     text-align: unset;
-    left: 20px;
+    left: 50px;
   }
 
   .nav_container.active {
     width: 30%;
     max-height: 10px;
   }
-}
 
+  #input_fields {
+    flex-direction: row;
+  }
+
+  .newsletter_wrapper button {
+    max-width: 25%;
+  }
+
+  .dots {
+    left: 47%;
+  }
+
+  .nav_links {
+    font-size: 13px;
+  }
+
+  .search {
+    max-width: 50px;
+    margin-bottom: unset;
+  }
+
+  .nav_container button {
+    width: 70px;
+    height: 29px;
+    text-align: center;
+    line-height: 10px;
+  }
+
+  .logo_container {
+    justify-content: unset;
+  }
+}
 /*---------laptop---------*/
 @media screen and (min-width: 1024px) {
   .logo_container {
     justify-content: flex-start;
-  }
-
-  #navbar_logo {
-    width: 70%;
   }
 
   .logo_container {
@@ -424,8 +449,23 @@ img {
   .nav_links {
     font-size: 19px;
   }
-}
+  .call-to-action_option {
+    max-width: 250px;
+  }
 
+  .two-third_right {
+    padding: 80px;
+  }
+
+  .logo_image {
+    max-width: 160px;
+    margin-top: 12px;
+  }
+
+  .text h1 {
+    max-width: 600px;
+  }
+}
 /*----laptop large------*/
 @media screen and (min-width: 1440px) {
   .splash_text {
@@ -455,5 +495,9 @@ img {
 
   .dropdown {
     padding-right: 30px;
+  }
+
+  .nav_container button {
+    height: 34px;
   }
 }
