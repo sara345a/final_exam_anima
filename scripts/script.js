@@ -17,7 +17,7 @@
 //////////////////////PRIVATLIVSPOLITIK FADE-IN///////////////////////////////////////////
 
     function fadeIn() {
-        document.querySelector("#fixed_box".classList.add("fadeIn");   
+        document.querySelector("#fixed_box").classList.add("fade_in");   
       }
 ///////////////////////////SLIDESHOW///////////////////////////////////////////
 var slideIndex = 0;
