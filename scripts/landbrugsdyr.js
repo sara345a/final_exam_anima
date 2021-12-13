@@ -83,6 +83,7 @@ async function filterContent() {
             klon.querySelector(".animal_article h2").textContent = animalData.title.rendered;
             klon.querySelector(".animal_article p").textContent = animalData.beskrivende_tekst;
             klon.querySelector(".animal_article .top-banner").style.backgroundImage = "url(" + animalData.baggrundsbillede.guid + ")";
+            klon.querySelector("#fold_content").innerHTML = animalData.content.rendered;
 
             /* klon.querySelector("button").id = animalData.slug;
             klon.querySelector("button").addEventListener("click", visMere);
