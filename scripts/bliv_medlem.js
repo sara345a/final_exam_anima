@@ -66,7 +66,7 @@ async function vis(data) {
     document.querySelector("#icon_3 h4").textContent = data.ikon_overskrift3;
     document.querySelector("#icon_3 p").textContent = data.ikon_tekst3;
 
-    document.querySelector(".textbox h3").textContent = data.ikon_overskrift1;
+    document.querySelector(".textbox h3").textContent = data.overskrift1;
     document.querySelector(".textbox p").textContent = data.tekstfelt1;
     document.querySelector("#bottom_column img").src = data.indholdsbillede1.guid;
 
