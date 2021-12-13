@@ -78,7 +78,7 @@ async function filterContent() {
 
     //filtrer efter kategori og vis
     jsonAnimal.forEach((animalData) => {
-        if (animalData.kategori == "landbrugsdyr_omdyr") {
+        if (animalData.kategori =="landbrugsdyr_omdyr") {
             const klon = document.querySelector("#animal_template").cloneNode(true).content;
             klon.querySelector(".animal_article h2").textContent = animalData.title.rendered;
             klon.querySelector(".animal_article p").textContent = animalData.beskrivende_tekst;

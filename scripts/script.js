@@ -10,7 +10,15 @@
       menu.classList.toggle("is-active");
       menuLinks.classList.toggle("active");
       }); 
+
+      fadeIn();
     }
+
+//////////////////////PRIVATLIVSPOLITIK FADE-IN///////////////////////////////////////////
+
+    function fadeIn() {
+        document.querySelector("#fixed_box").classList.add("fade_in");   
+      }
 ///////////////////////////SLIDESHOW///////////////////////////////////////////
 var slideIndex = 0;
 showSlides();
@@ -121,6 +129,15 @@ console.log("vis");
  document.querySelector(".first h1").textContent = data.splash_overskrift1;
     document.querySelector(".second h1").textContent = data.splash_overskrift2;
     document.querySelector(".third h1").textContent = data.splash_overskrift3;
+    document.querySelector(".call-to-action_box .icon_1").src = data.ikon1.guid;
+    document.querySelector(".call-to-action_box .h2_1").textContent = data.ikon_overskrift1;
+    document.querySelector(".call-to-action_box .para_1").textContent = data.ikon_tekst1;
+    document.querySelector(".call-to-action_box .icon_2").src = data.ikon2.guid;
+    document.querySelector(".call-to-action_box .h2_2").textContent = data.ikon_overskrift2;
+    document.querySelector(".call-to-action_box .para_2").textContent = data.ikon_tekst2;
+    document.querySelector(".call-to-action_box .icon_3").src = data.ikon3.guid;
+    document.querySelector(".call-to-action_box .h2_3").textContent = data.ikon_overskrift3;
+    document.querySelector(".call-to-action_box .para_3").textContent = data.ikon_tekst3;
 
 }
 
