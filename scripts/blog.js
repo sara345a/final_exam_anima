@@ -62,6 +62,7 @@ async function hentData() {
     //vis forsiden
     vis();
     addButtons();
+    postButtons();
 
 }
 
@@ -79,6 +80,7 @@ async function vis() {
         klon.querySelector(".post_h2").textContent = post.title.rendered;
         klon.querySelector(".post_excerpt").innerHTML = post.excerpt.rendered;
         klon.querySelector(".post_image").src = post.blog_posts.guid;
+        klon.querySelector(".post_button").val = post.id;
         document.querySelector("#blogcontent").appendChild(klon);
         console.log("appendChild");
 
@@ -99,7 +101,6 @@ function filterClicked(buttonClicked){
     document.querySelector("#blogcontent").innerHTML = "";
 
     if(buttonClicked.target.innerHTML == "Alle"){
-      debugger;
         vis();
     } else {
         jsonpost.forEach((post) => {
@@ -110,6 +111,7 @@ function filterClicked(buttonClicked){
             klon.querySelector(".post_h2").textContent = post.title.rendered;
             klon.querySelector(".post_excerpt").innerHTML = post.excerpt.rendered;
             klon.querySelector(".post_image").src = post.blog_posts.guid;
+            klon.querySelector(".post_button").val = post.id;
             document.querySelector("#blogcontent").appendChild(klon);
             console.log("appendChild");
     
@@ -142,6 +144,18 @@ async function addButtons(){
 
 }
 
+function postButtons(){
+  document.querySelectorAll('.post_button').forEach(btn => {
+    btn.addEventListener('click', postButtonClicked)
+  })
+}
+
+function postButtonClicked(){
+  
+  let postId = this.val;
+  sessionStorage.setItem("postId", postId);
+  window.location.href = "blog_underside.html";
+}
 
 
 
