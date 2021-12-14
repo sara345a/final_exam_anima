@@ -138,6 +138,8 @@ console.log("vis");
     document.querySelector(".call-to-action_box .icon_3").src = data.ikon3.guid;
     document.querySelector(".call-to-action_box .h2_3").textContent = data.ikon_overskrift3;
     document.querySelector(".call-to-action_box .para_3").textContent = data.ikon_tekst3;
+    document.querySelector(".two-third_right h2").textContent = data.overskrift1;
+    document.querySelector(".two-third_right p").textContent = data.tekstfelt1;
 
 }
 

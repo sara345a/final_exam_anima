@@ -323,13 +323,13 @@ img {
 }
 
 /*----two third------*/
+
 .two-third_wrapper {
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-icyblue);
 }
 
 .two-third {
