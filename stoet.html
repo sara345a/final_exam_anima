@@ -94,9 +94,6 @@
                   <li>
                     <a href="kontakt.html" class="nav_links" id="dropbtn">KONTAKT</a>
                   </li>
-                  <div class="dropdown-content">
-                    <a href="#">Ledige stillinger</a>
-                  </div>
                 </div>
         
                 <div class="search_container">
@@ -139,23 +136,23 @@
                         <div id="step1">
                           <h3>VÆLG BELØB</h3>
                           <div id="amounts">
-                            <button id="dkk50" class="" onclick="chosenAmountOneFunction()">50 DKK</button>
-                            <button id="dkk100" class="" onclick="chosenAmountTwoFunction()">100 DKK</button>
-                            <button id="dkk150" class="" onclick="chosenAmountThreeFunction()">150 DKK</button>
-                            <button id="dkk200" class="" onclick="chosenAmountFourFunction()">200 DKK</button>
-                            <button id="dkk250" class="" onclick="chosenAmountFiveFunction()">250 DKK</button>
-                            <button id="dkk500" class="" onclick="chosenAmountSixFunction()">500 DKK</button>
+                            <button id="dkk50" class="amounts_button" onclick="chosenAmountOneFunction()">50 DKK</button>
+                            <button id="dkk100" class="amounts_button" onclick="chosenAmountTwoFunction()">100 DKK</button>
+                            <button id="dkk150" class="amounts_button" onclick="chosenAmountThreeFunction()">150 DKK</button>
+                            <button id="dkk200" class="amounts_button" onclick="chosenAmountFourFunction()">200 DKK</button>
+                            <button id="dkk250" class="amounts_button" onclick="chosenAmountFiveFunction()">250 DKK</button>
+                            <button id="dkk500" class="amounts_button" onclick="chosenAmountSixFunction()">500 DKK</button>
                             <input type="text" placeholder="ANDET"></input>
                           </div>
                           
                           <h3>VÆLG BETALINGSFORM</h3>
                           <div class="payments">
-                            <button id="card" class="" onclick="chosenCardFunction()">BETALINGSKORT</button>
-                            <button id="mobilepay" class="" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
-                            <button id="pay_service" class="" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
+                            <button id="card" class="payments_button" onclick="chosenCardFunction()">BETALINGSKORT</button>
+                            <button id="mobilepay" class="payments_button" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
+                            <button id="pay_service" class="payments_button" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
                           </div>
                           <div class="next_button">
-                            <button onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
+                            <button class="nexts_button" onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
                           </div>
                         </div>
                         
@@ -216,15 +213,24 @@
             </div>
           </section>
 
-          <section id="content two_third">
-            <div id="bottom_column">
-                <div class="textbox">
-                    <h3></h3>
-                    <p></p>
-                </div>
-                <img>
+          <!-- COMPONENT THREE -->
+          <section class="two-third_wrapper">
+            <div class="two-third">
+            <div div class="two-third_left">
+              <div class="two-third_image">
+                <img src="" alt="">
+              </div>
             </div>
-        </section>
+            <div div class="two-third_right">
+              <h3 class="subheader">Header Lorem ipsum dolor sit.</h3>
+              <p class="paragraph">Subheader Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum magnam sapiente iure eius eos ipsa eaque praesentium illum vero fugiat libero consequatur tempore voluptatibus atque quae nobis, alias deleniti?</p>
+              <div class="two-third-button_container">
+                <button type="button">STØT</button>
+                <button type="button">STØT</button>
+              </div>
+            </div>
+            </div>
+          </section>
     </main>
 
     
