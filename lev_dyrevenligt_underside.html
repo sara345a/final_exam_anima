@@ -839,7 +839,9 @@ document.addEventListener("DOMContentLoaded", hentData);
 async function hentData() {
   console.log("hentData");
 
-  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/lev_dyrevenligt_post/177/";
+  let postId = sessionStorage.getItem("postId");
+
+  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/lev_dyrevenligt_post/" + postId;
 
   const respons = await fetch(link);
 
