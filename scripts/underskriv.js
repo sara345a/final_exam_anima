@@ -143,5 +143,18 @@ async function addButtons(){
 
 }
 
+function postButtons(){
+  document.querySelectorAll('.post_button').forEach(btn => {
+    btn.addEventListener('click', postButtonClicked)
+  })
+}
+
+function postButtonClicked(){
+  
+  let postId = this.val;
+  sessionStorage.setItem("postId", postId);
+  window.location.href = "underskriv_underside.html";
+}
+
 
 
