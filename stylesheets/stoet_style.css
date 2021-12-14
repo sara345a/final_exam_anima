@@ -516,9 +516,19 @@ main #icons_box p {
 
 .two-third-button_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
   padding-top: 30px;
+}
+
+.two-third .read-more_button,
+.two-third .donate_button {
+  width: 200px;
+}
+.two-third .donate_button {
+  background-color: transparent;
+  border: 3px solid var(--color-red);
+  color: var(--color-red);
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -770,6 +780,10 @@ footer .column a:hover {
   }
   .two-third_right {
     flex: 1 1 60%;
+  }
+
+  .two-third-button_container {
+    flex-direction: row;
   }
 }
 
