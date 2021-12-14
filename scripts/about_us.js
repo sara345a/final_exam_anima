@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", hentData);
 async function hentData() {
   console.log("hentData");
 
-  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/187/";
+  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/om_os/240";
 
   const respons = await fetch(link);
 
@@ -82,22 +82,26 @@ async function vis(data) {
   console.log("vis");
 
   document.querySelector(".picture_one").style.backgroundImage =
-    "url(" + data.splash1.guid + ")";
-  document.querySelector(".text h1").textContent = data.splash_overskrift1;
-  document.querySelector(".text p").textContent = data.splash_tekst1;
-  document.querySelector(".two-third_left .subheader").textContent = data.overskrift1;
-  document.querySelector(".two-third_left .paragraph").textContent = data.tekstfelt1;
+    "url(" + data.splash.guid + ")";
+  document.querySelector(".text h1").textContent = data.splash_overskrift;
+  document.querySelector(".text p").textContent = data.splash_tekst;
+  document.querySelector(".two-third_left .h2_1").textContent = data.voresarbejde_overskrift;
+  document.querySelector(".two-third_left .para_1").textContent = data.tekstfelt1;
+  document.querySelector(".two-third_left .h3_1").textContent = data.underoverskrift1;
+  document.querySelector(".two-third_left .para_2").textContent = data.tekstfelt2;
   
-  document.querySelector(".two-third_right .subheader").textContent = data.overskrift2;
-  document.querySelector(".two-third_right .h4_1").textContent = data.ikon_overskrift1;
+  document.querySelector(".two-third_right .subheader").textContent = data.milepaele_overskrift;
+  document.querySelector(".two-third_right .h4_1").textContent = data.ikon_tekst1;
   document.querySelector(".two-third_right .icon_1").src = data.ikon1.guid;
   
-  document.querySelector(".two-third_right .h4_2").textContent = data.ikon_overskrift2;
+  document.querySelector(".two-third_right .h4_2").textContent = data.ikon_tekst2;
   document.querySelector(".two-third_right .icon_2").src = data.ikon2.guid;
   
-  document.querySelector(".two-third_right .h4_3").textContent = data.ikon_overskrift3;
+  document.querySelector(".two-third_right .h4_3").textContent = data.ikon_tekst3;
   document.querySelector(".two-third_right .icon_3").src = data.ikon3.guid;
   
+  document.querySelector(".banner_container h2").textContent = data.ekstra_overskrift;
+  /* document.querySelector(".banner_container img").src = data.indholdsbillede.guid; */
 
-
+  document.querySelector(".timeline h2").textContent = data.voreshistorie_overskrift;
 }

@@ -71,25 +71,30 @@ async function filterContent() {
     const animalLink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/dyr_posts/"
     const responsAnimal = await fetch(animalLink);
     const jsonAnimal = await responsAnimal.json();
-    /* let filtrerede; */
-    console.log("Det virker!!!");
 
-    console.log(jsonAnimal);
-
+    let counter = 1;
     //filtrer efter kategori og vis
     jsonAnimal.forEach((animalData) => {
         if (animalData.kategori =="landbrugsdyr_omdyr") {
             const klon = document.querySelector("#animal_template").cloneNode(true).content;
             klon.querySelector(".animal_article h2").textContent = animalData.title.rendered;
             klon.querySelector(".animal_article p").textContent = animalData.beskrivende_tekst;
-            klon.querySelector(".animal_article .top-banner").style.backgroundImage = "url(" + animalData.baggrundsbillede.guid + ")";
+            klon.querySelector(".animal_article #top_banner").style.backgroundImage = "url(" + animalData.baggrundsbillede.guid + ")";
+            klon.querySelector("#fold_content").innerHTML = animalData.content.rendered;
+            klon.querySelector("#fold_content").classList.add(animalData.slug);
 
-            /* klon.querySelector("button").id = animalData.slug;
-            klon.querySelector("button").addEventListener("click", visMere);
+            klon.querySelector("button").addEventListener("click", showInfo);
+            klon.querySelector("button").val = animalData.slug;
 
-
-            klon.querySelector(".mere").id = animalData.slug + "mere";
-            klon.querySelector(".mere").innerHTML = animalData.content.rendered; */
+            if(counter % 2 == 0){
+              klon.querySelector("#top_banner").classList.add("top-banner2");
+              klon.querySelector("#top_banner_overlay").classList.add("top-banner-overlay2");
+            } else {
+              klon.querySelector("#top_banner").classList.add("top-banner");
+              klon.querySelector("#top_banner_overlay").classList.add("top-banner-overlay");
+            }
+            
+            counter++;
 
             document.querySelector("#animal_content").appendChild(klon);
             console.log("appendChild");
@@ -97,16 +102,12 @@ async function filterContent() {
     })
 }
 
-/* function visMere() {
-    console.log("viser mere info");
-
-    if (this.classList.contains("lukket")) {
-        this.classList = "open"
-        document.querySelector("#" + this.id + "mere").style.display = "block";
-    } else {
-        this.classList = "lukket"
-        document.querySelector("#" + this.id + "mere").style.display = "none";
-    }
+function showInfo() {
+debugger;
+let id = this.val;
+let className = "." + id;
+let elem = document.querySelector(className);
+elem.classList.toggle("hide");
 
 
-} */
+}
