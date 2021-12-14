@@ -839,7 +839,7 @@ document.addEventListener("DOMContentLoaded", hentData);
 async function hentData() {
   console.log("hentData");
 
-  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/blog_posts/40/";
+  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/lev_dyrevenligt_post/177/";
 
   const respons = await fetch(link);
 
@@ -852,9 +852,9 @@ async function hentData() {
 async function vis(data) {
   console.log("vis");
 
-    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.blog_underside_splash.guid + ")";
+    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.lev_dyrevenligt_underside_splash.guid + ")";
     document.querySelector(".text h1").textContent = data.title.rendered;
-    document.querySelector(".text p").textContent = data.blog_underside_tekst;
+    document.querySelector(".text p").textContent = data.lev_dyrevenligt_underside_tekst;
     document.querySelector("#main_content").innerHTML = data.content.rendered;
 
 }
