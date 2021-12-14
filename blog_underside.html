@@ -232,6 +232,82 @@ header .text p {
 }
 
 /*------------------------------------------------------------------------------------*/
+/*                                     MAIN CONTENT                                   */
+/*------------------------------------------------------------------------------------*/
+
+main #main_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main #main_content {
+width: 100%;
+display: flex;
+flex-direction: column;
+place-items: center;
+}
+
+main #main_content img {
+    width: 100%;
+    height: auto;
+}
+
+main #main_content .wp-block-column, main #main_content .wp-block-embed__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+main #main_content iframe {
+    width: 80%;
+    height: auto;
+}
+
+main #main_content p, main #main_content h2, main #main_content h3 {
+    width: 80%;
+    text-align: left;
+} 
+
+/*------------------------------------------------------------------------------------*/
+/*                                        FOOTER                                      */
+/*------------------------------------------------------------------------------------*/
+
+footer .footer-content-wrapper {
+  display: flex;
+  gap: 20px;
+  text-align: start;
+  background-color: var(--color-darkerblue);
+  color: var(--color-white);
+  padding: 20px;
+  font-family: var(--paragraph);
+}
+
+footer .column {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 10px;
+}
+
+footer .column a {
+  text-decoration: none;
+  color: var(--color-white);
+  white-space: pre-line;
+}
+
+footer .column .fas,
+footer .column .fab {
+  font-size: 20px;
+}
+
+footer .column a:hover {
+  color: rgb(189, 189, 189);
+}
+
+/*------------------------------------------------------------------------------------*/
 /*                                     MEDIA QUERY                                    */
 /*------------------------------------------------------------------------------------*/
 
@@ -252,6 +328,17 @@ header .text p {
 
   header .text {
     left: 70px;
+  }
+}
+
+/* ---------mobile---------*/
+@media screen and (max-width: 766px) {
+  footer .footer-content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -318,6 +405,12 @@ header .text p {
   }
 }
 
+@media screen and (min-width: 767px) {
+  footer .footer-content-wrapper {
+    justify-content: space-evenly;
+  }
+}
+
 /*-------tablet--------*/
 @media screen and (min-width: 768px) {
   header #navbar_logo {
@@ -348,6 +441,44 @@ header .text p {
     left: 50px;
   }
 
+  main #main_content .wp-block-columns {
+    display: flex;
+    flex-direction: row;
+    }
+
+    /* main #main_content .wp-block-column {
+        width: 50%;
+    }
+
+    main #main_content .wp-block-image {
+        width: 100%;
+    } */
+
+    main #main_content h2, main #main_content h3 {
+    width: 90%;
+    }
+
+    main #main_content p  {
+    width: 80%;
+    text-align: left;
+    } 
+
+    main #main_content #player {
+        width: 100%;
+    }
+
+    main #main_content figure {
+        width: 100%;
+    }
+
+    main #main_content .wp-block-embed__wrapper {
+    width: 100%;
+    }
+
+    main #main_content iframe {
+    width: 100%;
+    height: auto;
+    }
 
 }
 
@@ -396,6 +527,10 @@ header .text p {
     font-size: 19px;
   }
 
+  main #main_content p  {
+    width: 70%;
+    } 
+
 
 }
 
@@ -430,12 +565,15 @@ header .text p {
     padding-right: 30px;
   }
 
+  main #main_content p  {
+    width: 60%;
+    } 
 
 }
 
     </style>
 
-    <title>FINLAND AVLER RÆVE I MONSTER STØRRELSE | Anima</title>
+    <title>ARTIKEL | Anima</title>
 </head>
 
 <body>
@@ -550,10 +688,113 @@ header .text p {
         
 
         <main>
+        <div id="main_container">
           <article id="main_content">
 
           </article>
+        </div>
     </main>
+
+    <footer>
+        <div class="footer-content-wrapper">
+          <div class="column one">
+            <img src="../../static_assets\Logo - Anima HVID.svg" alt="logo" />
+            <p>
+              Husk at du kan få fradrag for donationer til Anima på op til 17.000
+              kr.
+            </p>
+      
+            <p>CVR: 29047650</p>
+            <img
+              src="../../static_assets\recommended-charity-2020 (1).png"
+              alt=""
+            />
+          </div>
+      
+          <div class="column two">
+            <h3>LINKS</h3>
+            <hr
+              style="
+                width: 100%;
+                color: white;
+                height: 1px;
+                background-color: white;
+              "
+            />
+      
+            <a href="#">Nyheder</a>
+            <a href="#">Støt</a>
+            <a href="#">Donér</a>
+            <a href="#">Opskrifter</a>
+            <a href="#">Om Anima</a>
+          </div>
+      
+          <div class="column three">
+            <h3>KONTAKT OS</h3>
+            <hr
+              style="
+                width: 100%;
+                color: white;
+                height: 1px;
+                background-color: white;
+              "
+            />
+      
+            <div class="column_three_contact">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@anima.dk">info@anima.dk</a>
+            </div>
+      
+            <div class="column_three_contact">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+4535107070">+45 35 10 70 70</a>
+            </div>
+      
+            <div class="column_three_contact">
+              <i class="fas fa-map-marker-alt"></i>
+              <a href="https://goo.gl/maps/4YCyKX39cbA4k9rt5"
+                >Tornebuskegade 7, 1. 1131 København K
+              </a>
+            </div>
+          </div>
+      
+          <div class="column four">
+            <h3>FØLG OS</h3>
+            <hr
+              style="
+                width: 100%;
+                color: white;
+                height: 1px;
+                background-color: white;
+              "
+            />
+            <div class="column_four_some">
+              <i class="fab fa-instagram-square"></i>
+              <a href="https://www.instagram.com/animadk/?hl=da">Instagram</a>
+            </div>
+      
+            <div class="column_four_some">
+              <i class="fab fa-facebook-square"></i>
+              <a href="https://www.facebook.com/dk.anima/">Facebook</a>
+            </div>
+      
+            <div class="column_four_some">
+              <i class="fab fa-twitter-square"></i>
+              <a href="https://twitter.com/animadk">Twitter</a>
+            </div>
+      
+            <div class="column_four_some">
+              <i class="fab fa-vimeo"></i>
+              <a href="https://vimeo.com/animadk">Vimeo</a>
+            </div>
+      
+            <div class="column_four_some">
+              <i class="fab fa-youtube"></i>
+              <a href="https://www.youtube.com/user/animadanmark">Youtube</a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     <!--script til at indsætte indhold om blog og alle blogpostene-->
     <script>
@@ -611,8 +852,9 @@ async function hentData() {
 async function vis(data) {
   console.log("vis");
 
-//   document.querySelector(".picture_one").style.backgroundImage =
-//     "url(" + data.blogposts.guid + ")";
+    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.blog_underside_splash.guid + ")";
+    document.querySelector(".text h1").textContent = data.title.rendered;
+    document.querySelector(".text p").textContent = data.blog_underside_tekst;
     document.querySelector("#main_content").innerHTML = data.content.rendered;
 
 }
