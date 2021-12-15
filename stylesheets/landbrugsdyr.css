@@ -249,7 +249,6 @@ main button {
   color: var(--color-white);
   padding: 2% 7% 2% 7%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
 }
 
 main #animal_article {
@@ -274,7 +273,6 @@ main .top-banner-overlay {
   color: white;
   background: rgba(48, 65, 93, 70%);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-
 }
 
 main .top-banner-overlay p {
@@ -285,9 +283,11 @@ main .top-banner-overlay p {
 }
 
 main #fold_section {
-  background-color: var(--color-icyblue);
   display: flex;
   justify-content: center;
+  background-image: url("/static_assets/background_shape_high-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main #fold_content {
