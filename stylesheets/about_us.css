@@ -234,14 +234,15 @@ header .text button {
 /*----two third------*/
 
 .two-third {
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-icyblue);
   font-family: var(--paragraph);
+  background-image: url("/static_assets/background_shape_high-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .subheader {
@@ -577,8 +578,13 @@ footer .column a:hover {
   font-family: var(--heading);
 }
 
+.timeline {
+  background-image: url("/static_assets/background_shape_high-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .timeline ul {
-  background: var(--color-grey);
   margin-top: 0px;
   padding: 50px 0;
   font-family: var(--paragraph);

@@ -257,6 +257,12 @@ main #top_column {
   width: 80%;
 }
 
+main #bottom_column {
+  background-image: url("/static_assets/background_shape_high-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main #form {
   display: flex;
   flex-direction: column;
@@ -283,8 +289,12 @@ main #thank_you_message {
 }
 /****************************POSTS**************************/
 
+main #button_box {
+  background-color: var(--color-icyblue);
+}
+
 main #blogcontent {
-  background-color: white;
+  background-color: var(--color-icyblue);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   color: black;
@@ -321,8 +331,9 @@ main .button_box {
   margin: 5%;
 }
 
-main .post_element:hover {
-  background-color: var(--color-icyblue);
+main .button_box button:hover {
+  color: var(--color-darkerblue);
+  background-color: var(--color-white);
 }
 
 /*------------------------------------------------------------------------------------*/

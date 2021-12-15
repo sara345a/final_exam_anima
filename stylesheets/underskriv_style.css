@@ -246,11 +246,13 @@ main button {
 }
 
 main #blogcontent {
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   color: black;
   align-items: center;
+  background-image: url("/static_assets/background_shape_high-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main .post_article {
@@ -268,6 +270,7 @@ main .post_element {
   margin-top: 10%;
   margin-bottom: 10%;
   cursor: pointer;
+  background-color: var(--color-white);
 }
 
 main .post_image {
@@ -283,8 +286,9 @@ main .button_box {
   margin: 5%;
 }
 
-main .post_element:hover {
-  background-color: var(--color-icyblue);
+main .button_box button:hover {
+  color: var(--color-darkerblue);
+  background-color: var(--color-white);
 }
 
 /*------------------------------------------------------------------------------------*/
