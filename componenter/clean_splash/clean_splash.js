@@ -35,7 +35,6 @@ function makeNavbarSticky() {
 document.addEventListener("DOMContentLoaded", hentData);
 
 //Henter json data og starter forsiden (async for at få loadet json før man går videre)
-
 async function hentData() {
   console.log("hentData");
 

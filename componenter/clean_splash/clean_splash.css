@@ -9,9 +9,8 @@
 
   --heading: montserrat, sans-serif;
   --paragraph: work-sans, sans-serif;
-  --box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 40%);
+  --box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
 }
-
 body {
   margin: 0px;
 }
@@ -43,10 +42,19 @@ p {
 /*------------------------------------------------------------------------------------*/
 /*                                     NAV BAR START                                  */
 /*------------------------------------------------------------------------------------*/
+header .sticky,
+header .top_component {
+  z-index: 300;
+}
+
+header .navbar {
+  z-index: 1000 !important;
+}
 header .top_top {
   position: relative;
 }
-.wrapper {
+
+header .wrapper {
   display: flex;
   margin: 0px 10px;
   position: sticky;
@@ -112,6 +120,7 @@ header .dropdown-content a {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family: var(--heading);
 }
 
 header .dropdown-content a:hover {
@@ -162,13 +171,13 @@ button:active {
 }
 
 /*STICKY NAVBAR CLASS-*/
-header .sticky {
+.sticky {
   position: fixed;
   top: 0;
   padding-bottom: 7px;
 }
 
-header .background_color {
+.background_color {
   background-color: var(--color-darkerblue);
   transition-timing-function: ease-in-out;
   transition: 0.4s;
@@ -374,6 +383,10 @@ header .text button {
     padding-bottom: 0px;
   }
 
+  .button {
+    width: 70px;
+  }
+
   header .search {
     width: 80px;
     margin-bottom: unset;
@@ -382,22 +395,18 @@ header .text button {
   header .nav_links {
     font-size: 19px;
   }
-  header .call-to-action_option {
-    max-width: 250px;
-  }
-
-  header .two-third_right {
-    padding: 80px;
-  }
 
   header .logo_image {
     max-width: 160px;
     margin-top: 12px;
   }
 
-  header .text h1,
-  header .text p {
+  header .text h1 {
     max-width: 600px;
+  }
+
+  .support-button_container {
+    margin-left: 10px;
   }
 }
 /*----laptop large------*/
@@ -410,8 +419,12 @@ header .text button {
     padding-right: 30px;
   }
 
-  header img {
+  img {
     max-height: 600px;
+  }
+
+  header .button {
+    width: 80px;
   }
 
   header .search {
