@@ -9,16 +9,14 @@
 
   --heading: montserrat, sans-serif;
   --paragraph: work-sans, sans-serif;
-  --box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 40%);
+  --box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
 }
-
 body {
   margin: 0px;
 }
 
 html {
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 h1,
@@ -44,10 +42,19 @@ p {
 /*------------------------------------------------------------------------------------*/
 /*                                     NAV BAR START                                  */
 /*------------------------------------------------------------------------------------*/
+header .sticky,
+header .top_component {
+  z-index: 300;
+}
+
+header .navbar {
+  z-index: 1000 !important;
+}
 header .top_top {
   position: relative;
 }
-.wrapper {
+
+header .wrapper {
   display: flex;
   margin: 0px 10px;
   position: sticky;
@@ -113,6 +120,7 @@ header .dropdown-content a {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family: var(--heading);
 }
 
 header .dropdown-content a:hover {
@@ -163,13 +171,13 @@ button:active {
 }
 
 /*STICKY NAVBAR CLASS-*/
-header .sticky {
+.sticky {
   position: fixed;
   top: 0;
   padding-bottom: 7px;
 }
 
-header .background_color {
+.background_color {
   background-color: var(--color-darkerblue);
   transition-timing-function: ease-in-out;
   transition: 0.4s;
