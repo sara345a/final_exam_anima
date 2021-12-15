@@ -101,18 +101,20 @@ img#navbar_logo:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background: var(--color-grey);
-  color: var(--color-white);
+  background: var(--color-red);
+  /* color: var(--color-white); */
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-left: -20px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  margin-left: -30px;
+  margin-top: 10px;
 }
 
 .dropdown-content a {
-  color: var(--color-black);
+  color: var(--color-white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family: var(--heading);
 }
 
 .dropdown-content a:hover {
@@ -194,6 +196,15 @@ button:active {
 }
 
 /*----------------------------------nav bar END---------------------------------------*/
+header .sticky,
+header .top_component {
+  z-index: 300;
+}
+
+header .navbar {
+  z-index: 1000 !important;
+}
+
 img {
   object-fit: cover;
   width: 100%;
@@ -322,6 +333,9 @@ img {
   color: var(--color-black);
 }
 
+.call-to-action_box img {
+  width: 36%;
+}
 /*----two third------*/
 
 .two-third_wrapper {
@@ -345,15 +359,31 @@ img {
   border-radius: 0px 0px 10px 10px;
 }
 
+.two-third_wrapper .subheader {
+  text-align: start;
+  align-self: flex-start;
+}
+
 .two-third_right .paragraph {
   max-width: 600px;
 }
 
 .two-third_left {
+  display: flex;
   min-height: 340px;
   width: 100%;
   border-radius: 10px 10px 0px 0px;
 }
+
+.two-third-left_img {
+  display: flex;
+  justify-content: center;
+}
+
+.two-third-left_img img {
+  border-radius: 10px;
+}
+
 .two-third-button_container {
   display: flex;
   flex-direction: row;
@@ -368,8 +398,10 @@ img {
   justify-content: center;
   align-items: center;
   align-self: center;
-  background-image: url(https://images.unsplash.com/photo-1638555097330-503fd1063ecf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1322&q=80);
+  background-image: url(https://images.unsplash.com/photo-1627462656780-964d9535a50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
   padding: 40px 0px;
+  background-position: center;
+  background-size: cover;
 }
 
 #input_fields {
