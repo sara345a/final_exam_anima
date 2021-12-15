@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="stylesheets/stoet_style.css">
     <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5ad841142e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>STØT | Anima</title>
 </head>
@@ -128,9 +136,9 @@
                     <div id="form">
                       <div id="form_content" class="">
                         <div id="flow_steps">
-                          <h4 id="step1_path" class="this_flow">1. BELØB</h4>
-                          <h4 id="step2_path">2. INFORMATION</h4>
-                          <h4 id="step3_path">3. BETAL</h4>
+                          <h4 id="step1_path" onclick="chosenPathStepOneFunction()" class="this_flow">1. BELØB</h4>
+                          <h4 id="step2_path" onclick="chosenPathStepTwoFunction()">2. INFORMATION</h4>
+                          <h4 id="step3_path" onclick="chosenPathStepThreeFunction()">3. BETAL</h4>
                         </div>
     
                         <div id="step1">
@@ -340,7 +348,39 @@
 
     <script>
 
-        
+        function chosenPathStepOneFunction() {
+          var stepOne = document.getElementById("step1_path");
+           var stepTwo = document.getElementById("step2_path");
+           var stepThree = document.getElementById("step3_path");
+
+                stepTwo.classList.remove("this_flow");
+                stepThree.classList.remove("this_flow");
+
+                stepOne.classList.toggle("this_flow");
+        }
+
+        function chosenPathStepTwoFunction() {
+          var stepOne = document.getElementById("step1_path");
+           var stepTwo = document.getElementById("step2_path");
+           var stepThree = document.getElementById("step3_path");
+
+                stepOne.classList.remove("this_flow");
+                stepThree.classList.remove("this_flow");
+
+                stepTwo.classList.toggle("this_flow");
+        }
+
+        function chosenPathStepThreeFunction() {
+          var stepOne = document.getElementById("step1_path");
+           var stepTwo = document.getElementById("step2_path");
+           var stepThree = document.getElementById("step3_path");
+
+                stepTwo.classList.remove("this_flow");
+                stepOne.classList.remove("this_flow");
+
+                stepThree.classList.toggle("this_flow");
+        }        
+
         function chosenAmountOneFunction() {
             var amount50 = document.getElementById("dkk50");
            var amount100 = document.getElementById("dkk100");

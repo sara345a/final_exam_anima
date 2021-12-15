@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="stylesheets/bliv_medlem_style.css">
     <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5ad841142e.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <title>STØT | Anima</title>
+    <title>BLIV MEDLEM | Anima</title>
 </head>
 
 <body>
@@ -128,9 +136,9 @@
                     <div id="form">
                       <div id="form_content" class="">
                         <div id="flow_steps">
-                          <h4 id="step1_path" class="this_flow">1. BELØB</h4>
-                          <h4 id="step2_path">2. INFORMATION</h4>
-                          <h4 id="step3_path">3. BETAL</h4>
+                          <h4 id="step1_path" onclick="chosenPathStepOneFunction()" class="this_flow">1. BELØB</h4>
+                          <h4 id="step2_path" onclick="chosenPathStepTwoFunction()">2. INFORMATION</h4>
+                          <h4 id="step3_path" onclick="chosenPathStepThreeFunction()">3. BETAL</h4>
                         </div>
     
                         <div id="step1">
@@ -145,12 +153,6 @@
                             <input type="text" placeholder="ANDET"></input>
                           </div>
                           
-                          <h3>VÆLG BETALINGSFORM</h3>
-                          <div class="payments">
-                            <button id="card" class="payments_button" onclick="chosenCardFunction()">BETALINGSKORT</button>
-                            <button id="mobilepay" class="payments_button" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
-                            <button id="pay_service" class="payments_button" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
-                          </div>
                           <div class="next_button">
                             <button class="nexts_button" onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
                           </div>
@@ -338,6 +340,38 @@
 
     <script>
 
+        function chosenPathStepOneFunction() {
+          var stepOne = document.getElementById("step1_path");
+           var stepTwo = document.getElementById("step2_path");
+           var stepThree = document.getElementById("step3_path");
+
+                stepTwo.classList.remove("this_flow");
+                stepThree.classList.remove("this_flow");
+
+                stepOne.classList.toggle("this_flow");
+        }
+
+        function chosenPathStepTwoFunction() {
+          var stepOne = document.getElementById("step1_path");
+           var stepTwo = document.getElementById("step2_path");
+           var stepThree = document.getElementById("step3_path");
+
+                stepOne.classList.remove("this_flow");
+                stepThree.classList.remove("this_flow");
+
+                stepTwo.classList.toggle("this_flow");
+        }
+
+        function chosenPathStepThreeFunction() {
+          var stepOne = document.getElementById("step1_path");
+           var stepTwo = document.getElementById("step2_path");
+           var stepThree = document.getElementById("step3_path");
+
+                stepTwo.classList.remove("this_flow");
+                stepOne.classList.remove("this_flow");
+
+                stepThree.classList.toggle("this_flow");
+        }
         
         function chosenAmountOneFunction() {
             var amount50 = document.getElementById("dkk50");
@@ -439,39 +473,6 @@
                 amount250.classList.remove("chosen_amount");
 
                 amount500.classList.toggle("chosen_amount");
-        }
-
-        function chosenCardFunction() {
-            var card = document.getElementById("card");
-           var mobilePay = document.getElementById("mobilepay");
-           var payService = document.getElementById("pay_service");
-
-                mobilePay.classList.remove("chosen_amount");
-                payService.classList.remove("chosen_amount");
-
-                card.classList.toggle("chosen_amount");
-        }
-
-        function chosenMobilepayFunction() {
-            var card = document.getElementById("card");
-           var mobilePay = document.getElementById("mobilepay");
-           var payService = document.getElementById("pay_service");
-
-                card.classList.remove("chosen_amount");
-                payService.classList.remove("chosen_amount");
-
-                mobilePay.classList.toggle("chosen_amount");
-        }
-
-        function chosenPayServiceFunction() {
-            var card = document.getElementById("card");
-           var mobilePay = document.getElementById("mobilepay");
-           var payService = document.getElementById("pay_service");
-
-                card.classList.remove("chosen_amount");
-                mobilePay.classList.remove("chosen_amount");
-
-                payService.classList.toggle("chosen_amount");
         }
         
 

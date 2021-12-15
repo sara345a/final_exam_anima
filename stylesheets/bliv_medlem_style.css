@@ -300,6 +300,12 @@ header .text button {
   border-radius: 10px 10px 0px 0px;
 }
 
+#step1_path,
+#step2_path,
+#step3_path {
+  cursor: pointer;
+}
+
 #step1 {
   padding: 20px;
 }
@@ -324,14 +330,7 @@ header .text button {
   margin-top: 10%;
 }
 
-#form #step1 .payments {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5%;
-}
-
-#form #step1 .amounts_button,
-#form #step1 .payments_button {
+#form #step1 .amounts_button {
   font-size: 12px;
   padding: 2% 4% 2% 4%;
   text-align: center;
@@ -342,12 +341,7 @@ header .text button {
   color: #30415d;
 }
 
-#form #step1 .payments_button {
-  font-size: 8px;
-}
-
-#form #step1 .amounts_button:hover,
-#form #step1 .payments_button:hover {
+#form #step1 .amounts_button:hover {
   background-color: var(--color-darkblue);
   color: var(--color-white);
 }

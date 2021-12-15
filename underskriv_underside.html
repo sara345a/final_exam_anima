@@ -7,6 +7,15 @@
     <meta name="robots" content="noindex">
     <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5ad841142e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>UNDERKSRIFTSINDSAMLING | Anima</title>
     <style>
 /*****************************GENERELT********************************/
 
@@ -296,12 +305,8 @@ header .text button {
 }
 
 #form #flow_steps {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr 1fr;
-  /* justify-content: space-around; */
   background-color: var(--color-darkblue);
   color: var(--color-white);
-  /* border-radius: 5px 5px 0px 0px; */
   padding: 5px;
   text-align: center;
   font-size: 17px;
@@ -309,74 +314,25 @@ header .text button {
   border-radius: 10px 10px 0px 0px;
 }
 
-#form #step1 h3 {
-  margin-left: 5%;
-}
-
-#form #step1 #amounts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 68px);
-  grid-gap: 5%;
-  margin: 0% 5% 5% 5%;
-}
-
-#form #step1 #amounts input {
-  font-size: 12px;
-  padding: 2% 4% 2% 4%;
-  margin-top: 30%;
-  border-radius: 3px;
-  border-color: var(--color-darkblue);
-}
-
 #form #step1 h3:nth-of-type(2) {
   margin-top: 10%;
-}
-
-#form #step1 .payments {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5%;
-  margin: 0% 5% 5% 5%;
-}
-
-#form #step1 #amounts button,
-#form #step1 .payments button {
-  font-size: 12px;
-  padding: 2% 4% 2% 4%;
-  text-align: center;
-  margin-top: 30%;
-  border-radius: 3px;
-  background-color: var(--color-white);
-  border: solid 1px var(--color-darkblue);
-  color: #30415d;
-}
-
-#form #step1 .payments button {
-  font-size: 8px;
-}
-
-#form #step1 #amounts button:hover,
-#form #step1 .payments button:hover {
-  background-color: var(--color-darkblue);
-  color: var(--color-white);
 }
 
 #form #step1 .next_button {
   margin-left: 5%;
 }
 
-#form #step2 {
+#form #step1 {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 5%;
+  margin: 5% 10% 5% 10%;
 }
 
-#form #step2 .inputs {
+#form #step1 .inputs {
   margin-top: 5%;
 }
 
-#form #step2 input {
+#form #step1 input {
   font-size: 10px;
   border-radius: 3px;
   border-color: var(--color-darkblue);
@@ -385,7 +341,7 @@ header .text button {
   margin: 2% 0% 2% 0%;
 }
 
-#form #step2 .checkbox {
+#form #step1 .checkbox {
   display: flex;
   flex-direction: row;
   display: flex;
@@ -393,13 +349,13 @@ header .text button {
   margin: 5% 0% 5% 0%;
 }
 
-#form #step2 .checkbox input {
+#form #step1 .checkbox input {
   width: unset;
   height: unset;
   margin-right: 5%;
 }
 
-#form #step2 .checkbox p {
+#form #step1 .checkbox p {
   font-size: 10px;
 }
 
@@ -411,7 +367,7 @@ header .text button {
   border-radius: 3px;
 }
 
-#form #step3 {
+#form #step2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -419,7 +375,7 @@ header .text button {
   padding: 5% 10% 10% 10%;
 }
 
-#form #step3 p {
+#form #step2 p {
   margin-top: 5%;
 }
 
@@ -451,6 +407,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 place-items: center;
+margin-top: 5%;
 }
 
 main #main_content img {
@@ -488,10 +445,6 @@ main #main_content p, main #main_content h2, main #main_content h3 {
   color: var(--color-red) !important;
 }
 
-.chosen_amount {
-  background-color: var(--color-darkblue) !important;
-  color: var(--color-white) !important;
-}
 
 /*------------------------------------------------------------------------------------*/
 /*                              FOOTER START                                          */
@@ -829,9 +782,13 @@ footer .column a:hover {
     width: 40%;
   }
 
-  main #step1 #amounts {
-    grid-template-columns: 80px 80px 80px 80px;
-  }
+  #form #step1 .checkbox {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  margin: 2% 0% 2% 0%;
+}
 
   main #bottom_column .textbox {
     width: 50%;
@@ -896,8 +853,6 @@ footer .column a:hover {
 }
 
     </style>
-
-    <title>UNDERKSRIFTSINDSAMLING | Anima</title>
 </head>
 
 <body>
@@ -1019,35 +974,11 @@ footer .column a:hover {
                   <div id="form">
                     <div id="form_content" class="">
                       <div id="flow_steps">
-                        <h4 id="step1_path" class="this_flow">1. BELØB</h4>
-                        <h4 id="step2_path">2. INFORMATION</h4>
-                        <h4 id="step3_path">3. BETAL</h4>
-                      </div>
-  
-                      <div id="step1">
-                        <h3>VÆLG BELØB</h3>
-                        <div id="amounts">
-                          <button id="dkk50" class="" onclick="chosenAmountOneFunction()">50 DKK</button>
-                          <button id="dkk100" class="" onclick="chosenAmountTwoFunction()">100 DKK</button>
-                          <button id="dkk150" class="" onclick="chosenAmountThreeFunction()">150 DKK</button>
-                          <button id="dkk200" class="" onclick="chosenAmountFourFunction()">200 DKK</button>
-                          <button id="dkk250" class="" onclick="chosenAmountFiveFunction()">250 DKK</button>
-                          <button id="dkk500" class="" onclick="chosenAmountSixFunction()">500 DKK</button>
-                          <input type="text" placeholder="ANDET"></input>
-                        </div>
-                        
-                        <h3>VÆLG BETALINGSFORM</h3>
-                        <div class="payments">
-                          <button id="card" class="" onclick="chosenCardFunction()">BETALINGSKORT</button>
-                          <button id="mobilepay" class="" onclick="chosenMobilepayFunction()">MOBILEPAY</button>
-                          <button id="pay_service" class="" onclick="chosenPayServiceFunction()">BETALINGSSERVICE</button>
-                        </div>
-                        <div class="next_button">
-                          <button onclick="flowFuntionStepOne()">BLIV MEDLEM</button>
-                        </div>
+                        <h4 id="step1_path">UNDERSKRIV FOR DYRENE</h4>
+
                       </div>
                       
-                      <div id="step2" class="hide">
+                      <div id="step1" >
                         <h3>INDTAST DINE OPLYSNINGER</h3>
                         <div class="inputs">
                           <input type="text" placeholder="Navn" class="name"></input>
@@ -1056,14 +987,14 @@ footer .column a:hover {
                           <div class="checkbox"><input type="checkbox"></input><p>Ja tak, jeg vil gerne modtage nyhedsbrev fra Anima</p></div>
                           <div class="checkbox"><input type="checkbox"></input><p>Jeg godkender handelsbetingelserne*</p></div>
                           <div class="next_button">
-                            <button onclick="flowFuntionStepTwo()">GÅ TIL BETALING</button>
+                            <button onclick="flowFuntionStepOne()">UNDERSKRIV</button>
                             </div>
                           </div>
                       </div>
   
-                        <div id="step3" class="hide">
-                          <h3>BETALING</h3>
-                          <P>Du vil nu blive dirigeret videre til betalingsudbyderen</P> 
+                        <div id="step2" class="hide">
+                          <h3>TAK FOR DIN UNDERSKRIFT </h3>
+                          <P>Du er nu med til at gøre en forskel for dyrene og deres rettigheder</P> 
                         </div>
                       </div>
                   </div>
@@ -1225,162 +1156,12 @@ function makeNavbarSticky() {
 
 ///////////////////////////FORM FUNCTIONS///////////////////////////////////////////
 
-function chosenAmountOneFunction() {
-            var amount50 = document.getElementById("dkk50");
-           var amount100 = document.getElementById("dkk100");
-           var amount150 = document.getElementById("dkk150");
-           var amount200 = document.getElementById("dkk200");
-           var amount250 = document.getElementById("dkk250");
-           var amount500 = document.getElementById("dkk500");
-
-                amount100.classList.remove("chosen_amount");
-                amount150.classList.remove("chosen_amount");
-                amount200.classList.remove("chosen_amount");
-                amount250.classList.remove("chosen_amount");
-                amount500.classList.remove("chosen_amount");
-
-                amount50.classList.toggle("chosen_amount");
-        }
-           
-        function chosenAmountTwoFunction() {
-            var amount50 = document.getElementById("dkk50");
-           var amount100 = document.getElementById("dkk100");
-           var amount150 = document.getElementById("dkk150");
-           var amount200 = document.getElementById("dkk200");
-           var amount250 = document.getElementById("dkk250");
-           var amount500 = document.getElementById("dkk500");
-
-                amount50.classList.remove("chosen_amount");
-                amount150.classList.remove("chosen_amount");
-                amount200.classList.remove("chosen_amount");
-                amount250.classList.remove("chosen_amount");
-                amount500.classList.remove("chosen_amount");
-
-                amount100.classList.toggle("chosen_amount");
-        } 
-
-        function chosenAmountThreeFunction() {
-            var amount50 = document.getElementById("dkk50");
-           var amount100 = document.getElementById("dkk100");
-           var amount150 = document.getElementById("dkk150");
-           var amount200 = document.getElementById("dkk200");
-           var amount250 = document.getElementById("dkk250");
-           var amount500 = document.getElementById("dkk500");
-
-                amount50.classList.remove("chosen_amount");
-                amount100.classList.remove("chosen_amount");
-                amount200.classList.remove("chosen_amount");
-                amount250.classList.remove("chosen_amount");
-                amount500.classList.remove("chosen_amount");
-
-                amount150.classList.toggle("chosen_amount");
-        } 
-
-        function chosenAmountFourFunction() {
-            var amount50 = document.getElementById("dkk50");
-           var amount100 = document.getElementById("dkk100");
-           var amount150 = document.getElementById("dkk150");
-           var amount200 = document.getElementById("dkk200");
-           var amount250 = document.getElementById("dkk250");
-           var amount500 = document.getElementById("dkk500");
-
-                amount50.classList.remove("chosen_amount");
-                amount100.classList.remove("chosen_amount");
-                amount150.classList.remove("chosen_amount");
-                amount250.classList.remove("chosen_amount");
-                amount500.classList.remove("chosen_amount");
-
-                amount200.classList.toggle("chosen_amount");
-        } 
-
-        function chosenAmountFiveFunction() {
-            var amount50 = document.getElementById("dkk50");
-           var amount100 = document.getElementById("dkk100");
-           var amount150 = document.getElementById("dkk150");
-           var amount200 = document.getElementById("dkk200");
-           var amount250 = document.getElementById("dkk250");
-           var amount500 = document.getElementById("dkk500");
-
-                amount50.classList.remove("chosen_amount");
-                amount100.classList.remove("chosen_amount");
-                amount150.classList.remove("chosen_amount");
-                amount200.classList.remove("chosen_amount");
-                amount500.classList.remove("chosen_amount");
-
-                amount250.classList.toggle("chosen_amount");
-        }
-
-        function chosenAmountSixFunction() {
-            var amount50 = document.getElementById("dkk50");
-           var amount100 = document.getElementById("dkk100");
-           var amount150 = document.getElementById("dkk150");
-           var amount200 = document.getElementById("dkk200");
-           var amount250 = document.getElementById("dkk250");
-           var amount500 = document.getElementById("dkk500");
-
-                amount50.classList.remove("chosen_amount");
-                amount100.classList.remove("chosen_amount");
-                amount150.classList.remove("chosen_amount");
-                amount200.classList.remove("chosen_amount");
-                amount250.classList.remove("chosen_amount");
-
-                amount500.classList.toggle("chosen_amount");
-        }
-
-        function chosenCardFunction() {
-            var card = document.getElementById("card");
-           var mobilePay = document.getElementById("mobilepay");
-           var payService = document.getElementById("pay_service");
-
-                mobilePay.classList.remove("chosen_amount");
-                payService.classList.remove("chosen_amount");
-
-                card.classList.toggle("chosen_amount");
-        }
-
-        function chosenMobilepayFunction() {
-            var card = document.getElementById("card");
-           var mobilePay = document.getElementById("mobilepay");
-           var payService = document.getElementById("pay_service");
-
-                card.classList.remove("chosen_amount");
-                payService.classList.remove("chosen_amount");
-
-                mobilePay.classList.toggle("chosen_amount");
-        }
-
-        function chosenPayServiceFunction() {
-            var card = document.getElementById("card");
-           var mobilePay = document.getElementById("mobilepay");
-           var payService = document.getElementById("pay_service");
-
-                card.classList.remove("chosen_amount");
-                mobilePay.classList.remove("chosen_amount");
-
-                payService.classList.toggle("chosen_amount");
-        }
-        
-
         function flowFuntionStepOne() {
            var stepOne = document.getElementById("step1");
            var stepTwo = document.getElementById("step2");
-           var stepOnePath = document.getElementById("step1_path");
-           var stepTwoPath = document.getElementById("step2_path");
            stepOne.classList.toggle("hide");
            stepTwo.classList.toggle("hide");
-           stepOnePath.classList.toggle("this_flow");
-           stepTwoPath.classList.toggle("this_flow");
-        }
 
-        function flowFuntionStepTwo() {
-           var stepThree = document.getElementById("step3");
-           var stepTwo = document.getElementById("step2");
-           var stepThreePath = document.getElementById("step3_path");
-           var stepTwoPath = document.getElementById("step2_path");
-           stepThree.classList.toggle("hide");
-           stepTwo.classList.toggle("hide");
-           stepThreePath.classList.toggle("this_flow");
-           stepTwoPath.classList.toggle("this_flow");
         }
 
 ///////////////////////////HENT DATA///////////////////////////////////////////
