@@ -340,38 +340,63 @@
 
     <script>
 
-        function chosenPathStepOneFunction() {
-          var stepOne = document.getElementById("step1_path");
-           var stepTwo = document.getElementById("step2_path");
-           var stepThree = document.getElementById("step3_path");
+function chosenPathStepOneFunction() {
+          var stepOnePath = document.getElementById("step1_path");
+           var stepTwoPath = document.getElementById("step2_path");
+           var stepThreePath = document.getElementById("step3_path");
 
-                stepTwo.classList.remove("this_flow");
-                stepThree.classList.remove("this_flow");
+           var stepOne = document.getElementById("step1");
+           var stepTwo = document.getElementById("step2");
+           var stepThree = document.getElementById("step3");
 
-                stepOne.classList.toggle("this_flow");
+           stepOne.classList.remove("hide");
+           stepTwo.classList.add("hide");
+           stepThree.classList.add("hide");
+
+
+                stepTwoPath.classList.remove("this_flow");
+                stepThreePath.classList.remove("this_flow");
+
+                stepOnePath.classList.toggle("this_flow");
         }
 
         function chosenPathStepTwoFunction() {
-          var stepOne = document.getElementById("step1_path");
-           var stepTwo = document.getElementById("step2_path");
-           var stepThree = document.getElementById("step3_path");
+          var stepOnePath = document.getElementById("step1_path");
+           var stepTwoPath = document.getElementById("step2_path");
+           var stepThreePath = document.getElementById("step3_path");
 
-                stepOne.classList.remove("this_flow");
-                stepThree.classList.remove("this_flow");
+           var stepOne = document.getElementById("step1");
+           var stepTwo = document.getElementById("step2");
+           var stepThree = document.getElementById("step3");
 
-                stepTwo.classList.toggle("this_flow");
+           stepOne.classList.add("hide");
+           stepTwo.classList.remove("hide");
+           stepThree.classList.add("hide");
+
+                stepOnePath.classList.remove("this_flow");
+                stepThreePath.classList.remove("this_flow");
+
+                stepTwoPath.classList.toggle("this_flow");
         }
 
         function chosenPathStepThreeFunction() {
-          var stepOne = document.getElementById("step1_path");
-           var stepTwo = document.getElementById("step2_path");
-           var stepThree = document.getElementById("step3_path");
+          var stepOnePath = document.getElementById("step1_path");
+           var stepTwoPath = document.getElementById("step2_path");
+           var stepThreePath = document.getElementById("step3_path");
 
-                stepTwo.classList.remove("this_flow");
-                stepOne.classList.remove("this_flow");
+           var stepOne = document.getElementById("step1");
+           var stepTwo = document.getElementById("step2");
+           var stepThree = document.getElementById("step3");
 
-                stepThree.classList.toggle("this_flow");
-        }
+           stepOne.classList.add("hide");
+           stepTwo.classList.add("hide");
+           stepThree.classList.remove("hide");
+
+                stepTwoPath.classList.remove("this_flow");
+                stepOnePath.classList.remove("this_flow");
+
+                stepThreePath.classList.toggle("this_flow");
+        }        
         
         function chosenAmountOneFunction() {
             var amount50 = document.getElementById("dkk50");
