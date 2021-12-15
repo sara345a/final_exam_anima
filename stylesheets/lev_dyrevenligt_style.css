@@ -248,6 +248,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 main #top_column {
@@ -257,10 +258,15 @@ main #top_column {
   width: 80%;
 }
 
+main #top_column h3 {
+  margin: 10% 0% 10% 0%;
+}
+
 main #bottom_column {
-  background-image: url("/static_assets/background_shape_high-left.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 }
 
 main #form {
@@ -269,7 +275,7 @@ main #form {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 10%;
-  margin: 10% 10% 5% 10%;
+  margin: 10% 0% 10% 0%;
 }
 
 main #form input,
@@ -287,14 +293,23 @@ main #form .message {
 main #thank_you_message {
   text-align: center;
 }
+
+main #img_box {
+  margin: 0% 0% 10% 0%;
+}
 /****************************POSTS**************************/
 
 main #button_box {
-  background-color: var(--color-icyblue);
+  background-color: var(--color-white);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 main #blogcontent {
-  background-color: var(--color-icyblue);
+  background-image: url("/static_assets/background_shape_high-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   color: black;
@@ -316,6 +331,7 @@ main .post_element {
   margin-top: 10%;
   margin-bottom: 10%;
   cursor: pointer;
+  background-color: var(--color-white);
 }
 
 main .post_image {
@@ -332,8 +348,8 @@ main .button_box {
 }
 
 main .button_box button:hover {
-  color: var(--color-darkerblue);
-  background-color: var(--color-white);
+  color: var(--color-darkerblue) !important;
+  background-color: var(--color-white) !important;
 }
 
 /*------------------------------------------------------------------------------------*/
