@@ -140,6 +140,7 @@ console.log("vis");
     document.querySelector(".call-to-action_box .para_3").textContent = data.ikon_tekst3;
     document.querySelector(".two-third_right h2").textContent = data.overskrift1;
     document.querySelector(".two-third_right p").textContent = data.tekstfelt1;
+    document.querySelector(".two-third_left img").src = data.indholdsbillede1.guid;
 
 }
 

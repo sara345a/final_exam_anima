@@ -283,9 +283,11 @@ main .top-banner-overlay p {
 }
 
 main #fold_section {
-  background-color: var(--color-icyblue);
   display: flex;
   justify-content: center;
+  background-image: url("/static_assets/background_shape_high-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main #fold_content {
