@@ -229,11 +229,11 @@ header .text {
   color: #f2f2f2;
   font-size: 15px;
   font-weight: 800;
-  padding: 8px 12px;
+  padding: 8px 7px;
   position: absolute;
   bottom: 90px;
   text-align: center;
-  left: 20px;
+  left: 6px;
 }
 
 header .text button {
@@ -242,24 +242,21 @@ header .text button {
 /*------------------------------------------------------------------------------------*/
 /*                                     MAIN INDHOLD                                 */
 /*------------------------------------------------------------------------------------*/
-
+main ul {
+  font-family: var(--paragraph);
+}
 main button {
-  all: unset;
-  font-family: montserrat, sans-serif;
-  cursor: pointer;
-  background-color: var(--color-red);
-  color: var(--color-white);
-  padding: 2% 7% 2% 7%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  width: 120px;
 }
 
 main #animal_article {
-  height: auto;
+  height: 400px;
 }
 
 main .top-banner {
   display: flex;
-  height: 240px;
+  height: 100%;
   background: no-repeat center / cover;
   flex-direction: column;
 }
@@ -268,7 +265,8 @@ main .top-banner-overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 240px;
+  align-items: center;
+  height: 100%;
   width: 40%;
   padding-left: 20px;
   padding-right: 80px;
@@ -279,9 +277,7 @@ main .top-banner-overlay {
 
 main .top-banner-overlay p {
   font-size: 1rem;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  max-width: 400px;
 }
 
 main #fold_section {
@@ -293,14 +289,28 @@ main #fold_section {
 }
 
 main #fold_content {
-  width: 60%;
   text-align: left;
-  margin: 10% 0% 10% 0%;
+  padding: 40px;
+  color: var(--color-black);
+  width: 70%;
+  max-width: 800px;
+}
+
+.wp-block-image {
+  display: flex;
+  justify-content: center;
+}
+
+main #fold_section img {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 500px;
 }
 
 main .top-banner2 {
   display: flex;
-  height: 240px;
+  height: 100%;
   background: no-repeat center / cover;
 }
 
@@ -308,10 +318,11 @@ main .top-banner-overlay2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 40%;
-  height: 240px;
-  padding-left: 80px;
-  padding-right: 20px;
+  height: 100%;
+  padding-left: 112px;
+  padding-right: 40px;
   color: white;
   background: rgba(48, 65, 93, 70%);
   margin-left: auto;
@@ -321,12 +332,13 @@ main .top-banner-overlay2 {
 
 main .top-banner-overlay2 p {
   font-size: 1rem;
-  margin-top: 10px;
-  margin-left: 40px;
+  max-width: 400px;
 }
 
 main h2 {
-  text-align: center;
+  text-align: start;
+  margin: 0px 0px 0px 0px;
+  padding-top: 25px;
 }
 
 .hide {
@@ -549,6 +561,19 @@ footer .column a:hover {
 
   .support-button_container {
     margin-left: 10px;
+  }
+
+  .picture_overlay_wrapper {
+    height: 400px;
+  }
+
+  main .top-banner-overlay {
+    padding-left: 40px;
+    padding-right: 103px;
+  }
+
+  main #fold_section img {
+    height: 400px;
   }
 }
 
