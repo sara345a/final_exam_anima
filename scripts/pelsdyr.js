@@ -68,7 +68,7 @@ function vis(data) {
 async function filterContent() {
 
   
-    const animalLink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/dyr_posts/"
+    const animalLink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/dyr_posts?per_page=100"
     const responsAnimal = await fetch(animalLink);
     const jsonAnimal = await responsAnimal.json();
 
