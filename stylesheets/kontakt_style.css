@@ -256,6 +256,9 @@ main #content {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-image: url("/static_assets/background_shape_high-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main #content #form {
@@ -265,6 +268,7 @@ main #content #form {
   border-radius: 5px;
   padding: 10%;
   margin: 10% 10% 5% 10%;
+  background-color: var(--color-white);
 }
 
 main #content #form input,
