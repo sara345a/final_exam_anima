@@ -300,20 +300,22 @@ header .text button {
   border-radius: 10px 10px 0px 0px;
 }
 
+#step1,
+#step2,
+#step3 {
+  margin: 10% 5% 10% 5%;
+}
+
 #step1_path,
 #step2_path,
 #step3_path {
   cursor: pointer;
 }
 
-#step1 {
-  padding: 20px;
-}
-
 #form #step1 #amounts {
   display: grid;
   grid-template-columns: repeat(auto-fill, 68px);
-  grid-gap: 13%;
+  grid-gap: 10%;
   align-items: baseline;
   justify-content: start;
 }
@@ -321,19 +323,19 @@ header .text button {
 #form #step1 #amounts input {
   font-size: 12px;
   padding: 2% 4% 2% 4%;
-  margin-top: 30%;
+  margin-top: 15%;
   border-radius: 3px;
   border-color: var(--color-darkblue);
 }
 
 #form #step1 h3:nth-of-type(2) {
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 #form #step1 .payments {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5%;
+  grid-gap: 3%;
 }
 
 #form #step1 .amounts_button,
@@ -341,7 +343,7 @@ header .text button {
   font-size: 12px;
   padding: 2% 4% 2% 4%;
   text-align: center;
-  margin-top: 30%;
+  margin-top: 15%;
   border-radius: 3px;
   background-color: var(--color-white);
   border: solid 1px var(--color-darkblue);
@@ -411,6 +413,10 @@ button.nexts_button {
 
 #form #step3 p {
   margin-top: 5%;
+}
+
+#form button {
+  width: unset;
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -844,6 +850,10 @@ footer .column a:hover {
 
   #form {
     width: 40%;
+  }
+
+  #form #step1 h3:nth-of-type(2) {
+    margin-top: 15%;
   }
 
   main #step1 #amounts {
