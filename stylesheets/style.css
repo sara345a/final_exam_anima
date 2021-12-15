@@ -344,7 +344,7 @@ img {
   padding: 40px 20px;
   justify-content: center;
   align-items: center;
-  background-image: url("/static_assets/background_shape_high-left.svg");
+  background-color: var(--color-icyblue);
   background-repeat: no-repeat;
   background-size: cover;
 }
