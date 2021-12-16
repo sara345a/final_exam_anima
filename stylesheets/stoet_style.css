@@ -519,9 +519,7 @@ main #icons_box p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/static_assets/background_shape_high-left.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--color-icyblue);
 }
 
 .two-third_right {

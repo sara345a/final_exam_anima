@@ -251,6 +251,10 @@ header .text button {
 /*                                     MAIN INDHOLD                                   */
 /*------------------------------------------------------------------------------------*/
 
+main {
+  overflow-x: hidden;
+}
+
 main button {
   all: unset;
   font-family: montserrat, sans-serif;
@@ -589,18 +593,24 @@ footer .column a:hover {
   main #top_column {
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     margin-top: 5%;
   }
 
   main #top_column .textbox {
     width: 120vw;
     margin-right: 10%;
+    margin-top: 0;
+  }
+
+  main #top_column .textbox h3 {
+    margin-top: 0;
   }
 
   main #top_column img {
     object-fit: cover;
     height: 1500px;
+    margin-top: 0;
   }
 
   main #bottom_column {
@@ -689,7 +699,7 @@ footer .column a:hover {
   main #top_column {
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 0;
   }
 
