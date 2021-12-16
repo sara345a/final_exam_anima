@@ -284,9 +284,6 @@ header .text button {
     padding: 2vh;
   }
 
-  header .nav_links {
-  }
-
   header .nav_links:hover {
     transition: all 0.4s ease-out;
   }
@@ -349,9 +346,6 @@ header .text button {
     text-align: center;
     line-height: 10px;
   }
-
-  header .logo_container {
-  }
 }
 /*---------laptop---------*/
 @media screen and (min-width: 1024px) {
@@ -384,9 +378,6 @@ header .text button {
     margin-bottom: unset;
   }
 
-  header .nav_links {
-  }
-
   header .logo_image {
     max-width: 160px;
     margin-top: 12px;
@@ -405,9 +396,6 @@ header .text button {
   header .splash_text {
     bottom: 20%;
   }
-  header .dropdown {
-    padding-right: 30px;
-  }
 
   img {
     max-height: 600px;
@@ -420,13 +408,6 @@ header .text button {
   header .search {
     width: 90px;
     margin-right: 10px;
-  }
-
-  header .nav_links {
-  }
-
-  header .dropdown {
-    padding-right: 30px;
   }
 
   header .nav_container button {

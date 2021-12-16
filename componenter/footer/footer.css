@@ -37,6 +37,7 @@ footer .column a {
 
 footer .column .fas,
 footer .column .fab {
+  font-size: 15px;
 }
 
 footer .column a:hover {

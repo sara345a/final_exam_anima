@@ -76,8 +76,10 @@ header .nav_container {
 }
 
 header .logo_image {
-  max-width: 150px;
-  margin-top: 5px;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header img#navbar_logo:hover {
@@ -147,7 +149,6 @@ header .nav_links {
   font-family: montserrat, sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: 20px;
   white-space: nowrap;
 }
 
@@ -170,6 +171,7 @@ button {
   overflow: hidden;
   transition-duration: 0.3s;
   transition-property: color, background-color;
+  font-weight: bold;
 }
 
 button:hover,
@@ -211,6 +213,37 @@ header .search {
 }
 
 /*----------------------------------nav bar END---------------------------------------*/
+
+/*----FONT SIZES START------*/
+
+.nav_links {
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(0.938rem, 2vw + 0.25rem, 1.063rem);
+  white-space: nowrap;
+}
+
+.dropdown-content a {
+  font-style: normal;
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 0.875rem);
+}
+
+.text h1 {
+  font-size: clamp(1.438rem, 3vw, 2.188rem);
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: (1.25rem, 4vw - 0.5rem, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.75rem, 3vw - 0.25rem, 0.938rem);
+}
+/*----font sizes end------*/
 img {
   object-fit: cover;
   width: 100%;
@@ -235,7 +268,6 @@ header .slideshow-container {
 /* Caption text */
 header .text {
   color: #f2f2f2;
-  font-size: 15px;
   font-weight: bold;
   padding: 8px 12px;
   position: absolute;
@@ -509,10 +541,6 @@ footer .column a:hover {
     padding: 2vh;
   }
 
-  header .nav_links {
-    font-size: 16px;
-  }
-
   header .nav_links:hover {
     transition: all 0.4s ease-out;
   }
@@ -566,10 +594,6 @@ footer .column a:hover {
   header .nav_container.active {
     width: 30%;
     max-height: 10px;
-  }
-
-  header .nav_links {
-    font-size: 13px;
   }
 
   header .search {
@@ -676,9 +700,6 @@ footer .column a:hover {
     margin-bottom: unset;
   }
 
-  header .nav_links {
-  }
-
   header .logo_image {
     max-width: 160px;
     margin-top: 12px;
@@ -736,9 +757,6 @@ footer .column a:hover {
   header .splash_text {
     bottom: 20%;
   }
-  header .dropdown {
-    padding-right: 30px;
-  }
 
   img {
     max-height: 600px;
@@ -751,13 +769,6 @@ footer .column a:hover {
   header .search {
     width: 90px;
     margin-right: 10px;
-  }
-
-  header .nav_links {
-  }
-
-  header .dropdown {
-    padding-right: 30px;
   }
 
   header .nav_container button {
