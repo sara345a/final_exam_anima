@@ -264,13 +264,23 @@ main #bottom_column {
   align-items: center;
 }
 
+main #bottom_column {
+  background-color: var(--color-icyblue);
+  padding-top: 5%;
+}
+
+main #separationbar {
+  all: unset;
+}
+
 main .textbox {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main #content img {
+main #top_column img,
+main #bottom_column img {
   width: 80%;
   height: auto;
   margin-top: 15%;
@@ -460,14 +470,14 @@ footer .column a:hover {
   main #bottom_column {
     flex-direction: row-reverse;
     align-items: flex-start;
-    margin-top: 5%;
   }
 
   main .textbox {
     width: 55%;
   }
 
-  main #content img {
+  main #top_column img,
+  main #bottom_column img {
     width: 40%;
     height: 600px;
     margin-top: 0%;
@@ -548,14 +558,14 @@ footer .column a:hover {
   main #bottom_column {
     flex-direction: row-reverse;
     align-items: flex-start;
-    margin-top: 5%;
   }
 
   main .textbox {
     width: 55%;
   }
 
-  main #content img {
+  main #top_column img,
+  main #bottom_column img {
     width: 40%;
     height: 600px;
     margin-top: 0%;
