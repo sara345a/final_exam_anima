@@ -50,7 +50,6 @@ html {
 
 .logo_image {
   max-width: 150px;
-  margin-top: 5px;
 }
 
 img#navbar_logo:hover {
@@ -118,7 +117,7 @@ img#navbar_logo:hover {
   font-family: montserrat, sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 20px;
+
   white-space: nowrap;
 }
 
@@ -326,7 +325,6 @@ img {
   }
 
   .nav_links {
-    font-size: 16px;
   }
 
   .nav_links:hover {
@@ -407,7 +405,6 @@ img {
   }
 
   .logo_container {
-    justify-content: unset;
   }
 }
 /*---------laptop---------*/

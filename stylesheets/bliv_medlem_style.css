@@ -77,7 +77,8 @@ header .nav_container {
 
 header .logo_image {
   max-width: 150px;
-  margin-top: 5px;
+  display: flex;
+  align-self: center;
 }
 
 header img#navbar_logo:hover {
@@ -123,8 +124,8 @@ header .dropdown-content {
   margin-left: -20px;
 }
 
-header .dropdown-content a {
-  color: var(--color-black);
+.dropdown-content a {
+  color: var(--color-white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -146,7 +147,7 @@ header .nav_links {
   font-family: montserrat, sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 20px;
+
   white-space: nowrap;
 }
 
@@ -209,6 +210,32 @@ header .search {
 }
 
 /*----------------------------------nav bar END---------------------------------------*/
+/*----FONT SIZES START------*/
+
+.nav_links {
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(1rem, 2vw, 1.438rem);
+  white-space: nowrap;
+}
+
+.text h1 {
+  font-size: clamp(1.438rem, 3vw, 2.188rem);
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: (1.25rem, 4vw - 0.5rem, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.75rem, 3vw - 0.25rem, 0.938rem);
+}
+/*----font sizes end------*/
+
 img {
   object-fit: cover;
   width: 100%;
@@ -229,7 +256,6 @@ header .top_component {
 /* Caption text */
 header .text {
   color: #f2f2f2;
-  font-size: 15px;
   font-weight: 800;
   padding: 8px 12px;
   bottom: 90px;
@@ -585,7 +611,6 @@ footer .column a {
 
 footer .column .fas,
 footer .column .fab {
-  font-size: 20px;
 }
 
 footer .column a:hover {
@@ -637,10 +662,6 @@ footer .column a:hover {
     z-index: 30;
   }
 
-  header .nav_links {
-    font-size: 16px;
-  }
-
   header .nav_links:hover {
     transition: all 0.4s ease-out;
   }
@@ -690,16 +711,13 @@ footer .column a:hover {
 /*-------tablet--------*/
 @media screen and (min-width: 767px) {
   header .logo_container {
-    justify-content: unset;
   }
 
   header .splash_text {
     bottom: 26%;
-    font-size: 1.7em;
   }
 
   header .text {
-    font-size: 22px;
     bottom: 100px;
     text-align: unset;
     left: 50px;
@@ -709,10 +727,6 @@ footer .column a:hover {
   header .nav_container.active {
     width: 30%;
     max-height: 10px;
-  }
-
-  header .nav_links {
-    font-size: 13px;
   }
 
   header .search {
@@ -801,11 +815,6 @@ footer .column a:hover {
     width: unset;
   }
 
-  header .splash_text {
-    bottom: 0%;
-    font-size: 2.5em;
-  }
-
   header .dropdown {
     padding-right: 17px;
   }
@@ -823,9 +832,6 @@ footer .column a:hover {
     margin-bottom: unset;
   }
 
-  header .nav_links {
-    font-size: 19px;
-  }
   header .call-to-action_option {
     max-width: 250px;
   }
@@ -875,7 +881,6 @@ footer .column a:hover {
 @media screen and (min-width: 1440px) {
   header .splash_text {
     bottom: 20%;
-    font-size: 2.5em;
   }
   header .dropdown {
     padding-right: 30px;
@@ -888,10 +893,6 @@ footer .column a:hover {
   header .search {
     width: 90px;
     margin-right: 10px;
-  }
-
-  header .nav_links {
-    font-size: 22px;
   }
 
   header .dropdown {

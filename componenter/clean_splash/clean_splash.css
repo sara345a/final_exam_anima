@@ -105,18 +105,19 @@ header .dropdown {
   padding: 8px;
 }
 
-header .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
-  background: var(--color-grey);
-  color: var(--color-white);
+  background: var(--color-red);
+  /* color: var(--color-white); */
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-left: -20px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  margin-left: -30px;
+  margin-top: 10px;
 }
 
-header .dropdown-content a {
-  color: var(--color-black);
+.dropdown-content a {
+  color: var(--color-white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -284,7 +285,6 @@ header .text button {
   }
 
   header .nav_links {
-    font-size: 16px;
   }
 
   header .nav_links:hover {
@@ -353,7 +353,6 @@ header .text button {
   }
 
   header .logo_container {
-    justify-content: unset;
   }
 }
 /*---------laptop---------*/

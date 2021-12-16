@@ -62,7 +62,9 @@ p {
 
 .logo_image {
   max-width: 150px;
-  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img#navbar_logo:hover {
@@ -125,17 +127,6 @@ img#navbar_logo:hover {
   display: block;
 }
 
-.nav_links {
-  color: var(--color-white);
-  text-decoration: none;
-  /* position: relative; */
-  font-family: montserrat, sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 20px;
-  white-space: nowrap;
-}
-
 .nav_links:hover {
   color: rgb(199, 199, 199);
   transition: all 0.1s ease-out;
@@ -196,6 +187,33 @@ button:active {
 }
 
 /*----------------------------------nav bar END---------------------------------------*/
+
+/*----FONT SIZES START------*/
+
+.nav_links {
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(1rem, 2vw, 1.438rem);
+  white-space: nowrap;
+}
+
+.text h1 {
+  font-size: clamp(1.438rem, 3vw, 2.188rem);
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: (1.25rem, 4vw - 0.5rem, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.75rem, 3vw - 0.25rem, 0.938rem);
+}
+/*----font sizes end------*/
+
 header .sticky,
 header .top_component {
   z-index: 300;
@@ -267,7 +285,6 @@ img {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
   font-weight: 800;
   padding: 8px 12px;
   position: absolute;
@@ -307,22 +324,20 @@ img {
 /*----call to action, donate, testamenter, underskriv------*/
 .call-to-action_box {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
   text-align: center;
   width: 100%;
 }
 .call-to-action_option {
-  height: 300px;
   box-shadow: var(--box-shadow);
   border-radius: 10px;
   margin: 20px;
   padding: 20px;
-  max-height: 300px;
   cursor: pointer;
-  text-decoration: none;
-  color: var(--color-black);
-  font-family: var(--paragraph);
+  max-width: 200px;
 }
 .call-to-action_option:hover {
   background-color: var(--color-grey);
@@ -464,7 +479,6 @@ footer .column a {
 
 footer .column .fas,
 footer .column .fab {
-  font-size: 20px;
 }
 
 footer .column a:hover {
@@ -581,6 +595,10 @@ footer .column a:hover {
     margin-left: 20px;
   }
 
+  .logo_image {
+    margin-top: 8px;
+  }
+
   .nav_container.active {
     background: var(--color-darkblue);
     left: -10px;
@@ -589,9 +607,9 @@ footer .column a:hover {
     padding: 2vh;
   }
 
-  .nav_links {
-    font-size: 16px;
-  }
+  /* .nav_links {
+     
+  } */
 
   .nav_links:hover {
     transition: all 0.4s ease-out;
@@ -632,14 +650,12 @@ footer .column a:hover {
 }
 
 /*-------tablet--------*/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .splash_text {
     bottom: 26%;
-    font-size: 1.7em;
   }
 
   .text {
-    font-size: 22px;
     bottom: 100px;
     text-align: unset;
     left: 50px;
@@ -648,10 +664,6 @@ footer .column a:hover {
   .nav_container.active {
     width: 30%;
     max-height: 10px;
-  }
-
-  .call-to-action_box {
-    flex-direction: row;
   }
 
   .two-third {
@@ -686,10 +698,6 @@ footer .column a:hover {
     left: 47%;
   }
 
-  .nav_links {
-    font-size: 13px;
-  }
-
   .search {
     max-width: 50px;
     margin-bottom: unset;
@@ -703,11 +711,18 @@ footer .column a:hover {
   }
 
   .logo_container {
-    justify-content: unset;
   }
 
   footer .footer-content-wrapper {
     justify-content: space-evenly;
+  }
+
+  .call-to-action_box {
+    flex-direction: row;
+  }
+
+  .call-to-action_option {
+    height: 350px;
   }
 }
 /*---------laptop---------*/
@@ -722,7 +737,6 @@ footer .column a:hover {
 
   .splash_text {
     bottom: 0%;
-    font-size: 2.5em;
   }
 
   .dropdown {
@@ -746,20 +760,11 @@ footer .column a:hover {
     margin-bottom: unset;
   }
 
-  .nav_links {
-    font-size: 19px;
-  }
   .call-to-action_option {
-    max-width: 250px;
   }
 
   .two-third_right {
     padding: 80px;
-  }
-
-  .logo_image {
-    max-width: 160px;
-    margin-top: 12px;
   }
 
   .text h1 {
@@ -770,7 +775,6 @@ footer .column a:hover {
 @media screen and (min-width: 1440px) {
   .splash_text {
     bottom: 20%;
-    font-size: 2.5em;
   }
   .dropdown {
     padding-right: 30px;
@@ -789,15 +793,24 @@ footer .column a:hover {
     margin-right: 10px;
   }
 
-  .nav_links {
-    font-size: 22px;
-  }
-
   .dropdown {
     padding-right: 30px;
   }
 
   .nav_container button {
     height: 34px;
+  }
+
+  .call-to-action_box {
+    gap: 64px;
+  }
+
+  .call-to-action_option {
+    margin: unset;
+    padding: 20px;
+    max-width: 231px;
+    width: 229px;
+    height: 290px;
+    margin: 20px 0pc;
   }
 }
