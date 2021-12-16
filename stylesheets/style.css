@@ -230,6 +230,7 @@ h2 {
 
 p {
   font-size: clamp(0.75rem, 3vw - 0.25rem, 0.938rem);
+  line-height: clamp(1.25rem, 2vw + 0.5rem, 1.438rem);
 }
 /*----font sizes end------*/
 
@@ -821,7 +822,7 @@ footer .column a:hover {
     padding: 20px;
     max-width: 231px;
     width: 229px;
-    height: 290px;
+    height: 320px;
     margin: 20px 0pc;
   }
 }
