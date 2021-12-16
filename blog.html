@@ -132,6 +132,7 @@
 
         <main>
           <div id="button_box">
+            
             <!-- <button class="filter_btn" value="landbrugsdyr" id="landbrugsdyr_button">Landbrugsdyr</button>
             <button class="filter_btn" id="pelsdyr_button">Pelsdyr</button>
             <button class="filter_btn" id="forsoegsdyr_button">Forsøgsdyr</button>
@@ -141,10 +142,10 @@
             <button class="filter_btn" id="andet_button">andet</button> -->
         </div>
             
-
+       
             <div id="blogcontent"></div>
 
-
+            
             <template id="category_template">
                 <button class="filter_btn"></button>
             </template>
@@ -152,12 +153,17 @@
             <template id="post_template">
                 <article class="post_article">
                     <div class="post_element">
+                      <div class="post-image_container">
                         <img class="post_image"></img>
-                        <h2 class="post_h2"></h2>
-                        <div class="post_excerpt"></div>
-                        <div class="button_box">
-                            <button class="post_button">LÆS HER</button>
+                      </div>
+                        <div class="button-and-text_wrapper">
+                          <h2 class="post_h2"></h2>
+                          <div class="post_excerpt"></div>
                         </div>
+                          <div class="button_box">
+                              <button class="post_button">LÆS HER</button>
+                          </div>
+                       
     
                     </div>
                     <!-- <div class="mere lukket" style="display: none;">

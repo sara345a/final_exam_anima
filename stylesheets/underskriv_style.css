@@ -269,57 +269,88 @@ header .text button {
 /*                                     MAIN INDHOLD                                   */
 /*------------------------------------------------------------------------------------*/
 
-main button {
-  all: unset;
-  font-family: montserrat, sans-serif;
-  cursor: pointer;
+.button_box {
+  padding: 20px;
+}
+
+.filter_btn {
+  width: 181px;
+  background-color: transparent;
+  padding: 0;
+  color: var(--color-black);
+  align-self: center;
+}
+
+.filter_btn:hover {
+  background-color: unset;
   color: var(--color-red);
 }
 
-main #blogcontent {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  color: black;
-  align-items: center;
-  background-image: url("/static_assets/background_shape_high-right.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.filter_btn:active {
+  background-color: unset;
+  color: unset;
 }
 
+#button_box {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1200px;
+  gap: 10px;
+  padding: 30px;
+  /* min-width: 123px; */
+}
+
+main #blogcontent {
+  background-image: url(/static_assets/background_shape_high-left.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  margin: 30px;
+  gap: 33px;
+  max-width: 1200px;
+  justify-content: center;
+}
 main .post_article {
   display: flex;
   justify-content: center;
+}
+
+main .button-and-text_wrapper {
+  padding: 20px;
+  flex: 1 1;
+}
+
+.post-image_container {
+  height: 200px;
 }
 
 main .post_element {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-radius: 2%;
-  width: 80%;
+  border-radius: 10px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-top: 10%;
-  margin-bottom: 10%;
-  cursor: pointer;
   background-color: var(--color-white);
+  max-width: 300px;
 }
 
 main .post_image {
   width: 100%;
-  border-radius: 2% 2% 0% 0%;
+  border-radius: 10px 10px 0% 0%;
+  height: 100%;
+  min-height: 140px;
 }
 
-main .post_h2,
-main .post_excerpt,
-main .button_box {
-  width: 90%;
-  place-self: center;
-  margin: 5%;
+main .post_image img {
+  border-radius: 0% 0% 0% 0%;
 }
 
 main .button_box button:hover {
-  color: var(--color-darkerblue);
-  background-color: var(--color-white);
+  color: var(--color-darkerblue) !important;
+  background-color: var(--color-white) !important;
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -478,6 +509,16 @@ footer .column a:hover {
 
   footer .footer-content-wrapper {
     justify-content: space-evenly;
+  }
+
+  main #blogcontent {
+    margin: auto;
+    padding: 30px;
+  }
+
+  #button_box {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
