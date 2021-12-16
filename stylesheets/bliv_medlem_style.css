@@ -146,7 +146,7 @@ header .nav_links {
   text-decoration: none;
   /* position: relative; */
   font-family: montserrat, sans-serif;
-  font-weight: 800;
+  font-weight: bold;
   font-style: normal;
 
   white-space: nowrap;
@@ -217,7 +217,7 @@ header .search {
   color: var(--color-white);
   text-decoration: none;
   font-family: montserrat, sans-serif;
-  font-weight: 800;
+  font-weight: bold;
   font-style: normal;
   font-size: clamp(1rem, 2vw, 1.438rem);
   white-space: nowrap;
@@ -257,7 +257,7 @@ header .top_component {
 /* Caption text */
 header .text {
   color: #f2f2f2;
-  font-weight: 800;
+  font-weight: bold;
   padding: 8px 12px;
   bottom: 90px;
   text-align: center;
