@@ -157,6 +157,7 @@ button {
   overflow: hidden;
   transition-duration: 0.3s;
   transition-property: color, background-color;
+  font-weight: bold;
 }
 
 button:hover,
@@ -207,8 +208,13 @@ button:active {
   font-family: montserrat, sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: clamp(1rem, 2vw, 1.438rem);
+  font-size: clamp(0.938rem, 2vw + 0.25rem, 1.063rem);
   white-space: nowrap;
+}
+
+.dropdown-content a {
+  font-style: normal;
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 0.875rem);
 }
 
 .text h1 {
@@ -424,7 +430,6 @@ img {
   justify-content: center;
   align-items: center;
   align-self: center;
-  background-image: url(https://images.unsplash.com/photo-1627462656780-964d9535a50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
   padding: 40px 0px;
   background-position: center;
   background-size: cover;
@@ -490,6 +495,7 @@ footer .column a {
 
 footer .column .fas,
 footer .column .fab {
+  font-size: 15px;
 }
 
 footer .column a:hover {
@@ -721,9 +727,6 @@ footer .column a:hover {
     line-height: 10px;
   }
 
-  .logo_container {
-  }
-
   footer .footer-content-wrapper {
     justify-content: space-evenly;
   }
@@ -767,9 +770,6 @@ footer .column a:hover {
     margin-bottom: unset;
   }
 
-  .call-to-action_option {
-  }
-
   .two-third_right {
     padding: 80px;
   }
@@ -792,9 +792,6 @@ footer .column a:hover {
   .splash_text {
     bottom: 20%;
   }
-  .dropdown {
-    padding-right: 30px;
-  }
 
   img {
     max-height: 600px;
@@ -807,10 +804,6 @@ footer .column a:hover {
   .search {
     width: 90px;
     margin-right: 10px;
-  }
-
-  .dropdown {
-    padding-right: 30px;
   }
 
   .nav_container button {

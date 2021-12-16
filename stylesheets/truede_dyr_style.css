@@ -136,17 +136,6 @@ header .dropdown:hover .dropdown-content {
   display: block;
 }
 
-header .nav_links {
-  color: var(--color-white);
-  text-decoration: none;
-  /* position: relative; */
-  font-family: montserrat, sans-serif;
-  font-weight: bold;
-  font-style: normal;
-
-  white-space: nowrap;
-}
-
 header .nav_links:hover {
   color: rgb(199, 199, 199);
   transition: all 0.1s ease-out;
@@ -166,6 +155,7 @@ button {
   overflow: hidden;
   transition-duration: 0.3s;
   transition-property: color, background-color;
+  font-weight: bold;
 }
 
 button:hover,
@@ -215,8 +205,13 @@ header .search {
   font-family: montserrat, sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: clamp(1rem, 2vw, 1.438rem);
+  font-size: clamp(0.938rem, 2vw + 0.25rem, 1.063rem);
   white-space: nowrap;
+}
+
+.dropdown-content a {
+  font-style: normal;
+  font-size: clamp(0.875rem, 2vw + 0.25rem, 0.875rem);
 }
 
 .text h1 {
@@ -361,6 +356,7 @@ footer .column a {
 
 footer .column .fas,
 footer .column .fab {
+  font-size: 15px;
 }
 
 footer .column a:hover {
@@ -422,9 +418,6 @@ footer .column a:hover {
     transition: all 0.5s ease;
     padding: 2vh;
     z-index: 30;
-  }
-
-  header .nav_links {
   }
 
   header .nav_links:hover {
@@ -628,9 +621,6 @@ footer .column a:hover {
   header .splash_text {
     bottom: 20%;
   }
-  header .dropdown {
-    padding-right: 30px;
-  }
 
   header img {
     max-height: 600px;
@@ -643,9 +633,5 @@ footer .column a:hover {
   header .search {
     width: 90px;
     margin-right: 10px;
-  }
-
-  header .dropdown {
-    padding-right: 30px;
   }
 }
