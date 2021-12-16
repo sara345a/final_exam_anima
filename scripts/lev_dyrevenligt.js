@@ -73,9 +73,10 @@ async function vis() {
     document.querySelector(".picture_one").style.backgroundImage = "url(" + json.splash1.guid + ")";
     document.querySelector(".text h1").textContent = json.splash_overskrift1;
     document.querySelector(".text p").textContent = json.splash_tekst1;
-    document.querySelector("#img_box img").src = json.indholdsbillede1.guid;
+    document.querySelector("#bottom_column img").src = json.indholdsbillede1.guid;
     document.querySelector("#top_column .textbox h3").textContent = json.overskrift1;
     document.querySelector("#top_column .textbox p").textContent = json.tekstfelt1;
+    document.querySelector("#top_column img").src = json.indholdsbillede2.guid;
   
 
     //filtrer efter kategori og vis
