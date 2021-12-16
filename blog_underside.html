@@ -58,7 +58,6 @@ header .nav_container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 5px;
 }
 
 header #navbar {
@@ -75,10 +74,11 @@ header img#navbar_logo:hover {
   transition: all 0.2s ease-out;
 }
 
-header .logo_container {
+  header .logo_container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100%;  
+height: 17px;
 }
 
 header .nav_container {
@@ -114,15 +114,15 @@ header .dropdown-content {
   margin-left: -20px;
 }
 
-header .dropdown-content a {
-  color: var(--color-black);
+ header .dropdown-content a {
+  color: var(--color-white);
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
+  display: block;font-family: var(--heading);
 }
 
 header .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #AC3C36;
 }
 
 header .dropdown:hover .dropdown-content {
@@ -392,7 +392,7 @@ footer .column a:hover {
   }
 
   header #burger_menu {
-    transform: translate(5%, 20%);
+    transform: translate(6%, -26%);
   }
 
   header .menu_toggle .burger-stripe {
@@ -518,9 +518,7 @@ footer .column a:hover {
     padding-right: 17px;
   }
 
-  header .wrapper {
-    margin: 0px 20px;
-  }
+   
 
   header .sticky {
     padding-bottom: 0px;
@@ -602,7 +600,7 @@ footer .column a:hover {
             
                     <img
                       id="navbar_logo"
-                      src="https://anima.dk/sites/default/files/anima-logo_0.svg"
+                      src="static_assets/Logo - Anima_HVID.png"
                       alt="logo"
                     />
                   </div>
@@ -708,7 +706,8 @@ footer .column a:hover {
     <footer>
         <div class="footer-content-wrapper">
           <div class="column one">
-            <img src="../../static_assets\Logo - Anima HVID.svg" alt="logo" />
+                        <img src="static_assets/Logo - Anima_HVID.png" alt="logo" />
+
             <p>
               Husk at du kan få fradrag for donationer til Anima på op til 17.000
               kr.
@@ -716,7 +715,7 @@ footer .column a:hover {
       
             <p>CVR: 29047650</p>
             <img
-              src="../../static_assets\recommended-charity-2020 (1).png"
+              src="static_assets/Logo - Anima_HVID.png"
               alt=""
             />
           </div>

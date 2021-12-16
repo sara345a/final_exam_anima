@@ -47,6 +47,12 @@ p {
 .top_top {
   position: relative;
 }
+
+header #navbar {
+  z-index: 1000 !important;
+  padding: 16px 0px 5px 0px;
+}
+
 .wrapper {
   display: flex;
   margin: 0px 10px;
@@ -57,11 +63,16 @@ p {
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 5px;
+}
+.logo_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 17px;
 }
 
 .logo_image {
-  max-width: 150px;
+  max-width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +131,7 @@ img#navbar_logo:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #ac3c36;
 }
 
 .dropdown:hover .dropdown-content {
@@ -591,12 +602,12 @@ footer .column a:hover {
     grid-gap: 0;
   }
 
-  #nav_logo {
-    margin-left: 20px;
+  header #navbar {
+    padding: 24px 0px 23px 0px;
   }
 
-  .logo_image {
-    margin-top: 8px;
+  #nav_logo {
+    margin-left: 20px;
   }
 
   .nav_container.active {
@@ -616,7 +627,7 @@ footer .column a:hover {
   }
 
   #burger_menu {
-    transform: translate(5%, 20%);
+    transform: translate(6%, -26%);
   }
 
   .menu_toggle .burger-stripe {
@@ -743,10 +754,6 @@ footer .column a:hover {
     padding-right: 17px;
   }
 
-  .wrapper {
-    margin: 0px 20px;
-  }
-
   .sticky {
     padding-bottom: 0px;
   }
@@ -769,6 +776,15 @@ footer .column a:hover {
 
   .text h1 {
     max-width: 600px;
+  }
+
+  .logo_image {
+    max-width: 160px;
+    margin-top: 12px;
+  }
+
+  .support-button_container {
+    margin-left: 10px;
   }
 }
 /*----laptop large------*/

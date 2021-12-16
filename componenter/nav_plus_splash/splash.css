@@ -103,7 +103,7 @@ img#navbar_logo:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #ac3c36;
 }
 
 .dropdown:hover .dropdown-content {
@@ -332,7 +332,7 @@ img {
   }
 
   #burger_menu {
-    transform: translate(5%, 20%);
+    transform: translate(6%, -26%);
   }
 
   .menu_toggle .burger-stripe {
