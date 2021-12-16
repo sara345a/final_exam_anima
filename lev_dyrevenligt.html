@@ -129,8 +129,8 @@
             <div class="mySlides">
               <div class="picture_one"></div>
               <div class="text">
-                <h1>Lorem ipsum.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, dolor?</p>
+                <h1></h1>
+                <p></p>
               </div>
             </div>
           </div>
@@ -144,30 +144,28 @@
                     <h3></h3>
                     <p></p>
                 </div>
-                    <!-- <iframe src="https://vimeo.com/179779661">
-                    </iframe>  -->
+                    <img> 
             </div>
+            <img id="separationbar" src="/static_assets/triangle_high_left.svg">
 
             <div id="bottom_column">
                 <div id="form">
                     <div id="form_content" class="">
                         <div id="form_headline">
-                            <h3>SEND OS EN BESKED</h3>
-                        </div>  
+                            <h3></h3>
+                        </div>
+                        <h4>GRØN INSPIRATION</h4>
+                        <P>Er du nysgerrig på en grønnere levestil?<br><br> Så abonnér på vores gratis online magasin 'GRØN INSPIRATION' og få gode tips!</P> 
                         <input type="text" placeholder="Navn" class="name"></input>
                         <input type="email" placeholder="E-mail" class="mail"></input>
                         <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
-                        <textarea type="text" rows="20" placeholder="Din besked" class="message"></textarea>
-                        <button onclick="flowFunction()">SEND</button>
+                        <button onclick="flowFunction()">ABONNÉR</button>
                     </div>
                     <div id="thank_you_message" class="hide">
-                        <p>TAK FOR DIN BESKED!<br><br>Vi gør vores bedste for at besvare den så hurtigt som muligt.</p>
+                        <p>TILLYKKE MED DIT ABONNEMENT PÅ ONLINE MAGASINET 'GRØN INSPIRATION'!<br><br>Du kan nu glæde dig til en masse gode ideer og fif til grønnere madvaner</p>
                     </div>
-                </div>
-    
-                <div id="img_box">
+                  </div>
                     <img>
-                </div>
             </div>
 
 
@@ -305,7 +303,14 @@
     <!--script til at indsætte indhold om blog og alle blogpostene-->
     <script src="scripts/lev_dyrevenligt.js"></script>
 
-    </script>
+    <script>
+      function flowFunction() {
+         var thankYouMessage = document.getElementById("thank_you_message");
+         var formContent = document.getElementById("form_content");
+         thankYouMessage.classList.toggle("hide");
+         formContent.classList.toggle("hide");
+      }
+  </script>
 </body>
 
 </html>

@@ -39,6 +39,14 @@ p {
   background-size: cover;
 }
 
+img {
+  border-radius: 10px;
+}
+
+#separationbar {
+  border-radius: unset;
+}
+
 /*------------------------------------------------------------------------------------*/
 /*                                     NAV BAR START                                  */
 /*------------------------------------------------------------------------------------*/
@@ -267,20 +275,27 @@ main #top_column h3 {
   margin: 10% 0% 10% 0%;
 }
 
+main #top_column img {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 main #bottom_column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  padding: 10% 10% 20% 10%;
+  background-color: var(--color-icyblue);
 }
 
 main #form {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 10px 10px 0% 0%;
   padding: 10%;
-  margin: 10% 0% 10% 0%;
+  margin: 10% 0% 0% 0%;
+  background-color: var(--color-white);
 }
 
 main #form input,
@@ -291,6 +306,30 @@ main #form textarea {
   height: 30px;
 }
 
+main #form button {
+  color: white;
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  width: 90px;
+  padding: 10px;
+  cursor: pointer;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-property: color, background-color;
+  margin-top: 5%;
+}
+
+main #form button:hover,
+main #form button:focus,
+main #form button:active {
+  background-color: #ac3c36;
+  color: white;
+}
+
 main #form .message {
   height: 100px;
 }
@@ -299,16 +338,19 @@ main #thank_you_message {
   text-align: center;
 }
 
-main #img_box {
-  margin: 0% 0% 10% 0%;
+main #bottom_column img {
+  border-radius: 0% 0% 10px 10px;
 }
+
 /****************************POSTS**************************/
 
 main #button_box {
   background-color: var(--color-white);
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 
 main #blogcontent {
@@ -319,6 +361,7 @@ main #blogcontent {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   color: black;
   align-items: center;
+  margin-bottom: 10%;
 }
 
 main .post_article {
@@ -330,18 +373,23 @@ main .post_element {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-radius: 2%;
-  width: 80%;
+  border-radius: 10px;
+  width: 70%;
+  height: 420px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-top: 10%;
   margin-bottom: 10%;
-  cursor: pointer;
   background-color: var(--color-white);
 }
 
 main .post_image {
   width: 100%;
-  border-radius: 2% 2% 0% 0%;
+  border-radius: 10px 10px 0% 0%;
+  height: 100%;
+}
+
+main .post_image img {
+  border-radius: 0% 0% 0% 0%;
 }
 
 main .post_h2,
@@ -533,8 +581,50 @@ footer .column a:hover {
     justify-content: unset;
   }
 
+  main #top_column {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10%;
+    margin-top: 5%;
+  }
+
+  main #top_column .textbox {
+    width: 120vw;
+    margin-right: 10%;
+  }
+
+  main #top_column img {
+    object-fit: cover;
+    height: 1500px;
+  }
+
+  main #bottom_column {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 10%;
+    padding-bottom: 15%;
+  }
+
+  main #form {
+    width: 80%;
+    padding: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  main #bottom_column img {
+    border-radius: 10px 0% 0px 10px;
+    height: 100%;
+  }
+
+  main #button_box {
+    margin-top: 0;
+  }
+
   main #blogcontent {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
+    width: 90%;
   }
 
   footer .footer-content-wrapper {
@@ -595,8 +685,42 @@ footer .column a:hover {
     margin-left: 10px;
   }
 
+  main #top_column {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 10%;
+    margin-bottom: 0;
+  }
+
+  main #top_column h3 {
+    margin-top: 0;
+  }
+
+  main #top_column img {
+    height: 400px;
+    margin-top: 0;
+  }
+
+  main #bottom_column {
+    width: 100%;
+    justify-content: center;
+    padding: 5% 15% 10% 15%;
+  }
+
+  main #bottom_column img {
+    width: unset;
+  }
+
+  main #bottom_column #form {
+    width: 30%;
+  }
+
   main #blogcontent {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 4fr));
+  }
+
+  main .post_element {
+    height: 380px;
   }
 }
 
@@ -635,6 +759,6 @@ footer .column a:hover {
     height: 34px;
   }
   main #blogcontent {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
   }
 }
