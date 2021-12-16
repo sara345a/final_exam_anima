@@ -555,11 +555,9 @@ footer .column a:hover {
 @media screen and (min-width: 768px) {
   header .splash_text {
     bottom: 26%;
-    font-size: 1.7em;
   }
 
   header .text {
-    font-size: 22px;
     bottom: 100px;
     text-align: unset;
     left: 50px;
@@ -659,7 +657,6 @@ footer .column a:hover {
 
   header .splash_text {
     bottom: 0%;
-    font-size: 2.5em;
   }
 
   header .dropdown {
@@ -680,7 +677,6 @@ footer .column a:hover {
   }
 
   header .nav_links {
-    font-size: 19px;
   }
 
   header .logo_image {
@@ -739,7 +735,6 @@ footer .column a:hover {
 @media screen and (min-width: 1440px) {
   header .splash_text {
     bottom: 20%;
-    font-size: 2.5em;
   }
   header .dropdown {
     padding-right: 30px;
@@ -759,7 +754,6 @@ footer .column a:hover {
   }
 
   header .nav_links {
-    font-size: 22px;
   }
 
   header .dropdown {
