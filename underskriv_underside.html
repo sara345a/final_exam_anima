@@ -421,6 +421,45 @@ header .text button {
 /*                                     MAIN CONTENT                                   */
 /*------------------------------------------------------------------------------------*/
 
+section.content.icons {
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+main #icons_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 40px 0px;
+  gap: 50px;
+}
+
+main #icon_1,
+main #icon_2,
+main #icon_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+main #icons_box img {
+  box-shadow: unset;
+  width: 40%;
+  margin-top: 5%;
+}
+
+main #icons_box p {
+  text-align: center;
+}
+
+
 main #main_container {
     display: flex;
     width: 100%;
@@ -432,7 +471,6 @@ main #main_content {
 width: 80%;
 display: flex;
 flex-direction: column;
-margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -647,6 +685,7 @@ footer .column a:hover {
     margin-top: 0%;
   }
 
+  
   main #icons_box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -659,13 +698,13 @@ footer .column a:hover {
     width: 80%;
   }
 
-  main #icons_box h4 {
+  /* main #icons_box h4 {
     font-size: 10px;
-  }
+  } */
 
-  main #icons_box p {
+  /* main #icons_box p {
     font-size: 10px;
-  }
+  } */
 
   main #icons_box img {
     width: 30%;
@@ -743,10 +782,6 @@ footer .column a:hover {
     .search {
     max-width: 50px;
     margin-bottom: unset;
-}
-
-main #main_content {
-margin-top: 10%;
 }
 
 
@@ -1018,6 +1053,28 @@ main #main_content {
         
 
         <main>
+
+          <section class="content icons">
+        
+            <div id="icons_box">
+                <div id="icon_1">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div id="icon_2">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div id="icon_3">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+          </section>
+
         <div id="main_container">
           <article id="main_content">
 
@@ -1205,6 +1262,16 @@ async function vis(data) {
     document.querySelector(".text h1").textContent = data.title.rendered;
     document.querySelector(".text p").textContent = data.underskriv_underside_tekst;
     document.querySelector("#main_content").innerHTML = data.content.rendered;
+
+  document.querySelector("#icon_1 img").src = data.ikon1.guid;
+  document.querySelector("#icon_1 h4").textContent = data.ikon_overskrift1;
+  document.querySelector("#icon_1 p").textContent = data.ikon_tekst1;
+  document.querySelector("#icon_2 img").src = data.ikon2.guid;
+  document.querySelector("#icon_2 h4").textContent = data.ikon_overskrift2;
+  document.querySelector("#icon_2 p").textContent = data.ikon_tekst2;
+  document.querySelector("#icon_3 img").src = data.ikon3.guid;
+  document.querySelector("#icon_3 h4").textContent = data.ikon_overskrift3;
+  document.querySelector("#icon_3 p").textContent = data.ikon_tekst3;
 
 }
 
