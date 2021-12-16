@@ -234,6 +234,11 @@ p {
   font-size: clamp(0.75rem, 3vw - 0.25rem, 0.938rem);
   line-height: clamp(1.25rem, 2vw + 0.5rem, 1.438rem);
 }
+
+#form #flow_steps {
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 0.938rem);
+  white-space: nowrap;
+}
 /*----font sizes end------*/
 img {
   object-fit: cover;
@@ -320,7 +325,6 @@ header .text button {
   /* border-radius: 5px 5px 0px 0px; */
   padding: 5px;
   text-align: center;
-  font-size: 17px;
   gap: 13px;
   border-radius: 10px 10px 0px 0px;
 }
@@ -339,10 +343,12 @@ header .text button {
 
 #form #step1 #amounts {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 68px);
-  grid-gap: 10%;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-gap: 5%;
   align-items: baseline;
-  justify-content: start;
+  justify-content: space-around;
+  flex: wrap;
+  flex-wrap: wrap;
 }
 
 #form #step1 #amounts input {
@@ -361,6 +367,7 @@ header .text button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3%;
+  justify-content: space-around;
 }
 
 #form #step1 .amounts_button,
@@ -878,6 +885,10 @@ footer .column a:hover {
     flex-direction: row;
     width: 100%;
   }
+
+  #form #step1 #amounts {
+    justify-content: center;
+  }
 }
 
 /*----laptop large------*/
@@ -901,6 +912,10 @@ footer .column a:hover {
 
   #form {
     width: 40%;
+  }
+
+  #form #step1 h3:nth-of-type(2) {
+    margin-top: 7%;
   }
 
   #form #form_content {
