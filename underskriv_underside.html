@@ -350,10 +350,6 @@ header .text button {
   margin-top: 10%;
 }
 
-#form #step1 .next_button {
-  margin-left: 5%;
-}
-
 #form #step1 {
   display: flex;
   flex-direction: column;
@@ -425,45 +421,87 @@ header .text button {
 /*                                     MAIN CONTENT                                   */
 /*------------------------------------------------------------------------------------*/
 
+section.content.icons {
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+main #icons_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 40px 0px;
+  gap: 50px;
+}
+
+main #icon_1,
+main #icon_2,
+main #icon_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+main #icons_box img {
+  box-shadow: unset;
+  width: 40%;
+  margin-top: 5%;
+}
+
+main #icons_box p {
+  text-align: center;
+}
+
+
 main #main_container {
     display: flex;
-    justify-content: center;
     width: 100%;
-    background-image: url("/static_assets/background_shape_high-left.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 main #main_content {
-width: 100%;
+width: 80%;
 display: flex;
 flex-direction: column;
-place-items: center;
-margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 main #main_content img {
     width: 100%;
     height: auto;
+    margin-top: 5%;
 }
 
 main #main_content .wp-block-column, main #main_content .wp-block-embed__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 main #main_content iframe {
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
-main #main_content p, main #main_content h2, main #main_content h3 {
-    width: 80%;
+main #main_content p, main #main_content h2, main #main_content h3, main #main_content h4 {
+    width: 100%;
     text-align: left;
 } 
+
+main #main_content h2, main #main_content h3, main #main_content h4 {
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
 
 /*------------------------------------------------------------------------------------*/
 /*                                     TOGGLE CLASSES                                 */
@@ -647,6 +685,7 @@ footer .column a:hover {
     margin-top: 0%;
   }
 
+  
   main #icons_box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -659,13 +698,13 @@ footer .column a:hover {
     width: 80%;
   }
 
-  main #icons_box h4 {
+  /* main #icons_box h4 {
     font-size: 10px;
-  }
+  } */
 
-  main #icons_box p {
+  /* main #icons_box p {
     font-size: 10px;
-  }
+  } */
 
   main #icons_box img {
     width: 30%;
@@ -709,25 +748,17 @@ footer .column a:hover {
     padding: 10px;
   }
 
+  main #main_content {
+    margin-top: 0;
+  }
+
   main #main_content .wp-block-columns {
     display: flex;
     flex-direction: row;
     }
 
-    /* main #main_content .wp-block-column {
-        width: 50%;
-    }
-
-    main #main_content .wp-block-image {
-        width: 100%;
-    } */
-
-    main #main_content h2, main #main_content h3 {
-    width: 90%;
-    }
-
     main #main_content p  {
-    width: 80%;
+    width: 100%;
     text-align: left;
     } 
 
@@ -745,13 +776,15 @@ footer .column a:hover {
 
     main #main_content iframe {
     width: 100%;
-    height: auto;
+    height: 500px;
     }
 
     .search {
     max-width: 50px;
     margin-bottom: unset;
 }
+
+
 }
 
 /*---------laptop---------*/
@@ -827,14 +860,19 @@ footer .column a:hover {
     margin-left: 10px;
   }
 
-  main #main_content p  {
-    width: 70%;
-    } 
-
     .logo_image {
     max-width: 160px;
     margin-top: 12px;
 }
+
+main #main_content {
+  width: 50%;
+  }
+
+  main #main_content p  {
+    width: 100%;
+    } 
+
 }
 
 /*----laptop large------*/
@@ -866,9 +904,6 @@ footer .column a:hover {
     width: 55%;
   }
 
-  main #main_content p  {
-    width: 60%;
-    }
 }
 
     </style>
@@ -878,27 +913,26 @@ footer .column a:hover {
        <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
        <header>
         <div class="top_top">
-        <div class="top_component">
-          <nav id="navbar">
-            <div class="wrapper">
-            <div class="logo_container">
-              <div class="menu_toggle" id="burger_menu">
-                <span class="burger-stripe"></span>
-                <span class="burger-stripe"></span>
-                <span class="burger-stripe"></span>
-              </div>
-      
-              <div class="logo_image">
-                <a href="frontpage.html">
-                  <img
-                    id="navbar_logo"
-                    src="static_assets/Logo - Anima_HVID.png"
-                    alt="logo"
-                  />
-                </a>
-              </div>
-             
-            </div>
+          <div class="top_component">
+            <nav id="navbar">
+              <div class="wrapper">
+                <div class="logo_container">
+                  <div class="menu_toggle" id="burger_menu">
+                    <span class="burger-stripe"></span>
+                    <span class="burger-stripe"></span>
+                    <span class="burger-stripe"></span>
+                  </div>
+                  
+                  <div class="logo_image">
+                    <a href="frontpage.html">
+                      <img
+                      id="navbar_logo"
+                      src="static_assets/Logo - Anima_HVID.png"
+                      alt="logo"
+                      />
+                    </a>
+                  </div>
+                </div>
       
             <div class="nav_container">
               <div class="dropdown">
@@ -935,56 +969,112 @@ footer .column a:hover {
                 <li>
                   <a href="blog.html" class="nav_links" id="dropbtn">BLOG</a>
                 </li>
-                
+                 
               </div>
       
               <div class="dropdown">
                 <li>
                   <a href="about_us.html" class="nav_links" id="dropbtn">OM OS</a>
                 </li>
-                
+               
               </div>
       
               <div class="dropdown">
                 <li>
                   <a href="kontakt.html" class="nav_links" id="dropbtn">KONTAKT</a>
                 </li>
-                <div class="dropdown-content">
-                  
-                </div>
               </div>
       
               <div class="search_container">
                 <input  class="search" type="text" name="" placeholder="Søg...">
-               </div>
+              </div>
           
               <div class="support-button_container">
                 <a href="stoet.html">
-                <button type="button">STØT</button>
-              </a>
+                  <button type="button">STØT</button>
+                </a>
               </div>
             </div>
           </nav>
+        </div>
       </div>
-    
-    
-          <!-- Slideshow container -->
+    </div>
+          
+          
+        <!-- Slideshow container -->
           <div class="ss-container">
+          
             <!-- Full-width images with number and caption text -->
-            <div class="mySlides">
+            <div class="mySlides first">
               <div class="picture_one"></div>
-              <div class="text">
-                <h1>Lorem ipsum.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, dolor?</p>
+              <div class="form_and_text_wrapper">
+                <div class="form_and_text_content">
+                  <div class="text">
+                    <h1></h1>
+                    <p></p>
+                  </div>
+
+                  <div id="form">
+                    <div id="form_content" class="">
+                      <div id="flow_steps">
+                        <h4 id="step1_path">UNDERSKRIV</h4>
+                      </div>
+                      
+                      <div id="step1">
+                        <p>Skriv under i dag og vær med til at kæmpe dyrenes kamp for bedre levevilkår</p>
+                        <h3>INDTAST DINE OPLYSNINGER</h3>
+                        <div class="inputs">
+                          <input type="text" placeholder="Navn" class="name"></input>
+                          <input type="email" placeholder="E-mail" class="mail"></input>
+                          <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
+                          <div class="next_button">
+                            <button onclick="flowFuntionStepOne()">UNDERSKRIV</button>
+                            </div>
+                          </div>
+                      </div>
+  
+                        <div id="step2" class="hide">
+                          <h3>TAK FOR DIN UNDERSKRIFT</h3>
+                          <P>Du er nu med i kampen for at give alle dyr et værdigt og godt liv</P> 
+                        </div>
+                      </div>
+                  </div>
+                </div>
               </div>
             </div>
+              
+        
           </div>
+        </div>
+      </div>
     </div>
-    </header>
+  </header>
 
         
 
         <main>
+
+          <section class="content icons">
+        
+            <div id="icons_box">
+                <div id="icon_1">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div id="icon_2">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div id="icon_3">
+                    <img>
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+          </section>
+
         <div id="main_container">
           <article id="main_content">
 
@@ -1172,6 +1262,16 @@ async function vis(data) {
     document.querySelector(".text h1").textContent = data.title.rendered;
     document.querySelector(".text p").textContent = data.underskriv_underside_tekst;
     document.querySelector("#main_content").innerHTML = data.content.rendered;
+
+  document.querySelector("#icon_1 img").src = data.ikon1.guid;
+  document.querySelector("#icon_1 h4").textContent = data.ikon_overskrift1;
+  document.querySelector("#icon_1 p").textContent = data.ikon_tekst1;
+  document.querySelector("#icon_2 img").src = data.ikon2.guid;
+  document.querySelector("#icon_2 h4").textContent = data.ikon_overskrift2;
+  document.querySelector("#icon_2 p").textContent = data.ikon_tekst2;
+  document.querySelector("#icon_3 img").src = data.ikon3.guid;
+  document.querySelector("#icon_3 h4").textContent = data.ikon_overskrift3;
+  document.querySelector("#icon_3 p").textContent = data.ikon_tekst3;
 
 }
 
