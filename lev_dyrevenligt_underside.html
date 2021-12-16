@@ -318,18 +318,17 @@ header .text p {
 
 main #main_container {
     display: flex;
-    justify-content: center;
     width: 100%;
-    background-image: url("/static_assets/background_shape_high-left.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 main #main_content {
-width: 100%;
+width: 80%;
 display: flex;
 flex-direction: column;
-place-items: center;
+margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 main #main_content img {
@@ -341,19 +340,24 @@ main #main_content .wp-block-column, main #main_content .wp-block-embed__wrapper
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 main #main_content iframe {
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
-main #main_content p, main #main_content h2, main #main_content h3 {
-    width: 80%;
+main #main_content p, main #main_content h2, main #main_content h3, main #main_content h4 {
+    width: 100%;
     text-align: left;
 } 
+
+main #main_content h2, main #main_content h3, main #main_content h4 {
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
 
 /*------------------------------------------------------------------------------------*/
 /*                                        FOOTER                                      */
@@ -517,25 +521,17 @@ footer .column a:hover {
     left: 50px;
   }
 
+  main #main_content {
+    margin-top: 0;
+  }
+
   main #main_content .wp-block-columns {
     display: flex;
     flex-direction: row;
     }
 
-    /* main #main_content .wp-block-column {
-        width: 50%;
-    }
-
-    main #main_content .wp-block-image {
-        width: 100%;
-    } */
-
-    main #main_content h2, main #main_content h3 {
-    width: 90%;
-    }
-
     main #main_content p  {
-    width: 80%;
+    width: 100%;
     text-align: left;
     } 
 
@@ -553,7 +549,7 @@ footer .column a:hover {
 
     main #main_content iframe {
     width: 100%;
-    height: auto;
+    height: 500px;
     }
 
     .search {
@@ -598,16 +594,18 @@ footer .column a:hover {
     margin-bottom: unset;
   }
 
-
-  main #main_content p  {
-    width: 70%;
-    } 
-
     .logo_image {
     max-width: 160px;
     margin-top: 12px;
-}
+  }
 
+  main #main_content {
+  width: 50%;
+  }
+
+  main #main_content p  {
+    width: 100%;
+    } 
 
 }
 
@@ -629,11 +627,6 @@ footer .column a:hover {
     width: 90px;
     margin-right: 10px;
   }
-
-  
-  main #main_content p  {
-    width: 60%;
-    } 
 
 }
 
