@@ -126,11 +126,12 @@ header .dropdown {
   margin-top: 7px;
 }
 
-header .dropdown-content a {
-  color: var(--color-black);
+.dropdown-content a {
+  color: var(--color-white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family: var(--heading);
 }
 
 header .dropdown-content a:hover {

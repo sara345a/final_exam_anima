@@ -422,9 +422,23 @@ img {
 
 .two-third-button_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
   padding-top: 30px;
+  justify-content: center;
+}
+
+.two-third-button_container button {
+  width: 189px;
+  align-self: flex-start;
+  min-height: 10px;
+  max-height: 35px;
+}
+
+.special_button {
+  background-color: transparent;
+  border: solid 3px var(--color-red);
+  color: var(--color-red);
 }
 
 /*----newsletter------*/
@@ -442,7 +456,6 @@ img {
 #input_fields {
   display: flex;
   flex-direction: column;
-  width: 50%;
   gap: 10px;
   justify-content: center;
 }
@@ -741,6 +754,11 @@ footer .column a:hover {
 
   .call-to-action_option {
     height: 350px;
+  }
+
+  .two-third-button_container {
+    flex-direction: row;
+    align-self: start;
   }
 }
 /*---------laptop---------*/
