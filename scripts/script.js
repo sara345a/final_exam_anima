@@ -141,7 +141,6 @@ console.log("vis");
     document.querySelector(".two-third_right h2").textContent = data.overskrift1;
     document.querySelector(".two-third_right p").textContent = data.tekstfelt1;
     document.querySelector(".two-third_left img").src = data.indholdsbillede1.guid;
-    document.querySelector(".newsletter_wrapper").style.backgroundImage = "url(" + data.indholdsbillede2.guid + ")";
 
 }
 
