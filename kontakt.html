@@ -138,7 +138,9 @@
                 <input type="email" placeholder="E-mail" class="mail"></input>
                 <input type="phone" placeholder="Telefon nr." class="phonenumber"></input>
                 <textarea type="text" rows="20" placeholder="Din besked" class="message"></textarea>
-                <button onclick="flowFunction()">SEND</button>
+                <div class="send_message button">
+                  <button onclick="flowFunction()">SEND</button>
+                </div>
             </div>
                 <div id="thank_you_message" class="hide">
                     <p>TAK FOR DIN BESKED!<br><br>Vi gør vores bedste for at besvare den så hurtigt som muligt.</p>
@@ -146,25 +148,30 @@
             </div>
 
             <div id="info" >
-                <h3>KONTAKT OS</h3>
+               
             <div id="info_content">
+              <div class="info_content_wrapper">
+                <h3>KONTAKT OS</h3>
                 <div class="adress">
-                    <img class="icon" src="/static_assets/Kontakt - Location.png">
-                    <p>Tornebuskegade 7, 1.<br>1131 København K</p>
+                  <i class="fas fa-map-marker-alt icon"></i>
+                  <a href="https://goo.gl/maps/4YCyKX39cbA4k9rt5"
+                  class="p" >Tornebuskegade 7, 1. 1131 København K
+                  </a>
                 </div>
                 <div class="phone">
-                    <img class="icon" src="/static_assets/Kontakt - Telefon.png">
-                    <p>+45 35 10 70 70</p>
+                  <i class="fas fa-phone icon"></i>
+                  <a href="tel:+4535107070" class="p">+45 35 10 70 70</a>
                 </div>
                 <div class="mail">
-                    <img class="icon" src="/static_assets/Kontakt - Mail.png">
-                    <p>info@anima.dk</p>
+                  <i class="fas fa-envelope icon"></i>
+                  <a href="mailto:info@anima.dk" class="p">info@anima.dk</a>
                 </div>
-                <div class="some">
+                <div class="some" >
                   <i class="fab fa-twitter-square" onclick="window.location.href=('https://twitter.com/animadk')"></i>
                     <i class="fab fa-instagram-square" onclick="window.location.href=('https://www.instagram.com/animadk/?hl=da')"></i>
                     <i class="fab fa-facebook-square" onclick="window.location.href=('https://www.facebook.com/dk.anima/')"></i>
                 </div>
+              </div>
             </div>
             </div>
 
@@ -210,7 +217,7 @@
               <a href="lev_dyrevenligt.html">Lev dyrevenligt</a>
               <a href="about_us.html">Om Anima</a>
             </div>
-    
+  
             <div class="column three">
               <h3>KONTAKT OS</h3>
               <hr

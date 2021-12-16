@@ -269,16 +269,6 @@ header .text button {
 /*                                     MAIN INDHOLD                                   */
 /*------------------------------------------------------------------------------------*/
 
-main button {
-  all: unset;
-  font-family: montserrat, sans-serif;
-  cursor: pointer;
-  background-color: var(--color-red);
-  color: var(--color-white);
-  padding: 2% 7% 2% 7%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
 main #content {
   display: flex;
   justify-content: center;
@@ -286,24 +276,27 @@ main #content {
   background-image: url("/static_assets/background_shape_high-left.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 30px;
 }
 
 main #content #form {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 10%;
-  margin: 10% 10% 5% 10%;
+  border-radius: 10px 10px 0px 0px;
   background-color: var(--color-white);
+  padding: 10px;
 }
 
 main #content #form input,
 main #content #form textarea {
-  width: 100%;
+  width: 80%;
   margin-top: 5%;
   margin-bottom: 5%;
   height: 30px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-family: var(--paragraph);
 }
 
 main #content #form .message {
@@ -314,19 +307,27 @@ main #thank_you_message {
   text-align: center;
 }
 
+main #info_content .icon {
+  flex: 1 1 15%;
+  align-self: center;
+}
+
+main #info_content a.p {
+  flex: 1 1 85%;
+  text-decoration: none;
+  align-self: center;
+  color: var(--color-white);
+  font-family: var(--paragraph);
+}
+
 main #content #info {
   display: flex;
   flex-direction: column;
   background-color: var(--color-darkblue);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 10%;
-  margin: 10%;
+  border-radius: 0px 0px 10px 10px;
   color: var(--color-white);
-}
-
-main #content #info #info_content {
-  margin-top: 10%;
+  padding: 25px;
 }
 
 main #content #info .adress,
@@ -337,18 +338,22 @@ main #content #info .mail {
   margin-top: 10%;
 }
 
-main #content #info .icon {
-  height: 30px;
-  align-self: center;
-  margin-right: 10%;
-}
-
-main #content #info p {
-  align-self: center;
-}
-
 main #content #info .some {
   margin-top: 20%;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 20px;
+}
+
+#info i {
+  cursor: pointer;
+}
+
+.some:hover {
+  opacity: 80%;
 }
 
 main #content #info .some_icon {
@@ -393,6 +398,11 @@ footer .column a {
 footer .column .fas,
 footer .column .fab {
   font-size: 15px;
+}
+
+.fas,
+.fab {
+  font-size: 20px;
 }
 
 footer .column a:hover {
@@ -517,6 +527,15 @@ footer .column a:hover {
   footer .footer-content-wrapper {
     justify-content: space-evenly;
   }
+
+  main #content {
+    flex-direction: row;
+  }
+
+  main #content #form input,
+  main #content #form textarea {
+    margin-top: unset;
+  }
 }
 
 /*---------laptop---------*/
@@ -569,11 +588,13 @@ footer .column a:hover {
   }
 
   main #content #form {
-    margin: 10% 0 10% 10%;
+    margin: 4% 0 4% 10%;
+    border-radius: 10px 0px 0px 10px;
   }
 
   main #content #info {
-    margin: 10% 10% 10% 0;
+    margin: 4% 10% 4% 0;
+    border-radius: 0px 10px 10px 0px;
   }
 }
 
