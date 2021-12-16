@@ -27,7 +27,8 @@
     -4.6px 19.5px 30.1px hsl(var(--shadow-color) / 0.22);
 }
 
-body {
+body,
+#navbar {
   max-width: 1800px;
   margin: auto;
 }

@@ -12,7 +12,8 @@
   --box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 40%);
 }
 
-body {
+body,
+#navbar {
   max-width: 1800px;
   margin: auto;
 }
