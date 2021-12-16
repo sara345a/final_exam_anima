@@ -15,7 +15,8 @@
 }
 
 body {
-  margin: 0px;
+  max-width: 1800px;
+  margin: auto;
 }
 
 html {
