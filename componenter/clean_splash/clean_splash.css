@@ -284,6 +284,7 @@ header .text button {
     opacity: 1;
     transition: all 0.5s ease;
     padding: 2vh;
+    gap: 17px;
   }
 
   header .nav_links:hover {
