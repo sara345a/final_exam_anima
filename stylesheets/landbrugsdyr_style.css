@@ -240,6 +240,11 @@ p {
 }
 /*----font sizes end------*/
 
+.seperation_line {
+  background-color: var(--color-darkerblue);
+  height: 10px;
+}
+
 img {
   object-fit: cover;
   width: 100%;
