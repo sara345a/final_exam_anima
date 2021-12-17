@@ -90,7 +90,7 @@ header img#navbar_logo:hover {
 
 header .logo_container {
   display: flex;
-  justify-content: space-between;
+
   width: 100%;
   height: 17px;
 }
@@ -714,6 +714,10 @@ footer .column a:hover {
 
   .two-third_left {
     min-height: unset;
+  }
+
+  .logo_container {
+    justify-content: space-between;
   }
 }
 
