@@ -263,8 +263,8 @@ header .text {
   padding: 8px 12px;
   position: absolute;
   bottom: 90px;
-  text-align: center;
-  left: 20px;
+  text-align: start;
+  /* left: 20px; */
 }
 
 header .text button {
@@ -410,9 +410,9 @@ footer .column a:hover {
     bottom: 63%;
   }
 
-  header .text {
+  /* header .text {
     left: 50px;
-  }
+  } */
 }
 
 @media screen and (min-width: 425px) {
@@ -420,9 +420,9 @@ footer .column a:hover {
     bottom: 58%;
   }
 
-  header .text {
+  /* header .text {
     left: 70px;
-  }
+  } */
 }
 
 /*---------mobile---------*/

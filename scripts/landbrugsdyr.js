@@ -58,12 +58,13 @@ function vis(data) {
   document.querySelector(".picture_one").style.backgroundImage =
     "url(" + data.splash1.guid + ")";
   document.querySelector(".text h1").textContent = data.splash_overskrift1;
-  document.querySelector(".text p").textContent = data.splash_tekst1;
+  document.querySelector(".text h2").textContent = data.splash_tekst1;
 }
 
 //filtrer fagene efter faggruppe og viser dem
 async function filterContent() {
-  const animalLink = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/dyr_posts?per_page=100";
+  const animalLink =
+    "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/dyr_posts?per_page=100";
   const responsAnimal = await fetch(animalLink);
   const jsonAnimal = await responsAnimal.json();
 
